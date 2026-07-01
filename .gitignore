@@ -16,3 +16,6 @@ assets/paginas/*.png
 # Sistema
 Thumbs.db
 .DS_Store
+
+.vercel
+.env*

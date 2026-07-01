@@ -1,0 +1,6 @@
+.claude/
+.git/
+site-deploy/
+amo-vacinas-site.zip
+node_modules/
+assets/paginas/[0-9]*.png

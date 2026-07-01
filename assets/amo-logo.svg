@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 140" width="320" height="140" role="img" aria-label="Amo Vacinas">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="1" stop-color="#6366F1"/>
+    </linearGradient>
+  </defs>
+  <text x="20" y="86" font-family="'Baloo 2', Arial, sans-serif" font-weight="800" font-size="92" fill="url(#g)">amo</text>
+  <path d="M232 50c0-9 7-16 16-16 5 0 9 2 12 6 3-4 7-6 12-6 9 0 16 7 16 16 0 14-28 30-28 30s-28-16-28-30z" fill="#EC4899"/>
+  <text x="22" y="116" font-family="'Baloo 2', Arial, sans-serif" font-weight="600" font-size="22" letter-spacing="9" fill="#8B5CF6">VACINAS</text>
+</svg>

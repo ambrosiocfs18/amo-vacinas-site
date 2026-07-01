@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Amo Vacinas — Cuidado que vai do nascer até a vida adulta</title>
+  <meta name="description" content="Amo Vacinas: clínicas de vacinação humanizada para toda a família. Reserve sua vacina da gripe 2026, conheça nossos planos e encontre a unidade mais próxima de você." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Amo Vacinas — Proteja sua família" />
+  <meta property="og:description" content="Vacinação humanizada do nascer até a vida adulta. Agende sua visita." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: rounded, kid-friendly brand pairing -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
+</head>
+<body>
+
+  <!-- ============ SKIP LINK ============ -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ============ VOUCHER / ANNOUNCEMENT BAR ============ -->
+  <div class="voucher-bar" id="voucherBar" role="region" aria-label="Promoção de boas-vindas">
+    <div class="voucher-bar__inner">
+      <span class="voucher-bar__gift" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
+      </span>
+      <p class="voucher-bar__text">
+        <strong>Gift Voucher · R$50</strong> em todas as vacinas na sua <strong>primeira visita!</strong>
+      </p>
+      <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--mini">Agende agora</a>
+      <button class="voucher-bar__close" id="voucherClose" aria-label="Fechar aviso">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-header__inner">
+      <a href="#topo" class="brand" aria-label="Amo Vacinas — página inicial">
+        <span class="brand__logo">
+          <span class="brand__word">amo</span>
+          <svg class="brand__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.5 1.8 4.7 5.3 4.1 7.6 3.7 9.7 5 12 7.6 14.3 5 16.4 3.7 18.7 4.1c3.5.6 4.9 4.4 3.3 7.7C19.5 16.4 12 21 12 21z"/></svg>
+        </span>
+        <span class="brand__tag">VACINAS</span>
+      </a>
+
+      <nav class="nav" id="primaryNav" aria-label="Navegação principal">
+        <a href="a-amo.html">A Amo</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="vacinas.html">Vacinas</a>
+        <a href="blog.html">Blog</a>
+        <a href="unidades.html">Unidades</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+
+      <div class="site-header__cta">
+        <a href="franquia.html" class="btn btn--ghost">Seja nosso franqueado</a>
+        <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary">Agende agora</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile menu -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <nav aria-label="Navegação mobile">
+      <a href="a-amo.html">A Amo</a>
+      <a href="servicos.html">Serviços</a>
+      <a href="vacinas.html">Vacinas</a>
+      <a href="blog.html">Blog</a>
+      <a href="unidades.html">Unidades</a>
+      <a href="contato.html">Contato</a>
+    </nav>
+    <div class="mobile-menu__cta">
+      <a href="franquia.html" class="btn btn--ghost">Seja nosso franqueado</a>
+      <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary">Agende agora</a>
+    </div>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ============ HERO CAROUSEL ============ -->
+    <section class="hero" id="topo">
+      <h1 class="sr-only">Amo Vacinas — vacinação humanizada para toda a família, do bebê ao vovô</h1>
+
+      <div class="hero-slider" id="heroSlider" tabindex="0"
+           role="region" aria-roledescription="carrossel" aria-label="Campanhas da Amo Vacinas">
+        <div class="hero-slider__viewport">
+          <div class="hero-slider__track" id="heroTrack">
+
+            <a class="hero-slide" href="https://amovacinasonline.com/" target="_blank" rel="noopener" aria-label="Reserve a Vacina da Gripe 2026 e proteja sua família">
+              <img src="assets/banner-gripe-familia.png" width="945" height="418"
+                   alt="Reserve a Vacina da Gripe 2026. Proteja sua família. Quem se vacina vence a gripe." />
+            </a>
+
+            <a class="hero-slide" href="https://amovacinasonline.com/" target="_blank" rel="noopener" aria-label="Vacinação em domicílio, sem sair de casa">
+              <img src="assets/banner-domicilio.png" width="945" height="418" loading="lazy"
+                   alt="Cuidar da sua saúde sem sair de casa. Levamos a vacinação até você, com conforto e segurança. Agende agora." />
+            </a>
+
+            <a class="hero-slide" href="https://amovacinasonline.com/" target="_blank" rel="noopener" aria-label="Vacinação contra a gripe para escolas em 2026">
+              <img src="assets/banner-escola.png" width="945" height="418" loading="lazy"
+                   alt="Proteja sua escola contra a gripe em 2026. Fale conosco e planeje sua campanha de vacinação. Agende agora." />
+            </a>
+
+            <a class="hero-slide" href="https://amovacinasonline.com/" target="_blank" rel="noopener" aria-label="Campanha de vacinação corporativa contra a gripe em 2026">
+              <img src="assets/banner-corporativo.png" width="945" height="418" loading="lazy"
+                   alt="Proteja seus colaboradores contra a gripe em 2026. Planeje sua campanha de vacinação corporativa. Agende agora." />
+            </a>
+
+            <a class="hero-slide" href="a-amo.html" aria-label="A rede de clínicas de vacinação mais premiada do Brasil">
+              <img src="assets/banner-premiada.png" width="945" height="418" loading="lazy"
+                   alt="A rede de clínicas de vacinação mais premiada do Brasil. Excelência em Franchising ABF e Melhores Franquias do Brasil." />
+            </a>
+
+            <a class="hero-slide" href="a-amo.html" aria-label="Empresa com avaliação 5 estrelas no atendimento no Google">
+              <img src="assets/banner-estrelas.png" width="945" height="418" loading="lazy"
+                   alt="Somos uma empresa com avaliação 5 estrelas no atendimento no Google. Clínica 5 estrelas na avaliação do Google." />
+            </a>
+
+          </div>
+        </div>
+
+        <button class="hero-slider__arrow hero-slider__arrow--prev" id="heroPrev" type="button" aria-label="Banner anterior">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="hero-slider__arrow hero-slider__arrow--next" id="heroNext" type="button" aria-label="Próximo banner">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="hero-slider__dots" id="heroDots" role="tablist" aria-label="Selecionar banner"></div>
+      </div>
+    </section>
+
+    <!-- ============ PROMO BANNERS ============ -->
+    <section class="promos" id="servicos" aria-label="Serviços em destaque">
+      <div class="container">
+
+        <article class="promo promo--violet reveal">
+          <div class="promo__mascot" aria-hidden="true">
+            <!-- Mascot: super bear -->
+            <svg viewBox="0 0 120 120" class="mascot"><use href="#mascotBear"/></svg>
+          </div>
+          <div class="promo__text">
+            <h2>A <span class="text-grad">Amo Vacinas</span> está em todo o Brasil</h2>
+            <p>Descubra a Amo mais próxima de você e cuide de quem você ama pertinho de casa.</p>
+          </div>
+          <a href="unidades.html" class="btn btn--white promo__cta">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Encontre uma unidade
+          </a>
+        </article>
+
+        <article class="promo promo--blue reveal">
+          <div class="promo__photo">
+            <img src="https://picsum.photos/seed/amo-menina-vacina/360/300" alt="Criança feliz com curativo no braço após vacinação" width="360" height="300" loading="lazy" />
+          </div>
+          <div class="promo__text">
+            <h2>Programe sua <span class="text-grad">vacinação</span></h2>
+            <p>E aproveite todos os serviços da Amo na data certa, sem perder nenhuma dose.</p>
+          </div>
+          <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--white promo__cta">Agende agora</a>
+        </article>
+
+        <article class="promo promo--pink reveal" id="vacinas">
+          <div class="promo__text promo__text--wide">
+            <h2>Cuidado que vai do <span class="text-grad-pink">nascer</span> até a <span class="text-grad-pink">vida adulta</span></h2>
+            <p>Veja agora os planos de vacinação Amo e proteja a sua família em todas as fases da vida.</p>
+          </div>
+          <div class="promo__photo promo__photo--round">
+            <img src="https://picsum.photos/seed/amo-mae-filha/360/360" alt="Mãe e filha abraçadas, sorrindo" width="360" height="360" loading="lazy" />
+          </div>
+          <a href="vacinas.html" class="btn btn--white promo__cta">Conheça nossos planos</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="reviews" id="a-amo" aria-label="Depoimentos de clientes">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2>Clientes satisfeitos <span class="text-grad">compartilham suas histórias!</span></h2>
+          <p>Avaliações reais de quem confia na Amo Vacinas para cuidar da família.</p>
+        </header>
+
+        <div class="reviews__grid">
+          <figure class="review reveal">
+            <header class="review__head">
+              <img class="review__avatar" src="https://i.pravatar.cc/96?img=47" alt="" width="48" height="48" loading="lazy" />
+              <div>
+                <strong>Karoline Abreu</strong>
+                <span class="review__meta">3 semanas atrás</span>
+              </div>
+              <svg class="review__google" viewBox="0 0 24 24" width="22" height="22" aria-label="Avaliação no Google"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-2 3.2-4.8 3.2-7.9z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M6 14.4a6.6 6.6 0 0 1 0-4.2V7.4H2.3a11 11 0 0 0 0 9.8L6 14.4z"/><path fill="#EA4335" d="M12 5.5c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.4L6 10.2c.9-2.6 3.2-4.7 6-4.7z"/></svg>
+            </header>
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>Contratei o pacote de 18 meses e hoje o completei com muita satisfação. Obrigada a toda a equipe da Amo Vacinas Meireles pelo carinho ao longo desse processo.</blockquote>
+          </figure>
+
+          <figure class="review reveal">
+            <header class="review__head">
+              <img class="review__avatar" src="https://i.pravatar.cc/96?img=12" alt="" width="48" height="48" loading="lazy" />
+              <div>
+                <strong>George Pinheiro</strong>
+                <span class="review__meta">1 mês atrás</span>
+              </div>
+              <svg class="review__google" viewBox="0 0 24 24" width="22" height="22" aria-label="Avaliação no Google"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-2 3.2-4.8 3.2-7.9z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M6 14.4a6.6 6.6 0 0 1 0-4.2V7.4H2.3a11 11 0 0 0 0 9.8L6 14.4z"/><path fill="#EA4335" d="M12 5.5c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.4L6 10.2c.9-2.6 3.2-4.7 6-4.7z"/></svg>
+            </header>
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>Atendimento muito humanizado. A enfermeira Celine foi uma doce, explicou todo o procedimento com calma, acolhimento e amor. Tornou acolhedor um momento que seria de estresse.</blockquote>
+          </figure>
+
+          <figure class="review reveal">
+            <header class="review__head">
+              <img class="review__avatar" src="https://i.pravatar.cc/96?img=32" alt="" width="48" height="48" loading="lazy" />
+              <div>
+                <strong>Emiliane Barbosa</strong>
+                <span class="review__meta">2 meses atrás</span>
+              </div>
+              <svg class="review__google" viewBox="0 0 24 24" width="22" height="22" aria-label="Avaliação no Google"><path fill="#4285F4" d="M22.5 12.2c0-.7-.1-1.4-.2-2.1H12v4h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-2 3.2-4.8 3.2-7.9z"/><path fill="#34A853" d="M12 23c2.9 0 5.4-1 7.2-2.6l-3.6-2.7c-1 .7-2.3 1.1-3.6 1.1-2.8 0-5.1-1.9-6-4.4H2.3v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M6 14.4a6.6 6.6 0 0 1 0-4.2V7.4H2.3a11 11 0 0 0 0 9.8L6 14.4z"/><path fill="#EA4335" d="M12 5.5c1.6 0 3 .5 4.1 1.6l3.1-3.1A11 11 0 0 0 2.3 7.4L6 10.2c.9-2.6 3.2-4.7 6-4.7z"/></svg>
+            </header>
+            <div class="review__stars" aria-label="5 de 5 estrelas">★★★★★</div>
+            <blockquote>Quero registrar o quanto fiquei tranquila com a experiência da minha filha Antonella na vacinação. Desde a chegada tudo foi acolhedor, o que fez toda a diferença para a nossa visita.</blockquote>
+          </figure>
+        </div>
+
+        <div class="reviews__cta reveal">
+          <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Agende sua visita</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ NEWS + INSTAGRAM ============ -->
+    <section class="news" id="blog" aria-label="Notícias e redes sociais">
+      <div class="container">
+        <header class="section-head reveal">
+          <h2>Fique por dentro das <span class="text-grad">últimas notícias</span></h2>
+        </header>
+
+        <div class="news__layout">
+          <div class="news__list">
+            <article class="news-card news-card--feature reveal">
+              <div class="news-card__img">
+                <img src="https://picsum.photos/seed/amo-noticia-franquia/640/420" alt="Equipe da Amo Vacinas em entrevista" width="640" height="420" loading="lazy" />
+              </div>
+              <div class="news-card__body">
+                <span class="tag">Notícia</span>
+                <h3>Grupo Salus, dono da Sorridents, vai transformar rede cearense de vacinas em franquia</h3>
+                <a href="blog.html" class="link-arrow">Ler matéria
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="news-card reveal">
+              <div class="news-card__img news-card__img--dark">
+                <img src="https://picsum.photos/seed/amo-noticia-clinicas/440/300" alt="Profissional de saúde preparando uma vacina" width="440" height="300" loading="lazy" />
+              </div>
+              <div class="news-card__body">
+                <h3>Chegada de novas vacinas impulsiona abertura de clínicas particulares</h3>
+              </div>
+            </article>
+
+            <article class="news-card news-card--quote reveal">
+              <div class="news-card__body">
+                <span class="tag tag--soft">Dúvida frequente</span>
+                <h3>“As vacinas são seguras para mim?”</h3>
+                <p>Tire suas dúvidas com nossos especialistas e vacine com segurança.</p>
+                <a href="#contato" class="link-arrow">Falar com a Amo
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+              </div>
+            </article>
+          </div>
+
+          <aside class="insta reveal" aria-label="Instagram da Amo Vacinas">
+            <div class="insta__phone">
+              <div class="insta__notch"></div>
+              <div class="insta__top">
+                <span class="brand__logo brand__logo--sm">
+                  <span class="brand__word">amo</span>
+                  <svg class="brand__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.5 1.8 4.7 5.3 4.1 7.6 3.7 9.7 5 12 7.6 14.3 5 16.4 3.7 18.7 4.1c3.5.6 4.9 4.4 3.3 7.7C19.5 16.4 12 21 12 21z"/></svg>
+                </span>
+                <span class="insta__handle">@amovacinasoficial</span>
+              </div>
+              <div class="insta__stats">
+                <div><strong>318</strong><span>posts</span></div>
+                <div><strong>9,1 mil</strong><span>seguidores</span></div>
+                <div><strong>225</strong><span>seguindo</span></div>
+              </div>
+              <a href="#blog" class="insta__follow">Seguir</a>
+              <div class="insta__grid">
+                <img src="https://picsum.photos/seed/amo-ig1/160/160" alt="Publicação no Instagram da Amo Vacinas" width="160" height="160" loading="lazy" />
+                <img src="https://picsum.photos/seed/amo-ig2/160/160" alt="Publicação no Instagram da Amo Vacinas" width="160" height="160" loading="lazy" />
+                <img src="https://picsum.photos/seed/amo-ig3/160/160" alt="Publicação no Instagram da Amo Vacinas" width="160" height="160" loading="lazy" />
+                <img src="https://picsum.photos/seed/amo-ig4/160/160" alt="Publicação no Instagram da Amo Vacinas" width="160" height="160" loading="lazy" />
+                <img src="https://picsum.photos/seed/amo-ig5/160/160" alt="Publicação no Instagram da Amo Vacinas" width="160" height="160" loading="lazy" />
+                <img src="https://picsum.photos/seed/amo-ig6/160/160" alt="Publicação no Instagram da Amo Vacinas" width="160" height="160" loading="lazy" />
+              </div>
+            </div>
+            <p class="insta__caption">Siga a gente e acompanhe dicas de saúde todos os dias.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FRANQUEADO CTA ============ -->
+    <section class="franchise" id="franqueado" aria-label="Seja um franqueado">
+      <div class="container franchise__inner reveal">
+        <div class="franchise__text">
+          <span class="eyebrow eyebrow--light">Seja nosso franqueado</span>
+          <h2>Leve o cuidado da Amo para a sua cidade</h2>
+          <p>Faça parte de uma das redes de vacinação que mais cresce no Brasil, com suporte completo do primeiro dia ao crescimento da sua unidade.</p>
+        </div>
+        <a href="franquia.html" class="btn btn--white btn--lg">Quero ser franqueado</a>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO / AGENDAMENTO ============ -->
+    <section class="contact" id="contato" aria-label="Agende sua visita">
+      <div class="container contact__inner">
+        <div class="contact__copy reveal">
+          <h2>Agende sua <span class="text-grad">visita</span></h2>
+          <p>Preencha seus dados e nossa equipe entra em contato para confirmar o melhor horário para você e sua família.</p>
+          <ul class="contact__list">
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+              SAC 0800 729 1714
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Unidades em todo o Brasil
+            </li>
+          </ul>
+        </div>
+
+        <form class="contact__form reveal" id="contactForm" novalidate>
+          <div class="field">
+            <label for="nome">Nome completo</label>
+            <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como podemos te chamar?" />
+            <small class="field__error" data-for="nome"></small>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="telefone">Telefone / WhatsApp</label>
+              <input type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="tel" required placeholder="(00) 00000-0000" />
+              <small class="field__error" data-for="telefone"></small>
+            </div>
+            <div class="field">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required placeholder="seu@email.com" />
+              <small class="field__error" data-for="email"></small>
+            </div>
+          </div>
+          <div class="field">
+            <label for="assunto">O que você procura?</label>
+            <select id="assunto" name="assunto">
+              <option value="vacina">Agendar uma vacina</option>
+              <option value="planos">Conhecer os planos</option>
+              <option value="unidade">Encontrar uma unidade</option>
+              <option value="franquia">Ser franqueado</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn--primary btn--lg btn--block" id="contactSubmit">Enviar e agendar</button>
+          <p class="contact__ok" id="contactOk" hidden>
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+            Recebemos seus dados! Em breve entramos em contato.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="unidades">
+    <div class="container site-footer__top">
+      <div class="site-footer__brand">
+        <a href="#topo" class="brand brand--footer" aria-label="Amo Vacinas">
+          <span class="brand__logo">
+            <span class="brand__word">amo</span>
+            <svg class="brand__heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-10-9.2C.4 8.5 1.8 4.7 5.3 4.1 7.6 3.7 9.7 5 12 7.6 14.3 5 16.4 3.7 18.7 4.1c3.5.6 4.9 4.4 3.3 7.7C19.5 16.4 12 21 12 21z"/></svg>
+          </span>
+          <span class="brand__tag">VACINAS</span>
+        </a>
+        <p class="site-footer__follow">Acompanhe as nossas redes sociais</p>
+        <div class="socials">
+          <a href="#blog" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+          <a href="#blog" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#blog" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8a.6.6 0 0 0 .6.6h16.8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6zM8.3 18.3H5.6V9.7h2.7v8.6zM6.9 8.5a1.6 1.6 0 1 1 0-3.1 1.6 1.6 0 0 1 0 3.1zm11.4 9.8h-2.7v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H9.9V9.7h2.6v1.2h.1a2.9 2.9 0 0 1 2.6-1.4c2.8 0 3.3 1.8 3.3 4.2v4.6z"/></svg></a>
+          <a href="#blog" aria-label="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.3 1.6 3.7 3.8 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.7c0 4.3-3.4 6.9-7 5.7-2.4-.8-3.6-3.3-2.9-5.8.6-2.1 2.5-3.4 4.9-3.2v2.7c-.4.1-.8.2-1.2.4-1 .5-1.4 1.5-1.1 2.5.3 1 1.4 1.6 2.4 1.3 1-.3 1.5-1.1 1.5-2.4V3h3.4z"/></svg></a>
+        </div>
+        <p class="site-footer__sac">SAC 0800 729 1714</p>
+      </div>
+
+      <nav class="site-footer__cols" aria-label="Links do rodapé">
+        <div>
+          <h4>Amo Vacinas</h4>
+          <a href="a-amo.html">Quem somos</a>
+          <a href="trabalhe-conosco.html">Trabalhe conosco</a>
+          <a href="faq.html">FAQ</a>
+          <a href="imprensa.html">Área de imprensa</a>
+        </div>
+        <div>
+          <h4>Produtos e serviços</h4>
+          <a href="vacinas.html">Vacinas</a>
+          <a href="servicos.html">Nossos serviços</a>
+          <a href="unidades.html">Encontrar unidade</a>
+        </div>
+        <div>
+          <h4>Fale conosco</h4>
+          <a href="contato.html">Canais de atendimento</a>
+          <a href="franquia.html">Seja franqueado</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container site-footer__legal">
+      <p><strong>SSFF VACCINE FRANCHISING LTDA</strong> · CNPJ nº 44.388.703/0001-39. Todos os direitos reservados.</p>
+      <p>Site reconstruído a partir do mockup original. Layout de referência: Amo Vacinas.</p>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="whatsapp-fab" href="https://wa.me/5508007291714" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3a12.4 12.4 0 0 0 5.8 1.5c7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.4-10.2 5.7 0 10.3 4.6 10.3 10.2 0 5.7-4.6 10.2-10.3 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
+  </a>
+
+  <!-- Shared SVG defs: mascot -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="mascotBear">
+        <circle cx="32" cy="30" r="12" fill="#8B5CF6"/>
+        <circle cx="88" cy="30" r="12" fill="#8B5CF6"/>
+        <circle cx="60" cy="62" r="40" fill="#A78BFA"/>
+        <path d="M28 40 H92 a8 8 0 0 1 8 8 v6 a40 40 0 0 1 -80 0 v-6 a8 8 0 0 1 8 -8z" fill="#7C3AED"/>
+        <circle cx="60" cy="78" r="20" fill="#F3E8FF"/>
+        <circle cx="48" cy="58" r="5" fill="#2A2350"/>
+        <circle cx="72" cy="58" r="5" fill="#2A2350"/>
+        <circle cx="49.5" cy="56.5" r="1.6" fill="#fff"/>
+        <circle cx="73.5" cy="56.5" r="1.6" fill="#fff"/>
+        <ellipse cx="60" cy="74" rx="6" ry="4.5" fill="#6D28D9"/>
+        <path d="M52 84 Q60 90 68 84" stroke="#6D28D9" stroke-width="3" fill="none" stroke-linecap="round"/>
+        <circle cx="40" cy="74" r="5" fill="#F9A8D4" opacity=".8"/>
+        <circle cx="80" cy="74" r="5" fill="#F9A8D4" opacity=".8"/>
+      </g>
+    </defs>
+  </svg>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

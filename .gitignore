@@ -1,0 +1,18 @@
+# Claude Code / config
+.claude/
+.vercel/
+
+# Deploy artifacts (duplicados do site)
+site-deploy/
+amo-vacinas-site.zip
+
+# Dependências
+node_modules/
+
+# Exports de origem do Canva (mantém só os b*.png recortados que as páginas usam)
+assets/paginas/*.png
+!assets/paginas/b*.png
+
+# Sistema
+Thumbs.db
+.DS_Store

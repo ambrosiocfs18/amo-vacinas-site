@@ -794,3 +794,135 @@ button{font-family:inherit}
   .lp-persona{grid-template-columns:1fr}
   .lp-lead__box{grid-template-columns:1fr}
 }
+
+/* =====================================================================
+   PÁGINAS NATIVAS — A Amo · Serviços · Vacinas · Blog · Unidades · Contato
+   ===================================================================== */
+/* page hero (split compacto) */
+.ph{position:relative;background:var(--grad-hero);overflow:hidden;padding:clamp(30px,4.5vw,60px) 0}
+.ph__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4.5vw,52px);align-items:center}
+.ph h1{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800;letter-spacing:-.5px;line-height:1.1}
+.ph__sub{margin:14px 0 0;color:var(--muted);font-size:1.12rem;font-weight:500;max-width:52ch}
+.ph__body{margin:16px 0 0;color:var(--muted);font-weight:500;max-width:56ch}
+.ph__actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
+.ph__media img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
+.ph--center{text-align:center}
+.ph--center .ph__sub,.ph--center .ph__body{margin-inline:auto}
+
+/* story 2 colunas (a-amo) */
+.story{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,54px)}
+.story p{color:var(--muted);font-weight:500;line-height:1.7;margin-bottom:16px}
+.story strong{color:var(--violet-700)}
+.story .story__punch{font-family:'Baloo 2',cursive;color:var(--violet-700);font-size:1.06rem}
+
+/* fundadoras */
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:center}
+.founders figure{margin:0;position:relative}
+.founders figure img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
+.founders figcaption{margin-top:12px;text-align:center;color:var(--muted);font-weight:600;font-size:.92rem}
+.founders h2{font-size:clamp(1.8rem,3.6vw,2.5rem);font-weight:800}
+.founders .lead{margin-top:14px;color:var(--muted);font-weight:500;font-size:1.08rem}
+.founders .lead strong{color:var(--pink-500)}
+
+/* linhas alternadas foto+texto (serviços) */
+.zig{display:grid;gap:clamp(34px,5vw,64px)}
+.zig__row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
+.zig__row:nth-child(even)>figure{order:2}
+.zig__row figure{margin:0}
+.zig__row img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+.zig__row h3{font-size:clamp(1.4rem,2.6vw,1.85rem);font-weight:800}
+.zig__row h3 span{color:var(--violet-600)}
+.zig__row p{margin-top:10px;color:var(--muted);font-weight:500;line-height:1.65}
+.zig__row ul{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.zig__row li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-weight:600}
+.zig__row li svg{flex:none;color:#fff;background:var(--grad-primary);border-radius:50%;padding:4px;width:22px;height:22px;margin-top:2px}
+
+/* tiles de serviço (grade de ícones, âncoras) */
+.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.tile{
+  display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;
+  background:#fff;border:1.5px solid var(--lilac-200);border-radius:var(--r-md);
+  padding:22px 14px;font-family:'Baloo 2',cursive;font-weight:600;color:var(--violet-700);
+  transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out),border-color .2s var(--ease-out);
+}
+.tile svg{color:var(--violet-600)}
+@media (hover:hover) and (pointer:fine){.tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--violet-400)}}
+@media (max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
+
+/* lista de vacinas */
+.vlist{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.vlist__col{background:linear-gradient(165deg,#8B93F8,#7C83F0);color:#fff;border-radius:var(--r-md);padding:24px 26px;box-shadow:var(--shadow-sm)}
+.vlist__col ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.vlist__col li{font-family:'Baloo 2',cursive;font-weight:600;font-size:1.02rem;line-height:1.25}
+.vlist__col li small{display:block;font-family:'Nunito';font-weight:600;opacity:.85}
+
+/* blog */
+.blog-feature{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(24px,4vw,54px);align-items:center}
+.blog-feature img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+.blog-feature .tag{margin-bottom:12px}
+.blog-feature h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;line-height:1.2}
+.blog-feature .meta{margin-top:8px;color:var(--muted);font-weight:600;font-size:.92rem}
+.blog-feature p{margin-top:14px;color:var(--muted);font-weight:500;line-height:1.65}
+.blog-suggest{background:var(--grad-primary);color:#fff;border-radius:var(--r-lg);padding:clamp(26px,4vw,44px);display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,4vw,44px);align-items:center;box-shadow:var(--shadow-md);position:relative;overflow:hidden}
+.blog-suggest::after{content:"";position:absolute;width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,.08);top:-120px;right:-60px}
+.blog-suggest h2{font-size:clamp(1.5rem,3vw,2rem);font-weight:800;position:relative}
+.blog-suggest p{margin-top:8px;color:rgba(255,255,255,.9);font-weight:500;position:relative}
+.blog-suggest form{position:relative;display:flex;flex-direction:column;gap:12px}
+.blog-suggest textarea{
+  font-family:inherit;font-size:1rem;padding:14px 16px;border-radius:14px;border:none;
+  background:rgba(255,255,255,.92);color:var(--ink);min-height:110px;resize:vertical;
+}
+.blog-suggest textarea:focus{outline:3px solid rgba(255,255,255,.5)}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+
+/* unidades */
+.units{max-width:860px;margin:0 auto}
+.units__search{position:relative;margin-bottom:18px}
+.units__search input{
+  width:100%;font-family:inherit;font-size:1.05rem;padding:16px 52px 16px 20px;
+  border-radius:var(--r-pill);border:2px solid var(--violet-400);background:#fff;color:var(--ink);
+}
+.units__search input:focus{outline:none;border-color:var(--violet-600);box-shadow:var(--shadow-sm)}
+.units__search svg{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--violet-500);pointer-events:none}
+.units__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.units__list li a{
+  display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--lilac-100);
+  border-radius:16px;padding:15px 18px;font-family:'Baloo 2',cursive;font-weight:600;color:var(--ink);
+  box-shadow:var(--shadow-sm);transition:transform .2s var(--ease-out),border-color .2s var(--ease-out);
+}
+.units__list li a svg{flex:none;color:var(--violet-500)}
+.units__list li a small{margin-left:auto;color:var(--muted);font-family:'Nunito';font-weight:700}
+@media (hover:hover) and (pointer:fine){.units__list li a:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
+.units__empty{text-align:center;color:var(--muted);font-weight:600;padding:22px;display:none}
+
+/* contato */
+.chan{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:center}
+.chan figure{margin:0}
+.chan figure img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+.chan__cards{display:grid;gap:13px}
+.chan__card{
+  display:flex;align-items:center;gap:15px;background:#fff;border:1px solid var(--lilac-100);
+  border-radius:18px;padding:17px 20px;box-shadow:var(--shadow-sm);
+  transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){.chan__card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}}
+.chan__card .ico{flex:none;width:46px;height:46px;border-radius:14px;display:grid;place-items:center;color:#fff;background:var(--grad-primary)}
+.chan__card strong{display:block;font-family:'Baloo 2',cursive;font-size:1.05rem;color:var(--ink)}
+.chan__card span{color:var(--muted);font-weight:600;font-size:.95rem}
+
+/* faixa 5 estrelas (imagem real do banner) */
+.band-img{display:block;max-width:1200px;margin:0 auto;padding-inline:clamp(18px,4vw,40px)}
+.band-img img{width:100%;border-radius:var(--r-md);box-shadow:var(--shadow-sm)}
+
+/* selo google + fatos a-amo */
+.gsplit{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4vw,50px);align-items:center}
+.gsplit img{width:min(340px,80%);margin-inline:auto;border-radius:var(--r-lg)}
+
+@media (max-width:900px){
+  .ph__grid,.story,.founders,.zig__row,.blog-feature,.blog-suggest,.chan,.gsplit{grid-template-columns:1fr}
+  .zig__row:nth-child(even)>figure{order:0}
+  .ph__media{max-width:440px;margin-inline:auto}
+  .vlist{grid-template-columns:1fr}
+  .blog-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
+  .units__list{grid-template-columns:1fr}
+}

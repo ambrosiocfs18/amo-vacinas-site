@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Blog — Cuidar começa com informação</title>
-  <meta name="description" content="Blog — Cuidar começa com informação. Amo Vacinas: vacinação humanizada para toda a família." />
+  <meta name="description" content="Conteúdos claros e confiáveis sobre vacinas, saúde e prevenção para proteger a sua família." />
+  <meta property="og:title" content="Blog — Cuidar começa com informação" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -29,8 +31,9 @@
 
   <header class="site-header" id="siteHeader">
     <div class="site-header__inner">
-      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial"><img src="assets/logo-amo.png" alt="Amo Vacinas" width="300" height="122" /></a>
-
+      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial">
+        <img src="assets/logo-amo.png" alt="Amo Vacinas" width="300" height="122" />
+      </a>
       <nav class="nav" id="primaryNav" aria-label="Navegação principal">
         <a href="a-amo.html">A Amo</a>
         <a href="servicos.html">Serviços</a>
@@ -39,12 +42,10 @@
         <a href="unidades.html">Unidades</a>
         <a href="contato.html">Contato</a>
       </nav>
-
       <div class="site-header__cta">
         <a href="franquia.html" class="btn btn--ghost">Seja nosso franqueado</a>
         <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary">Agende agora</a>
       </div>
-
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -66,11 +67,87 @@
     </div>
   </div>
 
-  <main id="conteudo" class="cv-main">
-    <h1 class="sr-only">Blog — Cuidar começa com informação</h1>
-    <div class="cv-wrap">
-      <img class="cv-img" src="assets/paginas/b18.png" width="1366" height="1671" alt="Blog — Cuidar começa com informação — Amo Vacinas" />
-    </div>
+  <main id="conteudo">
+
+    <section class="ph">
+      <div class="container ph__grid reveal">
+        <div>
+          <span class="eyebrow">Blog Amo Vacinas</span>
+          <h1>Cuidar começa com <span class="text-grad">informação</span></h1>
+          <p class="ph__sub">Tudo o que você precisa saber sobre vacinas, saúde e prevenção em um só lugar.</p>
+          <p class="ph__body">Sabemos que cuidar de quem você ama envolve escolhas importantes. Por isso, criamos este espaço para trazer conteúdos claros, confiáveis e atualizados sobre vacinação e saúde. Aqui, você encontra orientação de qualidade para proteger sua família com segurança e tranquilidade.</p>
+        </div>
+        <div class="ph__media">
+          <img src="assets/blog-hero.jpg" alt="Profissional da Amo Vacinas apontando para o conteúdo" width="360" height="448" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section" aria-label="Post em destaque">
+      <div class="container blog-feature reveal">
+        <div>
+          <span class="tag">Destaque</span>
+          <h2>Vacinação em dia: o que você (realmente) precisa atualizar agora em 2026</h2>
+          <p class="meta">Amo Vacinas · 17 de março de 2026</p>
+          <p>Com a rotina corrida, muita gente esquece de um cuidado essencial: manter a vacinação em dia. E isso vai muito além das vacinas da infância. Fale com a nossa equipe e atualize a caderneta de toda a família.</p>
+          <div class="ph__actions">
+            <a href="https://wa.me/5508007291714?text=Ol%C3%A1!%20Quero%20atualizar%20minha%20caderneta%20de%20vacina%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--primary">Atualizar minha caderneta</a>
+          </div>
+        </div>
+        <img src="assets/blog-destaque.jpg" alt="Enfermeira aplicando vacina em uma paciente" width="510" height="342" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="lp-section lp-section--tint" style="padding-top:0;padding-bottom:0" aria-label="Sugerir tema">
+      <div class="container" style="padding-top:clamp(30px,4vw,50px);padding-bottom:clamp(30px,4vw,50px)">
+        <div class="blog-suggest reveal">
+          <div>
+            <h2>Sentiu falta de algum tema ou notícia?</h2>
+            <p>Sugira o assunto que gostaria de ler por aqui.</p>
+          </div>
+          <form id="suggestForm">
+            <label class="sr-only" for="suggestText">Sua sugestão de tema</label>
+            <textarea id="suggestText" name="sugestao" placeholder="Escreva sua sugestão..." required></textarea>
+            <button type="submit" class="btn btn--white">Enviar sugestão</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section" aria-label="Temas mais lidos">
+      <div class="container">
+        <div class="lp-head reveal" style="margin-bottom:clamp(22px,3vw,36px)">
+          <h2>Temas <span class="text-grad">mais lidos</span></h2>
+        </div>
+        <div class="blog-grid">
+          <article class="news-card reveal">
+            <div class="news-card__img"><img src="assets/blog-t1.jpg" alt="" width="386" height="260" loading="lazy" /></div>
+            <div class="news-card__body"><h3>Herpes Zoster: o que é, sintomas e tudo sobre a vacina</h3></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-card__img"><img src="assets/blog-t2.jpg" alt="" width="386" height="260" loading="lazy" /></div>
+            <div class="news-card__body"><h3>Por que a vacina BCG deixa marca no braço?</h3></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-card__img"><img src="assets/blog-t3.jpg" alt="" width="386" height="260" loading="lazy" /></div>
+            <div class="news-card__body"><h3>Álcool: pode beber depois de tomar vacina?</h3></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-card__img"><img src="assets/blog-t4.jpg" alt="" width="386" height="260" loading="lazy" /></div>
+            <div class="news-card__body"><h3>Vacinas para viagem: saiba quais destinos exigem e quais documentos levar</h3></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-card__img"><img src="assets/blog-t5.jpg" alt="" width="386" height="260" loading="lazy" /></div>
+            <div class="news-card__body"><h3>Calendário da gestação: guia para ajudar as mamães nesse momento tão especial</h3></div>
+          </article>
+          <article class="news-card reveal">
+            <div class="news-card__img"><img src="assets/blog-t6.jpg" alt="" width="386" height="260" loading="lazy" /></div>
+            <div class="news-card__body"><h3>Bebê pode tomar vacina com febre? Saiba se é necessário adiar a imunização</h3></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -111,7 +188,7 @@
     </div>
     <div class="container site-footer__legal">
       <p><strong>SSFF VACCINE FRANCHISING LTDA</strong> · CNPJ nº 44.588.753/0001-35 · Alameda Rio Negro, 500, 3º andar, conjunto 306 - Torre 02 - Barueri - São Paulo - CEP 06454-000.</p>
-      <p>© 2022 Amo Vacinas. Todos os direitos reservados. Site desenvolvido por Targett Digital.</p>
+      <p>© 2026 Amo Vacinas. Todos os direitos reservados.</p>
     </div>
   </footer>
 
@@ -120,5 +197,18 @@
   </a>
 
   <script src="js/script.js" defer></script>
+  <script>
+    (function () {
+      var f = document.getElementById('suggestForm');
+      if (!f) return;
+      f.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var t = document.getElementById('suggestText').value.trim();
+        if (!t) return;
+        window.open('https://wa.me/5508007291714?text=' + encodeURIComponent('Olá! Sugestão de tema para o blog da Amo: ' + t), '_blank', 'noopener');
+        f.reset();
+      });
+    })();
+  </script>
 </body>
 </html>

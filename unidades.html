@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Unidades — Encontre a Amo mais perto de você</title>
-  <meta name="description" content="Unidades — Encontre a Amo mais perto de você. Amo Vacinas: vacinação humanizada para toda a família." />
+  <meta name="description" content="Já somos 46 unidades pelo Brasil. Encontre a clínica Amo Vacinas mais próxima de você." />
+  <meta property="og:title" content="Unidades — Encontre a Amo mais perto de você" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -29,8 +31,9 @@
 
   <header class="site-header" id="siteHeader">
     <div class="site-header__inner">
-      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial"><img src="assets/logo-amo.png" alt="Amo Vacinas" width="300" height="122" /></a>
-
+      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial">
+        <img src="assets/logo-amo.png" alt="Amo Vacinas" width="300" height="122" />
+      </a>
       <nav class="nav" id="primaryNav" aria-label="Navegação principal">
         <a href="a-amo.html">A Amo</a>
         <a href="servicos.html">Serviços</a>
@@ -39,12 +42,10 @@
         <a href="unidades.html" class="is-active">Unidades</a>
         <a href="contato.html">Contato</a>
       </nav>
-
       <div class="site-header__cta">
         <a href="franquia.html" class="btn btn--ghost">Seja nosso franqueado</a>
         <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary">Agende agora</a>
       </div>
-
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -66,12 +67,77 @@
     </div>
   </div>
 
-  <main id="conteudo" class="cv-main">
-    <h1 class="sr-only">Unidades — Encontre a Amo mais perto de você</h1>
-    <div class="cv-wrap">
-      <img class="cv-img" src="assets/paginas/b16.png" width="1366" height="1058" alt="Unidades — Encontre a Amo mais perto de você — Amo Vacinas" />
-      <a class="cv-hot" href="contato.html" style="left:5%;top:31%;width:42%;height:8%" aria-label="Encontre a Amo mais proxima de voce"></a>
-    </div>
+  <main id="conteudo">
+
+    <section class="ph">
+      <div class="container ph__grid reveal">
+        <div>
+          <span class="eyebrow">Unidades</span>
+          <h1>Já somos <span class="text-grad">46 unidades</span> pelo Brasil</h1>
+          <p class="ph__sub">Encontre a Amo Vacinas mais próxima de você e cuide de quem você ama pertinho de casa.</p>
+          <div class="ph__actions">
+            <a href="https://wa.me/5508007291714?text=Ol%C3%A1!%20Quero%20encontrar%20a%20unidade%20Amo%20mais%20pr%C3%B3xima%20de%20mim." target="_blank" rel="noopener" class="btn btn--primary btn--lg">Falar com a Amo</a>
+          </div>
+        </div>
+        <div class="ph__media">
+          <img src="assets/unidades-mapa.jpg" alt="Mapa do Brasil com unidades da Amo Vacinas marcadas e celular mostrando a localização" width="800" height="355" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section" aria-label="Encontre sua unidade">
+      <div class="container">
+        <div class="lp-head reveal">
+          <h2><span class="text-grad">Unidades</span> · Encontre a clínica mais próxima de você</h2>
+        </div>
+        <div class="units reveal">
+          <div class="units__search">
+            <label class="sr-only" for="unitSearch">Buscar unidade</label>
+            <input type="search" id="unitSearch" placeholder="Busque por cidade, bairro ou estado..." autocomplete="off" />
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <ul class="units__list" id="unitList">
+          <li><a href="https://www.google.com/maps/search/Amo+Vacinas+Meireles+Fortaleza" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Meireles<small>CE</small>
+          </a></li>
+          <li><a href="https://www.google.com/maps/search/Amo+Vacinas+Shopping+Eusébio" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Shopping Eusébio<small>CE</small>
+          </a></li>
+          <li><a href="https://www.google.com/maps/search/Amo+Vacinas+Iguatemi+Fortaleza" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Shopping Iguatemi<small>CE</small>
+          </a></li>
+          <li><a href="https://www.google.com/maps/search/Amo+Vacinas+Salvador+Shopping" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Salvador Shopping<small>BA</small>
+          </a></li>
+          <li><a href="https://www.google.com/maps/search/Amo+Vacinas+Teresina+Shopping" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Teresina Shopping<small>PI</small>
+          </a></li>
+          <li><a href="https://www.google.com/maps/search/Amo+Vacinas+Rio+Poty+Teresina" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Rio Poty<small>PI</small>
+          </a></li>
+          </ul>
+          <p class="units__empty" id="unitEmpty">Nenhuma unidade encontrada com esse termo. Fale com a gente no WhatsApp e indicamos a mais próxima!</p>
+          <p style="text-align:center;margin-top:20px;color:var(--muted);font-weight:600">E novas unidades chegando a todo o Brasil.
+            <a class="link-arrow" href="franquia.html" style="margin-top:6px">Quero levar a Amo para a minha cidade
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section lp-section--tint" style="padding-top:0" aria-label="Avaliação 5 estrelas">
+      <a class="band-img reveal" href="https://www.google.com/search?q=amo+vacinas" target="_blank" rel="noopener" aria-label="Ver avaliações da Amo Vacinas no Google">
+        <img src="assets/banner-estrelas.png" alt="Somos uma empresa com avaliação 5 estrelas no atendimento no Google" width="950" height="408" loading="lazy" />
+      </a>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -112,7 +178,7 @@
     </div>
     <div class="container site-footer__legal">
       <p><strong>SSFF VACCINE FRANCHISING LTDA</strong> · CNPJ nº 44.588.753/0001-35 · Alameda Rio Negro, 500, 3º andar, conjunto 306 - Torre 02 - Barueri - São Paulo - CEP 06454-000.</p>
-      <p>© 2022 Amo Vacinas. Todos os direitos reservados. Site desenvolvido por Targett Digital.</p>
+      <p>© 2026 Amo Vacinas. Todos os direitos reservados.</p>
     </div>
   </footer>
 
@@ -121,5 +187,24 @@
   </a>
 
   <script src="js/script.js" defer></script>
+  <script>
+    (function () {
+      var input = document.getElementById('unitSearch');
+      var list = document.getElementById('unitList');
+      var empty = document.getElementById('unitEmpty');
+      if (!input || !list) return;
+      var items = Array.prototype.slice.call(list.children);
+      input.addEventListener('input', function () {
+        var q = input.value.trim().toLowerCase();
+        var visible = 0;
+        items.forEach(function (li) {
+          var show = li.textContent.toLowerCase().indexOf(q) > -1;
+          li.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+        empty.style.display = visible ? 'none' : 'block';
+      });
+    })();
+  </script>
 </body>
 </html>

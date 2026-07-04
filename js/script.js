@@ -224,6 +224,42 @@
     img.addEventListener('click', open);
   })();
 
+  /* ---------- Count-up numbers (stats bands) ---------- */
+  (function countUp() {
+    const els = $$('[data-count]');
+    if (!els.length) return;
+    const fmt = (n) => n.toLocaleString('pt-BR');
+    const render = (el, val) => {
+      el.textContent =
+        (el.dataset.prefix || '') + fmt(val) + (el.dataset.suffix || '');
+    };
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      els.forEach((el) => render(el, +el.dataset.count));
+      return;
+    }
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!entry.isIntersecting) return;
+          io.unobserve(entry.target);
+          const el = entry.target;
+          const target = +el.dataset.count;
+          const t0 = performance.now();
+          const dur = 900;
+          const tick = (t) => {
+            const p = Math.min((t - t0) / dur, 1);
+            const eased = 1 - Math.pow(1 - p, 3); /* ease-out cubic */
+            render(el, Math.round(target * eased));
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+        });
+      },
+      { threshold: 0.6 }
+    );
+    els.forEach((el) => io.observe(el));
+  })();
+
   /* ---------- Hero carousel ---------- */
   (function heroCarousel() {
     const track = $('#heroTrack');

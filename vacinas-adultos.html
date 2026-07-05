@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Vacinas para Adultos (20 a 59 anos) — Amo Vacinas</title>
-  <meta name="description" content="Vacinas para Adultos (20 a 59 anos) — Amo Vacinas. Amo Vacinas: vacinação humanizada para toda a família." />
+  <meta name="description" content="Vacinas indicadas para adultos de 20 a 59 anos." />
+  <meta property="og:title" content="Vacinas para Adultos (20 a 59 anos) — Amo Vacinas" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,23 +16,11 @@
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <div class="voucher-bar" id="voucherBar" role="region" aria-label="Promoção de boas-vindas">
-    <div class="voucher-bar__inner">
-      <span class="voucher-bar__gift" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-      </span>
-      <p class="voucher-bar__text"><strong>Gift Voucher · R$50</strong> em todas as vacinas na sua <strong>primeira visita!</strong></p>
-      <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--mini">Agende agora</a>
-      <button class="voucher-bar__close" id="voucherClose" aria-label="Fechar aviso">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
-      </button>
-    </div>
-  </div>
-
   <header class="site-header" id="siteHeader">
     <div class="site-header__inner">
-      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial"><img src="assets/logo-amo.png" alt="Amo Vacinas" width="300" height="122" /></a>
-
+      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial">
+        <img src="assets/logo-amo.webp" alt="Amo Vacinas" width="300" height="122" />
+      </a>
       <nav class="nav" id="primaryNav" aria-label="Navegação principal">
         <a href="a-amo.html">A Amo</a>
         <a href="servicos.html">Serviços</a>
@@ -39,12 +29,10 @@
         <a href="unidades.html">Unidades</a>
         <a href="contato.html">Contato</a>
       </nav>
-
       <div class="site-header__cta">
         <a href="franquia.html" class="btn btn--ghost">Seja nosso franqueado</a>
         <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary">Agende agora</a>
       </div>
-
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -66,10 +54,10 @@
     </div>
   </div>
 
-  <main id="conteudo" class="cv-main">
-    <h1 class="sr-only">Vacinas para Adultos (20 a 59 anos) — Amo Vacinas</h1>
-  <nav class="subnav" aria-label="Calendário de vacinas">
-    <div class="subnav__inner">
+  <main id="conteudo">
+
+    <nav class="subnav" aria-label="Calendário de vacinas">
+      <div class="subnav__inner">
       <a href="vacinas.html">Visão geral</a>
       <a href="vacinas-bebes.html">Bebês</a>
       <a href="vacinas-criancas.html">Crianças</a>
@@ -78,23 +66,49 @@
       <a href="vacinas-idosos.html">Idosos 60+</a>
       <a href="vacinas-gestantes.html">Gestantes</a>
       <a href="vacinas-ocupacional.html">Ocupacional</a>
-    </div>
-  </nav>
-    <div class="cv-wrap">
-      <img class="cv-img" src="assets/paginas/b12.png" width="1366" height="1388" alt="Vacinas para Adultos (20 a 59 anos) — Amo Vacinas — Amo Vacinas" />
-    </div>
+      </div>
+    </nav>
+    <section class="lp-section" style="padding-top:clamp(20px,3vw,36px)" aria-label="Calendário de vacinas">
+      <div class="container">
+        <div class="cal-hero reveal">
+          <img src="assets/cal-adultos.webp" alt="Vacinas para adultos: planos de 20 a 59 anos" width="1092" height="385" loading="eager" />
+        </div>
+        <div class="vpill-grid">
+          <div class="vpill reveal"><span>Dengue</span></div>
+          <div class="vpill reveal"><span>dTpa</span></div>
+          <div class="vpill reveal"><span>Febre Amarela</span></div>
+          <div class="vpill reveal"><span>Hepatite A</span></div>
+          <div class="vpill reveal"><span>Hepatite B</span></div>
+          <div class="vpill reveal"><span>Hepatite A + B</span></div>
+          <div class="vpill reveal"><span>Herpes Zoster</span></div>
+          <div class="vpill reveal"><span>HPV nonavalente</span></div>
+          <div class="vpill reveal"><span>Influenza (gripe)</span></div>
+          <div class="vpill reveal"><span>Meningocócica ACWY</span></div>
+          <div class="vpill reveal"><span>Meningocócica B</span></div>
+          <div class="vpill reveal"><span>Pneumocócica 15V ou 20V</span></div>
+          <div class="vpill reveal"><span>VSR (18 a 59 anos com comorbidades)</span></div>
+          <div class="vpill reveal"><span>Tríplice viral</span></div>
+          <div class="vpill reveal"><span>Varicela</span></div>
+        </div>
+        <p class="cal-note">Calendário orientativo, baseado nas recomendações das sociedades de imunização. Nossa equipe avalia a carteirinha e indica as doses certas para cada caso.</p>
+        <div style="text-align:center;margin-top:26px" class="reveal">
+          <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Agendar vacinas</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container site-footer__top">
       <div class="site-footer__brand">
         <a href="index.html" class="brand brand--footer" aria-label="Amo Vacinas">
-          <img src="assets/logo-amo-branca.png" alt="Amo Vacinas" width="273" height="109" loading="lazy" />
+          <img src="assets/logo-amo-branca.webp" alt="Amo Vacinas" width="273" height="109" loading="lazy" />
         </a>
         <p class="site-footer__follow">Acompanhe as nossas redes sociais</p>
         <div class="socials">
+          <a href="https://www.instagram.com/amovacinasoficial/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8a.6.6 0 0 0 .6.6h16.8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6zM8.3 18.3H5.6V9.7h2.7v8.6zM6.9 8.5a1.6 1.6 0 1 1 0-3.1 1.6 1.6 0 0 1 0 3.1zm11.4 9.8h-2.7v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H9.9V9.7h2.6v1.2h.1a2.9 2.9 0 0 1 2.6-1.4c2.8 0 3.3 1.8 3.3 4.2v4.6z"/></svg></a>
           <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.3 1.6 3.7 3.8 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.7c0 4.3-3.4 6.9-7 5.7-2.4-.8-3.6-3.3-2.9-5.8.6-2.1 2.5-3.4 4.9-3.2v2.7c-.4.1-.8.2-1.2.4-1 .5-1.4 1.5-1.1 2.5.3 1 1.4 1.6 2.4 1.3 1-.3 1.5-1.1 1.5-2.4V3h3.4z"/></svg></a>
         </div>
@@ -107,6 +121,7 @@
           <a href="trabalhe-conosco.html">Trabalhe conosco</a>
           <a href="faq.html">FAQ</a>
           <a href="imprensa.html">Área de imprensa</a>
+          <a href="politica-privacidade.html">Política de privacidade</a>
         </div>
         <div>
           <h4>Produtos e serviços</h4>
@@ -123,7 +138,7 @@
     </div>
     <div class="container site-footer__legal">
       <p><strong>SSFF VACCINE FRANCHISING LTDA</strong> · CNPJ nº 44.588.753/0001-35 · Alameda Rio Negro, 500, 3º andar, conjunto 306 - Torre 02 - Barueri - São Paulo - CEP 06454-000.</p>
-      <p>© 2022 Amo Vacinas. Todos os direitos reservados. Site desenvolvido por Targett Digital.</p>
+      <p>© 2026 Amo Vacinas. Todos os direitos reservados.</p>
     </div>
   </footer>
 

@@ -161,26 +161,29 @@
         return;
       }
 
+      // envia direto ao WhatsApp da Amo (nenhum dado fica armazenado no site)
+      const assuntos = {
+        vacina: 'Agendar uma vacina',
+        planos: 'Conhecer os planos',
+        unidade: 'Encontrar uma unidade',
+        franquia: 'Ser franqueado',
+      };
+      const linhas = [
+        'Olá! Vim pelo site da Amo Vacinas.',
+        'Nome: ' + form.elements['nome'].value.trim(),
+        'Telefone: ' + form.elements['telefone'].value.trim(),
+        'E-mail: ' + form.elements['email'].value.trim(),
+      ];
+      const assunto = form.elements['assunto'];
+      if (assunto && assunto.value)
+        linhas.push('Assunto: ' + (assuntos[assunto.value] || assunto.value));
       const ok = $('#contactOk');
-      const submitBtn = $('#contactSubmit');
-      if (submitBtn) {
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Enviando...';
-      }
-      // simulate async send
-      setTimeout(() => {
-        if (ok) ok.hidden = false;
-        if (submitBtn) {
-          submitBtn.textContent = 'Enviado com sucesso';
-        }
-        form.reset();
-        setTimeout(() => {
-          if (submitBtn) {
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'Enviar e agendar';
-          }
-        }, 2500);
-      }, 800);
+      if (ok) ok.hidden = false;
+      window.open(
+        'https://wa.me/5508007291714?text=' + encodeURIComponent(linhas.join('\n')),
+        '_blank',
+        'noopener'
+      );
     });
   }
 

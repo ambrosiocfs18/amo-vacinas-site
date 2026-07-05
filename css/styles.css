@@ -926,3 +926,53 @@ button{font-family:inherit}
   .blog-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
   .units__list{grid-template-columns:1fr}
 }
+
+/* =====================================================================
+   RODADA MOBILE/SEGURANÇA — hambúrguer à direita, calendários, LGPD
+   ===================================================================== */
+/* hambúrguer no canto direito (oposto da logo) */
+.nav-toggle{margin-left:auto}
+
+/* fotos de hero contidas no mobile */
+@media (max-width:900px){
+  .ph__media img{max-height:380px;width:100%;object-fit:cover}
+  .founders figure img,.chan figure img{max-height:420px;object-fit:cover}
+}
+
+/* calendários de vacinas por fase */
+.cal-hero{margin:0 0 clamp(26px,4vw,40px)}
+.cal-hero img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+.age-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.age-card{background:#fff;border:2px solid var(--violet-500);border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm)}
+.age-card h3{background:var(--violet-500);color:#fff;text-align:center;font-size:1.05rem;font-weight:700;padding:10px 12px}
+.age-card ul{list-style:none;margin:0;padding:16px 18px;display:grid;gap:8px}
+.age-card li{color:var(--violet-700);font-weight:700;font-size:.95rem;line-height:1.3;padding-left:14px;position:relative}
+.age-card li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;border-radius:50%;background:var(--violet-500)}
+.vpill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.vpill{background:#fff;border:2px solid var(--violet-500);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);text-align:center}
+.vpill::before{content:"";display:block;height:12px;background:var(--violet-500)}
+.vpill span{display:block;padding:20px 14px;color:var(--violet-700);font-family:'Baloo 2',cursive;font-weight:700;font-size:1.02rem;line-height:1.25}
+.cal-note{margin-top:22px;text-align:center;color:var(--muted);font-weight:600;font-size:.92rem}
+@media (max-width:1024px){.age-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.age-grid{grid-template-columns:1fr}}
+
+/* consentimento LGPD nos formulários */
+.consent{font-size:.82rem;color:var(--muted);font-weight:600;text-align:center}
+.consent a{color:var(--violet-600);text-decoration:underline}
+.lp-lead__form .consent,.blog-suggest .consent{position:relative}
+.blog-suggest .consent{color:rgba(255,255,255,.85)}
+.blog-suggest .consent a{color:#fff}
+
+/* avatar local com iniciais (sem serviços externos) */
+.review__avatar--init{
+  width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
+  background:var(--grad-primary);color:#fff;font-family:'Baloo 2',cursive;font-weight:700;font-size:1rem;
+}
+
+/* página de privacidade */
+.legal{max-width:820px;margin:0 auto;padding:clamp(36px,5vw,64px) clamp(18px,4vw,40px)}
+.legal h1{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;margin-bottom:8px}
+.legal .updated{color:var(--muted);font-weight:600;font-size:.9rem;margin-bottom:26px}
+.legal h2{font-size:1.3rem;font-weight:700;margin:28px 0 10px;color:var(--violet-700)}
+.legal p,.legal li{color:var(--muted);font-weight:500;line-height:1.7}
+.legal ul{padding-left:22px;margin:8px 0}

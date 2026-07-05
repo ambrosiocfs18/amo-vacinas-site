@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Perguntas Frequentes (FAQ) — Amo Vacinas</title>
-  <meta name="description" content="Perguntas Frequentes (FAQ) — Amo Vacinas. Amo Vacinas: vacinação humanizada para toda a família." />
+  <meta name="description" content="Dúvidas sobre vacinação, preços, pacotes, segurança e agendamento, respondidas pela Amo Vacinas." />
+  <meta property="og:title" content="Perguntas Frequentes (FAQ) — Amo Vacinas" />
+  <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
@@ -14,23 +16,11 @@
 <body>
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-  <div class="voucher-bar" id="voucherBar" role="region" aria-label="Promoção de boas-vindas">
-    <div class="voucher-bar__inner">
-      <span class="voucher-bar__gift" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-      </span>
-      <p class="voucher-bar__text"><strong>Gift Voucher · R$50</strong> em todas as vacinas na sua <strong>primeira visita!</strong></p>
-      <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--mini">Agende agora</a>
-      <button class="voucher-bar__close" id="voucherClose" aria-label="Fechar aviso">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
-      </button>
-    </div>
-  </div>
-
   <header class="site-header" id="siteHeader">
     <div class="site-header__inner">
-      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial"><img src="assets/logo-amo.png" alt="Amo Vacinas" width="300" height="122" /></a>
-
+      <a href="index.html" class="brand" aria-label="Amo Vacinas — página inicial">
+        <img src="assets/logo-amo.webp" alt="Amo Vacinas" width="300" height="122" />
+      </a>
       <nav class="nav" id="primaryNav" aria-label="Navegação principal">
         <a href="a-amo.html">A Amo</a>
         <a href="servicos.html">Serviços</a>
@@ -39,12 +29,10 @@
         <a href="unidades.html">Unidades</a>
         <a href="contato.html">Contato</a>
       </nav>
-
       <div class="site-header__cta">
         <a href="franquia.html" class="btn btn--ghost">Seja nosso franqueado</a>
         <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary">Agende agora</a>
       </div>
-
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -66,23 +54,87 @@
     </div>
   </div>
 
-  <main id="conteudo" class="cv-main">
-    <h1 class="sr-only">Perguntas Frequentes (FAQ) — Amo Vacinas</h1>
-    <div class="cv-wrap">
-      <img class="cv-img" src="assets/paginas/b6.png" width="1366" height="2878" alt="Perguntas Frequentes (FAQ) — Amo Vacinas — Amo Vacinas" />
-    </div>
+  <main id="conteudo">
+
+    <section class="lp-section" style="padding-top:clamp(20px,3vw,36px)" aria-label="Perguntas frequentes">
+      <div class="container">
+        <div class="cal-hero reveal">
+          <img src="assets/faq-hero.webp" alt="Mascotes da Amo Vacinas segurando as letras FAQ: perguntas frequentes" width="1366" height="534" loading="eager" />
+        </div>
+        <div class="lp-head reveal">
+          <h2>Perguntas <span class="text-grad">frequentes</span></h2>
+          <p>Tudo o que você precisa saber antes de vacinar, respondido pela equipe da Amo.</p>
+        </div>
+        <div class="lp-faq reveal">
+          <details class="faq-item">
+            <summary>Quais serviços a Amo Vacinas oferece? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Atendemos em nossas unidades físicas com profissionais qualificados e também realizamos vacinação em domicílio, em empresas, escolas e maternidades, conforme disponibilidade por cidade. Nossas equipes estão preparadas para atender bebês, crianças, adultos, gestantes, idosos e viajantes, com as vacinas recomendadas conforme o calendário nacional. Além da vacinação, oferecemos serviços complementares de cuidado com a saúde, como glicemia capilar, aferição de pressão arterial, aplicação do primeiro brinco em bebês, segundo e terceiro furo em adultos e aplicação de medicamentos mediante prescrição médica, sempre seguindo rigorosos protocolos de segurança.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como posso agendar uma vacinação? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Você pode agendar diretamente com a unidade desejada, por WhatsApp ou telefone, ou pelo nosso agendamento online.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quais são as áreas de atendimento? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Atendemos em diversas cidades do Brasil com nossas clínicas físicas e, onde disponível, com atendimento domiciliar. Para saber se atendemos na sua cidade, consulte nosso localizador de unidades ou fale com nosso time pelo WhatsApp.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Como são os preços das vacinas? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Os valores podem variar de acordo com o tipo de vacina escolhida e o local de atendimento (clínica, domiciliar, empresas, escolas ou maternidades). Recomendamos entrar em contato diretamente com a unidade mais próxima para receber valores atualizados, orientações personalizadas e conhecer as melhores opções de pacotes disponíveis.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quais formas de pagamento vocês aceitam? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Aceitamos cartões de crédito e débito e PIX. Consulte as condições diretamente com a sua clínica para confirmar as opções disponíveis.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Posso fazer pacotes ou combos de vacinação? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Sim! Oferecemos pacotes de vacinação pensados para facilitar o cuidado completo com a saúde, de forma prática e personalizada, incluindo pacotes para bebês e crianças, gestantes, papais e adultos, viajantes e idosos, além de pacotes personalizados, definidos de acordo com a avaliação da situação vacinal e as necessidades individuais de cada paciente. Fale com nossa equipe comercial para conhecer o catálogo completo de pacotes disponíveis e as condições especiais.</p>
+          </details>
+          <details class="faq-item">
+            <summary>As vacinas aplicadas na Amo Vacinas são seguras? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Sim. Todas as vacinas utilizadas na Amo Vacinas são provenientes de laboratórios mundiais renomados, reconhecidos internacionalmente por seus altos padrões de qualidade, segurança e eficácia. Os imunizantes são devidamente certificados e armazenados em câmaras frias com controle rigoroso de temperatura, garantindo a integridade do produto do recebimento até a aplicação. Além disso, nossa equipe é formada por profissionais qualificados e constantemente treinados, assegurando um atendimento técnico, seguro e humanizado em todas as etapas do cuidado.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Posso receber reforços ou doses adicionais na Amo Vacinas? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Sim! Caso você precise de doses de reforço ou vacinas complementares, nossa equipe faz a avaliação da sua carteira de vacinação e orienta quais vacinas estão indicadas no momento, seguindo as recomendações dos órgãos de saúde.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Preciso levar a carteirinha de vacinação? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Sim! Levar sua Carteira de Vacinação ajuda nossa equipe a conferir quais vacinas você já tomou e identificar se existe alguma dose pendente ou reforço indicado.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Quanto tempo dura a vacinação? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">O tempo pode variar conforme o tipo de vacina e o fluxo no dia, mas, em geral, a aplicação é rápida. Além disso, a Amo Vacinas oferece um atendimento personalizado, com foco na experiência, no conforto e na segurança do paciente, garantindo orientação em todas as etapas para um cuidado tranquilo e acolhedor.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Posso tomar mais de uma vacina na mesma visita? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Sim! A aplicação de mais de uma vacina na mesma visita é uma prática segura e comum. Antes da aplicação, nossa equipe avalia sua carteirinha de vacinação e orienta sobre as vacinas que podem ser administradas no mesmo atendimento, garantindo conforto e segurança.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Gestantes podem se vacinar na Amo Vacinas? <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></summary>
+            <p class="faq-body">Sim! Oferecemos vacinação para gestantes conforme o calendário de imunização da gestante, seguindo as recomendações oficiais. A vacinação protege tanto a mãe quanto o bebê, contribuindo para uma gestação mais segura e saudável.</p>
+          </details>
+        </div>
+        <div style="text-align:center;margin-top:34px" class="reveal">
+          <p style="font-family:'Baloo 2',cursive;font-weight:700;font-size:1.3rem;color:var(--violet-700)">Ainda ficou com alguma dúvida?</p>
+          <p style="color:var(--muted);font-weight:600;margin:6px 0 18px">Fale com a Amo Vacinas mais perto de você. Nossa equipe vai te responder em breve!</p>
+          <a href="https://wa.me/5508007291714?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20vacina%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--primary btn--lg">Fale com a Amo</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
     <div class="container site-footer__top">
       <div class="site-footer__brand">
         <a href="index.html" class="brand brand--footer" aria-label="Amo Vacinas">
-          <img src="assets/logo-amo-branca.png" alt="Amo Vacinas" width="273" height="109" loading="lazy" />
+          <img src="assets/logo-amo-branca.webp" alt="Amo Vacinas" width="273" height="109" loading="lazy" />
         </a>
         <p class="site-footer__follow">Acompanhe as nossas redes sociais</p>
         <div class="socials">
+          <a href="https://www.instagram.com/amovacinasoficial/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.2" fill="currentColor" stroke="none"/></svg></a>
           <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M20.4 3H3.6A.6.6 0 0 0 3 3.6v16.8a.6.6 0 0 0 .6.6h16.8a.6.6 0 0 0 .6-.6V3.6a.6.6 0 0 0-.6-.6zM8.3 18.3H5.6V9.7h2.7v8.6zM6.9 8.5a1.6 1.6 0 1 1 0-3.1 1.6 1.6 0 0 1 0 3.1zm11.4 9.8h-2.7v-4.2c0-1 0-2.3-1.4-2.3s-1.6 1.1-1.6 2.2v4.3H9.9V9.7h2.6v1.2h.1a2.9 2.9 0 0 1 2.6-1.4c2.8 0 3.3 1.8 3.3 4.2v4.6z"/></svg></a>
           <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.3 1.6 3.7 3.8 3.9v2.6c-1.3.1-2.5-.3-3.8-1v5.7c0 4.3-3.4 6.9-7 5.7-2.4-.8-3.6-3.3-2.9-5.8.6-2.1 2.5-3.4 4.9-3.2v2.7c-.4.1-.8.2-1.2.4-1 .5-1.4 1.5-1.1 2.5.3 1 1.4 1.6 2.4 1.3 1-.3 1.5-1.1 1.5-2.4V3h3.4z"/></svg></a>
         </div>
@@ -95,6 +147,7 @@
           <a href="trabalhe-conosco.html">Trabalhe conosco</a>
           <a href="faq.html">FAQ</a>
           <a href="imprensa.html">Área de imprensa</a>
+          <a href="politica-privacidade.html">Política de privacidade</a>
         </div>
         <div>
           <h4>Produtos e serviços</h4>
@@ -111,7 +164,7 @@
     </div>
     <div class="container site-footer__legal">
       <p><strong>SSFF VACCINE FRANCHISING LTDA</strong> · CNPJ nº 44.588.753/0001-35 · Alameda Rio Negro, 500, 3º andar, conjunto 306 - Torre 02 - Barueri - São Paulo - CEP 06454-000.</p>
-      <p>© 2022 Amo Vacinas. Todos os direitos reservados. Site desenvolvido por Targett Digital.</p>
+      <p>© 2026 Amo Vacinas. Todos os direitos reservados.</p>
     </div>
   </footer>
 

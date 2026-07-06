@@ -352,7 +352,7 @@ button{font-family:inherit}
 .insta__stats span{font-size:.74rem;color:var(--muted)}
 .insta__follow{display:block;text-align:center;background:var(--grad-primary);color:#fff;font-family:'Baloo 2',cursive;font-weight:600;padding:9px;border-radius:12px;margin-bottom:16px}
 .insta__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
-.insta__grid img{aspect-ratio:1;object-fit:cover;border-radius:8px}
+.insta__grid img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:8px}
 .insta__caption{color:var(--muted);font-size:.92rem;text-align:center;max-width:30ch;font-weight:600}
 
 /* ---------- FRANCHISE CTA ---------- */

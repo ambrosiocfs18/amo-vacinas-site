@@ -990,3 +990,33 @@ button{font-family:inherit}
 
 /* logo oficial no mock do Instagram */
 .insta__logo{height:38px;width:auto;margin-inline:auto;display:block}
+
+/* =====================================================================
+   CORREÇÕES — voucher fiel ao mockup, galeria e fotos em tamanho nativo
+   ===================================================================== */
+.voucher-bar{position:relative;background:linear-gradient(90deg,#CFE0F7,#DCCDF5 45%,#F6CFE9);z-index:60}
+.voucher-bar.is-hidden{display:none}
+.voucher-bar__strip{display:block;max-width:1680px;margin:0 auto}
+.voucher-bar__strip img{width:100%;height:auto;display:block}
+.voucher-bar__mini{display:none;align-items:center;gap:10px;padding:7px 46px 7px 10px}
+.voucher-bar__mini img{height:46px;width:auto;border-radius:10px}
+.voucher-bar__mini p{font-size:.85rem;font-weight:600;color:#4b3a8c;line-height:1.25}
+.voucher-bar__mini p b{font-family:'Baloo 2',cursive;font-weight:800;color:#7C3AED;font-size:1rem}
+.voucher-bar__mini .btn--mini{margin-left:auto;flex:none}
+.voucher-bar__close{
+  position:absolute;right:8px;top:50%;transform:translateY(-50%);
+  width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;
+  background:rgba(255,255,255,.85);color:#6D28D9;display:grid;place-items:center;
+  box-shadow:0 2px 8px rgba(91,33,182,.18);
+}
+@media (max-width:760px){
+  .voucher-bar__strip{display:none}
+  .voucher-bar__mini{display:flex}
+}
+
+/* galeria: nunca esticar; corte uniforme 4:5 */
+.gal img{height:auto;aspect-ratio:4/5;object-fit:cover}
+
+/* fotos dos serviços em tamanho nativo (sem upscale = sem perda) */
+.zig__row figure{max-width:520px;width:100%;justify-self:center}
+.founders figure img{max-height:600px;object-fit:cover}

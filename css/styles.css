@@ -976,3 +976,14 @@ button{font-family:inherit}
 .legal h2{font-size:1.3rem;font-weight:700;margin:28px 0 10px;color:var(--violet-700)}
 .legal p,.legal li{color:var(--muted);font-weight:500;line-height:1.7}
 .legal ul{padding-left:22px;margin:8px 0}
+
+/* galeria de fotos reais (Instagram) */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.gal img{width:100%;border-radius:var(--r-md);box-shadow:var(--shadow-sm);transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.gal a:hover img{transform:translateY(-4px);box-shadow:var(--shadow-md)}}
+@media (max-width:900px){.gal{grid-template-columns:repeat(2,1fr)}}
+.gal2{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:980px;margin:0 auto}
+.gal2 figure{margin:0}
+.gal2 img{width:100%;border-radius:var(--r-md);box-shadow:var(--shadow-sm);aspect-ratio:4/3;object-fit:cover}
+.gal2 figcaption{margin-top:10px;text-align:center;color:var(--muted);font-weight:600;font-size:.92rem}
+@media (max-width:700px){.gal2{grid-template-columns:1fr}}

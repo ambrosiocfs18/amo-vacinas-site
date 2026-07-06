@@ -987,3 +987,6 @@ button{font-family:inherit}
 .gal2 img{width:100%;border-radius:var(--r-md);box-shadow:var(--shadow-sm);aspect-ratio:4/3;object-fit:cover}
 .gal2 figcaption{margin-top:10px;text-align:center;color:var(--muted);font-weight:600;font-size:.92rem}
 @media (max-width:700px){.gal2{grid-template-columns:1fr}}
+
+/* logo oficial no mock do Instagram */
+.insta__logo{height:38px;width:auto;margin-inline:auto;display:block}

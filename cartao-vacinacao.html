@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=6" />
+  <link rel="stylesheet" href="css/styles.css?v=7" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -16,7 +16,7 @@
 
   <div class="voucher-bar" id="voucherBar" role="region" aria-label="Cupom de boas-vindas">
     <div class="voucher-bar__inner vb">
-      <img class="vb__bear" src="assets/voucher-urso.webp" alt="" width="154" height="80" loading="eager" />
+      <img class="vb__bear" src="assets/voucher-urso.webp" alt="" width="70" height="82" loading="eager" />
       <span class="vb__pill">Gift Voucher</span>
       <span class="vb__price" aria-label="50 reais em todas as vacinas">
         <sup>R$</sup><b>50</b><span class="vb__dec">,00<small>em todas as vacinas</small></span>
@@ -69,12 +69,59 @@
     </div>
   </div>
 
-  <main id="conteudo" class="cv-main">
-    <h1 class="sr-only">Seu cartão de vacinação está em dia?</h1>
-    <div class="cv-wrap">
-      <img class="cv-img" src="assets/paginas/b3.webp" width="1366" height="1057" alt="Seu cartão de vacinação está em dia? — Amo Vacinas" />
-      <a class="cv-hot" href="https://amovacinasonline.com/" target="_blank" rel="noopener" style="left:57%;top:41%;width:18%;height:9%" aria-label="Clique aqui e agende sua avaliacao"></a>
-    </div>
+  <main id="conteudo">
+
+    <section class="ph">
+      <div class="container ph__grid reveal">
+        <div>
+          <span class="eyebrow">Cartão de vacinação</span>
+          <h1>Seu cartão de vacinação <span class="text-grad">está em dia?</span></h1>
+          <p class="ph__sub">Clique no botão abaixo, escolha uma unidade <strong>Amo Vacinas</strong>, envie a foto do seu cartão de vacinação e receba uma <strong>avaliação gratuita!</strong></p>
+          <div class="ph__actions">
+            <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--primary btn--lg">Agende agora</a>
+          </div>
+        </div>
+        <div class="ph__media ph__media--bear">
+          <img src="assets/mascote-heroi.webp" alt="Mascote super-herói da Amo Vacinas" width="315" height="480" loading="eager" />
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section lp-section--tint" aria-label="Por que revisar o cartão">
+      <div class="container">
+        <div class="lp-persona">
+          <div>
+            <span class="eyebrow">Cuidado contínuo</span>
+            <h2>Revisar o cartão é um <span class="text-grad">ato de amor</span></h2>
+            <p class="lead">Revisar o cartão de vacinas é um cuidado essencial em todas as fases da vida. Ao longo do tempo, novas vacinas são incluídas, esquemas podem mudar e reforços se tornam necessários para manter a proteção ativa.</p>
+            <p class="lead"><strong>Crianças, adolescentes, adultos e idosos</strong> precisam estar com a imunização em dia para se proteger de doenças que ainda circulam e que podem trazer complicações graves. Manter o cartão atualizado é um ato de prevenção, responsabilidade e amor.</p>
+            <blockquote class="lp-quote">Vacina em dia é cuidado contínuo, em todas as fases da vida.</blockquote>
+          </div>
+          <figure>
+            <div class="cvcard">
+              <img src="assets/mascote-adulta.webp" alt="Mascote da Amo Vacinas apresentando o cartão de vacinação" width="290" height="484" />
+              <div class="cvcard__list">
+                <strong>Vacinas recomendadas para adultos</strong>
+                <p>Tríplice Viral, Influenza (Gripe), dTpa, Hepatite A, Hepatite B, Hepatite A e B, Meningocócica ACWY, Meningocócica B, Febre Amarela, HPV, Pneumocócicas, Herpes Zóster, Varicela, VSR e Dengue.</p>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="lp-section" aria-label="Agende sua avaliação">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <h2>Envie a foto do seu cartão e ganhe uma avaliação gratuita</h2>
+            <p>Nossa equipe confere quais vacinas estão pendentes e monta o melhor plano para você e sua família.</p>
+          </div>
+          <a href="https://amovacinasonline.com/" target="_blank" rel="noopener" class="btn btn--white btn--lg">Agende agora</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -124,6 +171,6 @@
     <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3a12.4 12.4 0 0 0 5.8 1.5c7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.4-10.2 5.7 0 10.3 4.6 10.3 10.2 0 5.7-4.6 10.2-10.3 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
   </a>
 
-  <script src="js/script.js?v=6" defer></script>
+  <script src="js/script.js?v=7" defer></script>
 </body>
 </html>

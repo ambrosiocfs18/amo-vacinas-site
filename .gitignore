@@ -19,3 +19,17 @@ Thumbs.db
 
 .vercel
 .env*
+
+# Material-fonte bruto (originais pesados; o site usa só os .webp em assets/)
+Ambientes/
+Banners 2/
+Banners 3/
+Banners 4/
+Banners slide site/
+Banners vacinas/
+Bonecos/
+FOTO DE CLIENTES/
+Vídeos/
+Banner Site.png
+Cuidado que vai do nascer até a vida adulta.png
+Insira_familia_*.jpg

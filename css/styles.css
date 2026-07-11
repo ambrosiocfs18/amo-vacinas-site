@@ -1149,3 +1149,11 @@ button{font-family:inherit}
   .press-comm{grid-template-columns:1fr}
   .press-media{grid-template-columns:1fr}
 }
+
+/* =====================================================================
+   FIX — imagens de conteúdo mantêm proporção natural (evita distorção
+   quando os atributos width/height do HTML não batem com o slot)
+   ===================================================================== */
+.ph__media img,.zig__row img,.chan figure img,.founders figure img,
+.lp-persona figure img,.lp-awards img,.blog-feature img,.cal-hero img,
+.band-img img,.press-comm__logo img{height:auto}

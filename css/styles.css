@@ -1157,3 +1157,45 @@ button{font-family:inherit}
 .ph__media img,.zig__row img,.chan figure img,.founders figure img,
 .lp-persona figure img,.lp-awards img,.blog-feature img,.cal-hero img,
 .band-img img,.press-comm__logo img{height:auto}
+
+/* =====================================================================
+   HERO "SOMOS A AMO VACINAS" (A Amo) — nativo, fiel ao banner original
+   ===================================================================== */
+.ph--somos{background:linear-gradient(100deg,#BEE1FE 0%,#ECE6FB 45%,#F9D3F2 100%)}
+.somos-hero__title{
+  font-family:'Baloo 2',cursive;font-weight:500;color:var(--violet-500);
+  font-size:clamp(2.1rem,4.6vw,3.3rem);line-height:1.08;letter-spacing:-.5px;
+}
+.somos-hero__title strong{font-weight:800;color:var(--violet-700)}
+.somos-hero__sub{
+  margin-top:12px;font-family:'Baloo 2',cursive;font-weight:600;color:var(--violet-600);
+  font-size:clamp(1.1rem,2.1vw,1.4rem);
+}
+.somos-hero__stars{display:flex;align-items:center;gap:14px;margin:22px 0}
+.somos-hero__stars svg{flex:none;color:#FBBF24}
+.somos-hero__line{flex:1;max-width:110px;height:1px;background:linear-gradient(90deg,transparent,rgba(124,58,237,.4))}
+.somos-hero__line:last-child{background:linear-gradient(90deg,rgba(124,58,237,.4),transparent)}
+.somos-hero__claim{color:var(--indigo-500);font-weight:600;font-size:clamp(1.1rem,2.1vw,1.45rem)}
+.somos-hero__btn{
+  font-family:'Baloo 2',cursive;font-weight:600;font-size:1.05rem;color:#fff;
+  background:linear-gradient(180deg,#9BA3FA,#7F88F5);border:2px solid #fff;border-radius:999px;
+  padding:13px 30px;box-shadow:0 8px 20px rgba(99,102,241,.32);line-height:1;
+  transition:transform .16s var(--ease-out),box-shadow .3s var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){.somos-hero__btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(99,102,241,.4)}}
+.somos-hero__btn:active{transform:scale(.97)}
+
+/* imagem "sangrando" para a direita, com halo, sem card/sombra */
+.ph--somos .ph__media--bleed{position:relative;overflow:visible}
+.ph--somos .ph__media--bleed::before{
+  content:"";position:absolute;inset:-8% -6%;z-index:0;
+  background:radial-gradient(closest-side,rgba(255,255,255,.85),rgba(255,255,255,0) 72%);
+}
+.ph--somos .ph__media--bleed img{
+  position:relative;z-index:1;display:block;width:114%;max-width:114%;margin-left:-14%;
+  border-radius:0;box-shadow:none;
+}
+@media (max-width:900px){
+  .ph--somos .ph__media--bleed::before{inset:-4% 6%}
+  .ph--somos .ph__media--bleed img{width:100%;max-width:100%;margin-left:0}
+}

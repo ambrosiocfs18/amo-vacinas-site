@@ -268,7 +268,7 @@ button{font-family:inherit}
 
 /* layout A: mascot + text + cta */
 .promo--violet{grid-template-columns:auto 1fr auto;background:linear-gradient(120deg,#F1E9FF,#E4F0FF)}
-.promo--violet .mascot{width:118px;height:118px;filter:drop-shadow(0 12px 18px rgba(124,58,237,.28))}
+.promo--violet .promo__mascot img{width:auto;height:150px;object-fit:contain;filter:drop-shadow(0 12px 18px rgba(124,58,237,.28))}
 .promo--violet .promo__cta{color:var(--violet-700)}
 
 /* layout B: photo + text + cta */

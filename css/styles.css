@@ -1331,4 +1331,4 @@ button{font-family:inherit}
 .hero-solo-sec{background:linear-gradient(180deg,#FBFAFF 0%,#F4F0FF 100%);padding:clamp(14px,2.5vw,26px) 0 clamp(8px,1.6vw,16px)}
 .hero-solo{display:block;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out)}
 .hero-solo img{width:100%;height:auto;display:block}
-@media (hover:hover) and (pointer:fine){.hero-solo:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}}
+@media (hover:hover) and (pointer:fine){a.hero-solo:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}}

@@ -382,6 +382,16 @@ button{font-family:inherit}
 .field{display:flex;flex-direction:column;gap:6px}
 .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .field label{font-family:'Baloo 2',cursive;font-weight:600;font-size:.95rem;color:var(--ink)}
+.field textarea{
+  border:1.5px solid var(--lilac-200);border-radius:12px;padding:12px 14px;
+  font-family:'Nunito',sans-serif;font-size:1rem;color:var(--ink);background:#FBFAFF;
+  resize:vertical;min-height:96px;
+}
+.field textarea:focus{outline:none;border-color:var(--violet-500);background:#fff}
+.field textarea::placeholder{color:#A9A4C7}
+.cv-note{display:flex;gap:10px;align-items:flex-start;font-size:.9rem;font-weight:600;color:var(--muted);line-height:1.5;background:var(--lilac-50);border:1px solid var(--lilac-200);border-radius:14px;padding:12px 14px}
+.cv-note svg{flex:none;color:var(--violet-600);margin-top:1px}
+.cv-note strong{color:var(--violet-700)}
 .field input,.field select{
   font-family:inherit;font-size:1rem;padding:13px 16px;border-radius:14px;
   border:2px solid var(--lilac-200);background:var(--lilac-50);color:var(--ink);transition:border-color .2s var(--ease),background .2s var(--ease);

@@ -1360,6 +1360,7 @@ button{font-family:inherit}
 .mnav__caret{transition:transform .25s var(--ease);flex:none}
 .mnav__trigger[aria-expanded="true"] .mnav__caret{transform:rotate(180deg)}
 .mobile-menu .mnav__panel{display:flex;flex-direction:column;padding:2px 10px 8px 22px;gap:1px}
+.mobile-menu .mnav__panel[hidden]{display:none}
 .mobile-menu .mnav__panel a{
   font-family:'Nunito',sans-serif;font-weight:700;font-size:.98rem;color:var(--muted);
   padding:9px 10px;border-radius:10px;

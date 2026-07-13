@@ -842,17 +842,6 @@ button{font-family:inherit}
 .zig__row li{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-weight:600}
 .zig__row li svg{flex:none;color:#fff;background:var(--grad-primary);border-radius:50%;padding:4px;width:22px;height:22px;margin-top:2px}
 
-/* tiles de serviço (grade de ícones, âncoras) */
-.tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.tile{
-  display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;
-  background:#fff;border:1.5px solid var(--lilac-200);border-radius:var(--r-md);
-  padding:22px 14px;font-family:'Baloo 2',cursive;font-weight:600;color:var(--violet-700);
-  transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out),border-color .2s var(--ease-out);
-}
-.tile svg{color:var(--violet-600)}
-@media (hover:hover) and (pointer:fine){.tile:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--violet-400)}}
-@media (max-width:900px){.tiles{grid-template-columns:repeat(2,1fr)}}
 
 /* lista de vacinas */
 .vlist{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
@@ -1332,3 +1321,47 @@ button{font-family:inherit}
 .hero-solo{display:block;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out)}
 .hero-solo img{width:100%;height:auto;display:block}
 @media (hover:hover) and (pointer:fine){a.hero-solo:hover{transform:translateY(-2px);box-shadow:var(--shadow-lg)}}
+
+/* =====================================================================
+   SUBMENU "SERVIÇOS" — dropdown desktop + acordeão mobile
+   ===================================================================== */
+/* desktop: dropdown ao passar o mouse / focar */
+.nav__item{position:relative}
+.nav__link{display:inline-flex;align-items:center;gap:5px}
+.nav__caret{transition:transform .2s var(--ease);flex:none}
+.nav__item:hover .nav__caret,.nav__item:focus-within .nav__caret{transform:rotate(180deg)}
+.nav__dropdown{
+  position:absolute;top:100%;left:0;transform:translateY(8px);min-width:236px;
+  background:#fff;border:1px solid var(--lilac-100);border-radius:var(--r-md);
+  box-shadow:var(--shadow-lg);padding:8px;display:flex;flex-direction:column;gap:1px;
+  opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .18s var(--ease-out),transform .18s var(--ease-out),visibility .18s;
+  z-index:60;
+}
+.nav__item:hover .nav__dropdown,.nav__item:focus-within .nav__dropdown{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translateY(4px);
+}
+.nav__dropdown a{
+  font-family:'Nunito',sans-serif;font-weight:700;font-size:.92rem;color:var(--ink);
+  padding:9px 12px;border-radius:10px;white-space:nowrap;
+}
+.nav__dropdown a::after{display:none}
+.nav__dropdown a:hover{background:var(--lilac-50);color:var(--violet-600)}
+
+/* mobile: acordeão inline */
+.mnav__trigger{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:8px;
+  font-family:'Baloo 2',cursive;font-size:1.2rem;padding:12px 10px;border-radius:12px;color:var(--ink);
+  background:transparent;border:none;cursor:pointer;text-align:left;
+}
+.mnav__trigger:hover{background:var(--lilac-50);color:var(--violet-600)}
+.mnav__trigger.is-active{color:var(--violet-600)}
+.mnav__trigger:focus-visible{outline:3px solid var(--violet-400);outline-offset:2px}
+.mnav__caret{transition:transform .25s var(--ease);flex:none}
+.mnav__trigger[aria-expanded="true"] .mnav__caret{transform:rotate(180deg)}
+.mobile-menu .mnav__panel{display:flex;flex-direction:column;padding:2px 10px 8px 22px;gap:1px}
+.mobile-menu .mnav__panel a{
+  font-family:'Nunito',sans-serif;font-weight:700;font-size:.98rem;color:var(--muted);
+  padding:9px 10px;border-radius:10px;
+}
+.mobile-menu .mnav__panel a:hover{background:var(--lilac-50);color:var(--violet-600)}

@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=14" />
+  <link rel="stylesheet" href="css/styles.css?v=15" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -39,7 +39,19 @@
       </a>
       <nav class="nav" id="primaryNav" aria-label="Navegação principal">
         <a href="a-amo.html">Amo</a>
-        <a href="servicos.html" class="is-active">Serviços</a>
+        <div class="nav__item">
+            <a href="servicos.html" class="nav__link is-active">Serviços<svg class="nav__caret" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></a>
+            <div class="nav__dropdown" role="menu" aria-label="Serviços">
+              <a href="servicos.html#pressao" role="menuitem">Aferição de pressão</a>
+              <a href="servicos.html#medicamentos" role="menuitem">Aplicação de medicamentos</a>
+              <a href="servicos.html#glicemia" role="menuitem">Glicemia capilar</a>
+              <a href="servicos.html#brincos" role="menuitem">Aplicação de brincos</a>
+              <a href="servicos.html#domiciliar" role="menuitem">Vacinação domiciliar</a>
+              <a href="servicos.html#escolar" role="menuitem">Vacinação escolar</a>
+              <a href="servicos.html#empresarial" role="menuitem">Vacinação empresarial</a>
+              <a href="servicos.html#planos" role="menuitem">Planos programados</a>
+            </div>
+          </div>
         <a href="vacinas.html">Vacinas</a>
         <a href="blog.html">Blog</a>
         <a href="unidades.html">Unidades</a>
@@ -58,7 +70,20 @@
   <div class="mobile-menu" id="mobileMenu" hidden>
     <nav aria-label="Navegação mobile">
         <a href="a-amo.html">Amo</a>
-        <a href="servicos.html" class="is-active">Serviços</a>
+        <div class="mnav__item">
+        <button type="button" class="mnav__trigger is-active" aria-expanded="false" aria-controls="mnavServicos">Serviços<svg class="mnav__caret" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button>
+        <div class="mnav__panel" id="mnavServicos" hidden>
+          <a href="servicos.html">Ver todos os serviços</a>
+          <a href="servicos.html#pressao">Aferição de pressão</a>
+          <a href="servicos.html#medicamentos">Aplicação de medicamentos</a>
+          <a href="servicos.html#glicemia">Glicemia capilar</a>
+          <a href="servicos.html#brincos">Aplicação de brincos</a>
+          <a href="servicos.html#domiciliar">Vacinação domiciliar</a>
+          <a href="servicos.html#escolar">Vacinação escolar</a>
+          <a href="servicos.html#empresarial">Vacinação empresarial</a>
+          <a href="servicos.html#planos">Planos programados</a>
+        </div>
+      </div>
         <a href="vacinas.html">Vacinas</a>
         <a href="blog.html">Blog</a>
         <a href="unidades.html">Unidades</a>
@@ -79,45 +104,6 @@
           <img src="assets/hero-servicos.webp" width="1099" height="148" fetchpriority="high"
                alt="Programe sua vacinação e aproveite todos os serviços na data certa! Agende agora." />
         </a>
-      </div>
-    </section>
-
-    <section class="lp-section" aria-label="Todos os serviços">
-      <div class="container">
-        <div class="tiles">
-          <a class="tile reveal" href="#pressao">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 2-1 3.5-2 5l-5 8-5-8c-1-1.5-2-3-2-5a7 7 0 0 1 7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-            Aferição de pressão
-          </a>
-          <a class="tile reveal" href="#medicamentos">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 2 4 4"/><path d="m17 7 3-3"/><path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5"/><path d="m9 11 4 4"/><path d="m5 19-3 3"/></svg>
-            Aplicação de medicamentos
-          </a>
-          <a class="tile reveal" href="#glicemia">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="16" rx="3"/><circle cx="12" cy="8" r="2"/><path d="M12 18v4"/></svg>
-            Glicemia capilar
-          </a>
-          <a class="tile reveal" href="#brincos">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6.5 4.5-6.5 12"/><circle cx="12.5" cy="21" r="1"/></svg>
-            Aplicação de brincos
-          </a>
-          <a class="tile reveal" href="#domiciliar">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
-            Vacinação domiciliar
-          </a>
-          <a class="tile reveal" href="#escolar">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            Vacinação escolar
-          </a>
-          <a class="tile reveal" href="#empresarial">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-            Vacinação empresarial
-          </a>
-          <a class="tile reveal" href="#planos">
-            <svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="m9 16 2 2 4-4"/></svg>
-            Planos programados
-          </a>
-        </div>
       </div>
     </section>
 
@@ -244,6 +230,6 @@
     <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3a12.4 12.4 0 0 0 5.8 1.5c7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.4-10.2 5.7 0 10.3 4.6 10.3 10.2 0 5.7-4.6 10.2-10.3 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
   </a>
 
-  <script src="js/script.js?v=14" defer></script>
+  <script src="js/script.js?v=15" defer></script>
 </body>
 </html>

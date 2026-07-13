@@ -57,6 +57,8 @@
     var done = function () {
       mobileMenu.hidden = true;
       mobileMenu.classList.remove('is-closing');
+      $$('.mnav__panel', mobileMenu).forEach((p) => { p.hidden = true; });
+      $$('.mnav__trigger', mobileMenu).forEach((b) => b.setAttribute('aria-expanded', 'false'));
       mobileMenu.removeEventListener('animationend', done);
       clearTimeout(t);
     };
@@ -74,6 +76,17 @@
       closeMenu();
       closeModal();
     }
+  });
+
+  /* ---------- Submenu "Serviços" (acordeão mobile) ---------- */
+  $$('.mnav__trigger').forEach((btn) => {
+    const panel = document.getElementById(btn.getAttribute('aria-controls'));
+    if (!panel) return;
+    btn.addEventListener('click', () => {
+      const open = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+      panel.hidden = open;
+    });
   });
 
   /* ---------- Scroll reveal ---------- */

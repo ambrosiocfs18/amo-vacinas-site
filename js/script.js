@@ -34,6 +34,7 @@
   function openMenu() {
     mobileMenu.classList.remove('is-closing');
     mobileMenu.hidden = false;
+    mobileMenu.scrollTop = 0;
     mobileMenu.classList.add('is-open');
     navToggle.setAttribute('aria-expanded', 'true');
     navToggle.setAttribute('aria-label', 'Fechar menu');

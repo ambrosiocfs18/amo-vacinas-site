@@ -175,7 +175,7 @@ button{font-family:inherit}
 .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7.6px) rotate(-45deg)}
 
 /* mobile menu */
-.mobile-menu{position:fixed;inset:0 0 0 auto;top:0;width:min(320px,86vw);height:100dvh;background:#fff;z-index:45;box-shadow:var(--shadow-lg);padding:90px 26px 30px}
+.mobile-menu{position:fixed;inset:0 0 0 auto;top:0;width:min(320px,86vw);height:100vh;height:100dvh;background:#fff;z-index:45;box-shadow:var(--shadow-lg);padding:90px 26px 30px;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
 .mobile-menu.is-open{animation:menuIn .34s var(--ease) both}
 .mobile-menu.is-closing{animation:menuOut .28s var(--ease) both}
 @keyframes menuIn{from{transform:translateX(100%)}to{transform:translateX(0)}}

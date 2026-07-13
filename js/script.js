@@ -32,6 +32,8 @@
   let backdrop = null;
 
   function openMenu() {
+    mobileMenu.classList.remove('is-closing');
+    mobileMenu.hidden = false;
     mobileMenu.classList.add('is-open');
     navToggle.setAttribute('aria-expanded', 'true');
     navToggle.setAttribute('aria-label', 'Fechar menu');
@@ -45,11 +47,21 @@
     requestAnimationFrame(() => backdrop.classList.add('is-open'));
   }
   function closeMenu() {
+    if (!mobileMenu.classList.contains('is-open')) return;
     mobileMenu.classList.remove('is-open');
+    mobileMenu.classList.add('is-closing');
     navToggle.setAttribute('aria-expanded', 'false');
     navToggle.setAttribute('aria-label', 'Abrir menu');
     document.body.style.overflow = '';
     if (backdrop) backdrop.classList.remove('is-open');
+    var done = function () {
+      mobileMenu.hidden = true;
+      mobileMenu.classList.remove('is-closing');
+      mobileMenu.removeEventListener('animationend', done);
+      clearTimeout(t);
+    };
+    mobileMenu.addEventListener('animationend', done);
+    var t = setTimeout(done, 420);
   }
   if (navToggle && mobileMenu) {
     navToggle.addEventListener('click', () => {

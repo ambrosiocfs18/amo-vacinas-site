@@ -1052,72 +1052,31 @@ button{font-family:inherit}
 .founders figure img{max-height:600px;object-fit:cover}
 
 /* =====================================================================
-   VOUCHER NATIVO — réplica 1:1 do banner (cores extraídas da arte)
+   VOUCHER — arte completa (100% da largura, sem cortes) + CTA nativo
+   sobreposto exatamente no botão da arte (medido: 83.4%/29% 11.7%x40%)
    ===================================================================== */
-.voucher-bar{background:linear-gradient(90deg,#AEDAFF 0%,#F5F4FF 50%,#FBC9FE 100%);overflow:hidden}
-.voucher-bar__strip,.voucher-bar__mini,.voucher-bar__banner{display:none}
-.voucher-bar::before,.voucher-bar::after{
-  content:"";position:absolute;top:0;bottom:0;width:340px;z-index:0;pointer-events:none;
-  background:url("../assets/vb-hearts.svg") no-repeat;background-size:auto 108%;
-}
-.voucher-bar::before{left:0;background-position:left center;opacity:.6}
-.voucher-bar::after{right:0;background-position:right center;transform:scaleX(-1);opacity:.32}
-.vb{
-  position:relative;z-index:1;
-  max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:center;
-  gap:clamp(10px,2.1vw,28px);padding:6px 52px 6px 12px;min-height:88px;
-}
-.vb__bear{
-  height:78px;width:auto;flex:none;align-self:center;margin:0 2px 0 0;
-  filter:drop-shadow(0 5px 9px rgba(91,33,182,.24));
-}
-.vb__pill{
-  flex:none;font-family:'Baloo 2',cursive;font-weight:800;font-size:1.15rem;color:#fff;
-  background:linear-gradient(180deg,#93A6F8,#7C8AE8);border:2px solid rgba(255,255,255,.55);border-radius:999px;
-  padding:8px 22px;box-shadow:0 5px 13px rgba(91,86,220,.3),inset 0 1px 2px rgba(255,255,255,.5);
-  text-shadow:0 1px 2px rgba(74,60,160,.35);letter-spacing:.2px;
-}
-.vb__price{display:inline-flex;align-items:flex-start;line-height:.9;color:#9B5CC6;flex:none}
-.vb__price sup{font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;margin-top:3px}
-.vb__price b{font-family:'Baloo 2',cursive;font-weight:800;font-size:3rem;letter-spacing:-1.5px}
-.vb__dec{display:inline-flex;flex-direction:column;align-items:flex-start;margin-top:2px}
-.vb__dec{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.5rem}
-.vb__dec small{font-family:'Nunito';font-weight:800;font-size:.52rem;letter-spacing:.05em;text-transform:uppercase;color:#9B5CC6;margin-top:1px;line-height:1.1}
-.vb__text{font-family:'Baloo 2',cursive;font-weight:500;font-size:1.5rem;color:#9B5CC6;line-height:1;flex:none}
-.vb__text strong{display:block;font-weight:800;color:#8B4BC2}
-.vb__ticket{
-  flex:none;position:relative;transform:rotate(-8deg);
-  background:linear-gradient(150deg,#8397FB,#6E80EE);color:#fff;border-radius:11px;
-  padding:8px 18px;font-family:'Baloo 2',cursive;font-weight:800;font-size:1.15rem;line-height:1;
-  box-shadow:0 7px 16px rgba(91,33,182,.3);text-align:center;
-}
-.vb__ticket b{display:block;font-size:.72rem;letter-spacing:.1em;color:#F7CBEC;margin-bottom:2px}
-.vb__ticket::before{
-  content:"";position:absolute;inset:-6px -5px -9px 6px;z-index:-1;border-radius:11px;
-  background:#C9B6EE;transform:rotate(6deg);
-}
-.vb__btn{
-  flex:none;font-family:'Baloo 2',cursive;font-weight:600;font-size:1.12rem;color:#fff;
-  background:linear-gradient(180deg,#9AA6FA,#7C86EE);border:2px solid rgba(255,255,255,.72);border-radius:999px;
-  padding:11px 28px;box-shadow:0 7px 17px rgba(99,102,241,.34),inset 0 1px 2px rgba(255,255,255,.4);line-height:1;white-space:nowrap;
+.voucher-bar{background:linear-gradient(90deg,#AEDAFF 0%,#F5F4FF 50%,#FBC9FE 100%)}
+.voucher-bar__strip,.voucher-bar__mini{display:none}
+.voucher-bar__art{position:relative;line-height:0}
+.voucher-bar__art img{display:block;width:100%;height:auto}
+.voucher-bar__cta{
+  position:absolute;left:83.35%;top:27%;width:11.85%;height:43%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Baloo 2',cursive;font-weight:600;color:#fff;
+  font-size:clamp(6px,1.4vw,19px);line-height:1;white-space:nowrap;
+  background:linear-gradient(180deg,#9AA6FA,#7C86EE);
+  border:.14em solid rgba(255,255,255,.78);border-radius:999px;
+  box-shadow:0 .35em .9em rgba(99,102,241,.38),inset 0 .08em .16em rgba(255,255,255,.4);
   transition:transform .16s var(--ease-out),box-shadow .3s var(--ease-out);
 }
-.vb__btn:active{transform:scale(.97)}
-@media (hover:hover) and (pointer:fine){.vb__btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(99,102,241,.42)}}
-@media (max-width:1120px){.vb__ticket{display:none}}
-@media (max-width:940px){.vb__pill{display:none}}
-@media (max-width:760px){
-  .voucher-bar::before,.voucher-bar::after{width:150px}
-  .vb{gap:9px;padding:5px 44px 5px 8px;min-height:58px}
-  .vb__bear{height:48px}
-  .vb__price b{font-size:2rem}
-  .vb__price sup{font-size:.8rem}
-  .vb__dec{font-size:1rem}
-  .vb__dec small{display:none}
-  .vb__text{font-size:1.05rem}
-  .vb__btn{padding:9px 17px;font-size:.92rem}
+.voucher-bar__cta:active{transform:scale(.97)}
+@media (hover:hover) and (pointer:fine){
+  .voucher-bar__cta:hover{transform:translateY(-1px);box-shadow:0 .5em 1.2em rgba(99,102,241,.46)}
 }
-@media (max-width:430px){.vb__bear{display:none}.vb__text{font-size:.98rem}.vb__price b{font-size:1.8rem}}
+@media (max-width:760px){
+  .voucher-bar__close{width:20px;height:20px;right:5px}
+  .voucher-bar__close svg{width:11px;height:11px}
+}
 
 /* =====================================================================
    NATIVIZAÇÃO — cartão de vacinação, imprensa e trabalhe conosco

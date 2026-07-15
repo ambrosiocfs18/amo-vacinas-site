@@ -1052,73 +1052,72 @@ button{font-family:inherit}
 .founders figure img{max-height:600px;object-fit:cover}
 
 /* =====================================================================
-   VOUCHER NATIVO — reconstrução fiel do mockup (Canva), sem imagem de fundo
+   VOUCHER NATIVO — réplica 1:1 do banner (cores extraídas da arte)
    ===================================================================== */
-.voucher-bar{background:linear-gradient(90deg,#C9E2F8 0%,#DBCDF7 48%,#F6CBEA 100%);overflow:hidden}
+.voucher-bar{background:linear-gradient(90deg,#AEDAFF 0%,#F5F4FF 50%,#FBC9FE 100%);overflow:hidden}
 .voucher-bar__strip,.voucher-bar__mini,.voucher-bar__banner{display:none}
-.voucher-bar::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:min(440px,42%);z-index:0;pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='64' viewBox='0 0 24 24'%3E%3Cpath d='M12 20s-6.6-4-8.8-8.2C1.7 9 3.2 6 6.2 6c1.9 0 3 1.3 3.8 2.4C10.9 7.3 12 6 13.9 6c3 0 4.5 3 2.9 5.8C14.6 16 12 20 12 20z' fill='none' stroke='%23ffffff' stroke-width='1.1'/%3E%3C/svg%3E");
-  background-size:72px 64px;opacity:.5;
-  -webkit-mask-image:linear-gradient(90deg,#000 48%,transparent);mask-image:linear-gradient(90deg,#000 48%,transparent);
+.voucher-bar::before,.voucher-bar::after{
+  content:"";position:absolute;top:0;bottom:0;width:340px;z-index:0;pointer-events:none;
+  background:url("../assets/vb-hearts.svg") no-repeat;background-size:auto 108%;
 }
+.voucher-bar::before{left:0;background-position:left center;opacity:.6}
+.voucher-bar::after{right:0;background-position:right center;transform:scaleX(-1);opacity:.32}
 .vb{
   position:relative;z-index:1;
   max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:center;
-  gap:clamp(10px,2.2vw,26px);padding:7px 52px 7px 12px;min-height:86px;
+  gap:clamp(10px,2.1vw,28px);padding:6px 52px 6px 12px;min-height:88px;
 }
 .vb__bear{
-  height:72px;width:auto;flex:none;align-self:center;margin:0 2px 0 0;
-  filter:drop-shadow(0 5px 8px rgba(91,33,182,.22));
+  height:78px;width:auto;flex:none;align-self:center;margin:0 2px 0 0;
+  filter:drop-shadow(0 5px 9px rgba(91,33,182,.24));
 }
 .vb__pill{
-  flex:none;font-family:'Baloo 2',cursive;font-weight:700;font-size:1.05rem;color:#fff;
-  background:linear-gradient(180deg,#A9B0F6,#8E86EF);border:2px solid rgba(255,255,255,.92);border-radius:999px;
-  padding:7px 20px;box-shadow:0 4px 12px rgba(109,40,217,.22);text-shadow:0 1px 2px rgba(91,33,182,.28);
+  flex:none;font-family:'Baloo 2',cursive;font-weight:800;font-size:1.15rem;color:#fff;
+  background:linear-gradient(180deg,#93A6F8,#7C8AE8);border:2px solid rgba(255,255,255,.55);border-radius:999px;
+  padding:8px 22px;box-shadow:0 5px 13px rgba(91,86,220,.3),inset 0 1px 2px rgba(255,255,255,.5);
+  text-shadow:0 1px 2px rgba(74,60,160,.35);letter-spacing:.2px;
 }
-.vb__price{display:inline-flex;align-items:flex-start;line-height:1;color:#7C3AED;flex:none}
-.vb__price sup{font-family:'Baloo 2',cursive;font-weight:800;font-size:.85rem;margin-top:4px}
-.vb__price b{font-family:'Baloo 2',cursive;font-weight:800;font-size:2.35rem;letter-spacing:-1px}
-.vb__dec{display:inline-flex;flex-direction:column;align-items:flex-start;margin-top:3px}
-.vb__dec{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.15rem}
-.vb__dec small{font-family:'Nunito';font-weight:800;font-size:.5rem;letter-spacing:.06em;text-transform:uppercase;color:#8B5CF6;margin-top:2px}
-.vb__text{font-family:'Baloo 2',cursive;font-weight:500;font-size:1.25rem;color:#8B5CF6;line-height:1.05;flex:none}
-.vb__text strong{display:block;font-weight:700;color:#7C3AED}
+.vb__price{display:inline-flex;align-items:flex-start;line-height:.9;color:#9B5CC6;flex:none}
+.vb__price sup{font-family:'Baloo 2',cursive;font-weight:800;font-size:1rem;margin-top:3px}
+.vb__price b{font-family:'Baloo 2',cursive;font-weight:800;font-size:3rem;letter-spacing:-1.5px}
+.vb__dec{display:inline-flex;flex-direction:column;align-items:flex-start;margin-top:2px}
+.vb__dec{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.5rem}
+.vb__dec small{font-family:'Nunito';font-weight:800;font-size:.52rem;letter-spacing:.05em;text-transform:uppercase;color:#9B5CC6;margin-top:1px;line-height:1.1}
+.vb__text{font-family:'Baloo 2',cursive;font-weight:500;font-size:1.5rem;color:#9B5CC6;line-height:1;flex:none}
+.vb__text strong{display:block;font-weight:800;color:#8B4BC2}
 .vb__ticket{
-  flex:none;position:relative;transform:rotate(-5deg);
-  background:linear-gradient(135deg,#8F86F7,#7C6CEF);color:#fff;border-radius:10px;
-  padding:7px 16px;font-family:'Baloo 2',cursive;font-weight:800;font-size:.95rem;line-height:1.05;
-  box-shadow:0 6px 14px rgba(91,33,182,.28);text-align:center;
+  flex:none;position:relative;transform:rotate(-8deg);
+  background:linear-gradient(150deg,#8397FB,#6E80EE);color:#fff;border-radius:11px;
+  padding:8px 18px;font-family:'Baloo 2',cursive;font-weight:800;font-size:1.15rem;line-height:1;
+  box-shadow:0 7px 16px rgba(91,33,182,.3);text-align:center;
 }
-.vb__ticket b{display:block;font-size:.8rem;letter-spacing:.08em;color:#FBCFE8}
-.vb__ticket::before,.vb__ticket::after{
-  content:"";position:absolute;top:50%;width:10px;height:10px;border-radius:50%;
-  background:#E9DAF4;transform:translateY(-50%);
+.vb__ticket b{display:block;font-size:.72rem;letter-spacing:.1em;color:#F7CBEC;margin-bottom:2px}
+.vb__ticket::before{
+  content:"";position:absolute;inset:-6px -5px -9px 6px;z-index:-1;border-radius:11px;
+  background:#C9B6EE;transform:rotate(6deg);
 }
-.vb__ticket::before{left:-5px}
-.vb__ticket::after{right:-5px}
 .vb__btn{
-  flex:none;font-family:'Baloo 2',cursive;font-weight:600;font-size:1rem;color:#fff;
-  background:linear-gradient(180deg,#9BA3FA,#7F88F5);border:2px solid #fff;border-radius:999px;
-  padding:9px 24px;box-shadow:0 6px 16px rgba(99,102,241,.32);line-height:1;white-space:nowrap;
+  flex:none;font-family:'Baloo 2',cursive;font-weight:600;font-size:1.12rem;color:#fff;
+  background:linear-gradient(180deg,#9AA6FA,#7C86EE);border:2px solid rgba(255,255,255,.72);border-radius:999px;
+  padding:11px 28px;box-shadow:0 7px 17px rgba(99,102,241,.34),inset 0 1px 2px rgba(255,255,255,.4);line-height:1;white-space:nowrap;
   transition:transform .16s var(--ease-out),box-shadow .3s var(--ease-out);
 }
 .vb__btn:active{transform:scale(.97)}
-@media (hover:hover) and (pointer:fine){.vb__btn:hover{transform:translateY(-1px);box-shadow:0 9px 20px rgba(99,102,241,.4)}}
-@media (max-width:1080px){.vb__ticket{display:none}}
-@media (max-width:900px){.vb__pill{display:none}}
+@media (hover:hover) and (pointer:fine){.vb__btn:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(99,102,241,.42)}}
+@media (max-width:1120px){.vb__ticket{display:none}}
+@media (max-width:940px){.vb__pill{display:none}}
 @media (max-width:760px){
-  .voucher-bar::before{width:200px}
-  .vb{gap:8px;padding:5px 44px 5px 8px;min-height:56px}
-  .vb__bear{height:46px}
-  .vb__price b{font-size:1.7rem}
-  .vb__price sup{font-size:.7rem}
-  .vb__dec{font-size:.9rem}
+  .voucher-bar::before,.voucher-bar::after{width:150px}
+  .vb{gap:9px;padding:5px 44px 5px 8px;min-height:58px}
+  .vb__bear{height:48px}
+  .vb__price b{font-size:2rem}
+  .vb__price sup{font-size:.8rem}
+  .vb__dec{font-size:1rem}
   .vb__dec small{display:none}
-  .vb__text{font-size:.95rem}
-  .vb__btn{padding:8px 15px;font-size:.85rem}
+  .vb__text{font-size:1.05rem}
+  .vb__btn{padding:9px 17px;font-size:.92rem}
 }
-@media (max-width:430px){.vb__bear{display:none}.vb__text{font-size:.9rem}}
+@media (max-width:430px){.vb__bear{display:none}.vb__text{font-size:.98rem}.vb__price b{font-size:1.8rem}}
 
 /* =====================================================================
    NATIVIZAÇÃO — cartão de vacinação, imprensa e trabalhe conosco

@@ -184,6 +184,7 @@ button{font-family:inherit}
 .mobile-menu nav{display:flex;flex-direction:column;gap:4px}
 .mobile-menu nav a{font-family:'Baloo 2',cursive;font-size:1.2rem;padding:12px 10px;border-radius:12px;color:var(--ink)}
 .mobile-menu nav a:hover{background:var(--lilac-50);color:var(--violet-600)}
+.mobile-menu nav a.is-active{background:var(--lilac-50);color:var(--violet-600)}
 .mobile-menu__cta{display:flex;flex-direction:column;gap:10px;margin-top:22px}
 .menu-backdrop{position:fixed;inset:0;background:rgba(42,35,80,.45);z-index:44;opacity:0;pointer-events:none;transition:opacity .3s var(--ease)}
 .menu-backdrop.is-open{opacity:1;pointer-events:auto}
@@ -914,6 +915,20 @@ button{font-family:inherit}
 .chan{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:start}
 .chan figure{margin:0}
 .chan figure img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+/* ---------- Ambientes: carrossel infinito ---------- */
+.amb-intro{max-width:760px;margin:0 auto;text-align:center}
+.amb-marquee{margin-top:clamp(28px,4vw,46px);overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.amb-track{display:flex;width:max-content;animation:ambScroll 42s linear infinite;will-change:transform}
+.amb-marquee:hover .amb-track,.amb-marquee:focus-within .amb-track{animation-play-state:paused}
+.amb-card{flex:0 0 auto;width:clamp(232px,74vw,318px);margin:0 clamp(14px,2.4vw,22px) 0 0}
+.amb-card img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+@keyframes ambScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){
+  .amb-track{animation:none}
+  .amb-marquee{overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
 .chan__cards{display:grid;gap:13px}
 .chan__card{
   display:flex;align-items:center;gap:15px;background:#fff;border:1px solid var(--lilac-100);
@@ -1043,10 +1058,10 @@ button{font-family:inherit}
 .voucher-bar__strip,.voucher-bar__mini{display:none}
 .vb{
   max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:center;
-  gap:clamp(10px,2.2vw,26px);padding:6px 52px 6px 10px;min-height:64px;
+  gap:clamp(10px,2.2vw,26px);padding:0 52px 0 10px;min-height:80px;
 }
 .vb__bear{
-  height:82px;width:auto;flex:none;margin:-10px 2px -12px;
+  height:80px;width:auto;flex:none;align-self:flex-end;margin:0 2px -2px 0;
   filter:drop-shadow(0 5px 8px rgba(91,33,182,.22));
   position:relative;z-index:1;
 }

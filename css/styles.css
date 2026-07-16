@@ -277,12 +277,12 @@ button{font-family:inherit}
 
 /* layout B: photo + text + cta */
 .promo--blue{grid-template-columns:auto 1fr auto;background:linear-gradient(120deg,#E7EEFF,#EAFBFF)}
-.promo__photo img{width:150px;height:130px;object-fit:cover;border-radius:20px;box-shadow:var(--shadow-sm)}
+.promo__photo img{width:174px;height:150px;object-fit:cover;object-position:50% 32%;border-radius:20px;box-shadow:var(--shadow-sm)}
 .promo--blue .promo__cta{color:var(--indigo-500)}
 
 /* layout C: pink, text wide + round photo right */
 .promo--pink{grid-template-columns:1fr auto auto;background:linear-gradient(120deg,#FBE8FF,#EFE6FF)}
-.promo__photo--round img{width:140px;height:140px;border-radius:50%}
+.promo__photo--round img{width:164px;height:164px;object-fit:cover;object-position:50% 40%;border-radius:50%}
 .promo--pink .promo__cta{color:var(--pink-500)}
 
 .promo .btn--white{box-shadow:var(--shadow-sm)}

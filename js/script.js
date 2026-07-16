@@ -35,6 +35,12 @@
     mobileMenu.classList.remove('is-closing');
     mobileMenu.hidden = false;
     mobileMenu.scrollTop = 0;
+    // padding-top dinâmico: no topo da página o voucher + header cobrem
+    // mais que os 90px fixos e escondiam o primeiro item ("Amo")
+    const hdr = document.getElementById('siteHeader');
+    if (hdr) {
+      mobileMenu.style.paddingTop = Math.max(80, hdr.getBoundingClientRect().bottom + 14) + 'px';
+    }
     mobileMenu.classList.add('is-open');
     navToggle.setAttribute('aria-expanded', 'true');
     navToggle.setAttribute('aria-label', 'Fechar menu');

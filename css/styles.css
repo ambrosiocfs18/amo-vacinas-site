@@ -1060,7 +1060,7 @@ button{font-family:inherit}
 .voucher-bar__art{position:relative;line-height:0}
 .voucher-bar__art img{display:block;width:100%;height:auto}
 .voucher-bar__cta{
-  position:absolute;left:83.35%;top:27%;width:11.85%;height:43%;
+  position:absolute;left:82.8%;top:24%;width:12.6%;height:46%;
   display:flex;align-items:center;justify-content:center;
   font-family:'Baloo 2',cursive;font-weight:600;color:#fff;
   font-size:clamp(6px,1.4vw,19px);line-height:1;white-space:nowrap;

@@ -1058,6 +1058,7 @@ button{font-family:inherit}
 .voucher-bar{background:linear-gradient(90deg,#AEDAFF 0%,#F5F4FF 50%,#FBC9FE 100%)}
 .voucher-bar__strip,.voucher-bar__mini{display:none}
 .voucher-bar__art{position:relative;line-height:0}
+.voucher-bar__art picture{display:block}
 .voucher-bar__art img{display:block;width:100%;height:auto}
 .voucher-bar__cta{
   position:absolute;left:82.8%;top:24%;width:12.6%;height:46%;
@@ -1074,6 +1075,8 @@ button{font-family:inherit}
   .voucher-bar__cta:hover{transform:translateY(-1px);box-shadow:0 .5em 1.2em rgba(99,102,241,.46)}
 }
 @media (max-width:760px){
+  /* arte mobile recomposta (voucher-banner-mobile.webp): CTA reposicionado */
+  .voucher-bar__cta{left:78.25%;top:24%;width:14.75%;height:46%;font-size:clamp(7px,2vw,12px)}
   .voucher-bar__close{width:20px;height:20px;right:5px}
   .voucher-bar__close svg{width:11px;height:11px}
 }

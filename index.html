@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=30" />
+  <link rel="stylesheet" href="css/styles.css?v=31" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -27,7 +27,10 @@
   <!-- ============ VOUCHER / ANNOUNCEMENT BAR ============ -->
   <div class="voucher-bar" id="voucherBar" role="region" aria-label="Cupom de boas-vindas">
                 <div class="voucher-bar__art">
-      <img src="assets/voucher-banner.webp" alt="Gift Voucher: R$50,00 em todas as vacinas na sua primeira visita" width="4098" height="279" loading="eager" />
+      <picture>
+        <source media="(max-width:760px)" srcset="assets/voucher-banner-mobile.webp" width="3255" height="279" />
+        <img src="assets/voucher-banner.webp" alt="Gift Voucher: R$50,00 em todas as vacinas na sua primeira visita" width="4098" height="279" loading="eager" />
+      </picture>
       <a class="voucher-bar__cta" href="loja.html">Compre online</a>
     </div>
     <button class="voucher-bar__close" id="voucherClose" aria-label="Fechar cupom">
@@ -595,6 +598,6 @@
     </defs>
   </svg>
 
-  <script src="js/script.js?v=30" defer></script>
+  <script src="js/script.js?v=31" defer></script>
 </body>
 </html>

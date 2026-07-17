@@ -834,7 +834,7 @@ button{font-family:inherit}
 .story .story__punch{font-family:'Baloo 2',cursive;color:var(--violet-700);font-size:1.06rem}
 
 /* fundadoras */
-.founders{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:start}
+.founders{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:center}
 .founders figure{margin:0;position:relative}
 .founders figure img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-lg)}
 .founders figcaption{margin-top:12px;text-align:center;color:var(--muted);font-weight:600;font-size:.92rem}

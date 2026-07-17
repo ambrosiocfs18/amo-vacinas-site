@@ -68,6 +68,7 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 h1,h2,h3,h4{font-family:'Baloo 2',cursive;line-height:1.12;margin:0;font-weight:700;text-wrap:balance}
 p{margin:0}
+main p,main li,.lead{text-wrap:pretty}
 button{font-family:inherit}
 
 .container{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(18px,4vw,40px)}
@@ -1236,7 +1237,7 @@ button{font-family:inherit}
 .lprod__tag--idosos{background:#EEF2FF;color:#4338CA;border-color:#C7D2FE}
 .lprod__tag--bebes{background:#F0FDFA;color:#0F766E;border-color:#99F6E4}
 .lprod h3{font-size:1.08rem;font-weight:700;color:var(--ink)}
-.lprod p{color:var(--muted);font-weight:500;font-size:.92rem;line-height:1.5;flex:1}
+.lprod p{color:var(--muted);font-weight:500;font-size:.92rem;line-height:1.5;flex:1;text-wrap:balance}
 .lprod__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
 .lprod__price{font-size:.78rem;font-weight:700;color:var(--violet-500);max-width:14ch;line-height:1.25}
 .lprod__add{padding:9px 18px;font-size:.9rem}
@@ -1303,19 +1304,24 @@ button{font-family:inherit}
 .founders .lead,
 .chan > div p,
 .lp-awards > div > p,
-.lp-persona .lead{text-align:justify}
+.lp-persona .lead{text-align:justify;text-wrap:pretty}
 
 /* na página "A Amo", todo texto corrido justificado (títulos preservados) */
 .page-amo .story p,
-.page-amo .lp-awards > div li,
 .page-amo .founders .lead,
 .page-amo .chan > div p,
-.page-amo .lp-awards > div > p{text-align:justify}
+.page-amo .lp-awards > div > p{text-align:justify;text-wrap:pretty}
 
-/* em telas estreitas, justify pode abrir buracos: volta ao natural */
-@media (max-width:600px){
+/* listas com ícone ficam melhor à esquerda (justify abre buracos entre bullets) */
+.lp-awards li{text-wrap:pretty}
+
+/* colunas empilham em 1fr a partir de 900px (ver .founders/.chan/.lp-awards
+   acima): abaixo disso o texto justificado abre buracos feios, volta ao natural.
+   Repete os seletores .page-amo (maior especificidade) pra garantir que vençam. */
+@media (max-width:900px){
   .founders .lead,.chan > div p,.lp-awards > div > p,.lp-persona .lead,
-  .page-amo .story p,.page-amo .lp-awards > div li{text-align:left}
+  .page-amo .story p,.page-amo .founders .lead,.page-amo .chan > div p,
+  .page-amo .lp-awards > div > p{text-align:left}
 }
 
 /* =====================================================================

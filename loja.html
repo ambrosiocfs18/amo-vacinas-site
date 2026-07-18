@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=40" />
+  <link rel="stylesheet" href="css/styles.css?v=41" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -169,12 +169,69 @@
       </div>
     </section>
 
+    <!-- LOJA EM ABAS (organização do e-commerce) -->
+    <section class="lp-section lp-section--tint" id="catalogo" aria-label="Monte seu plano de vacinação">
+      <div class="container">
+        <div class="lp-head reveal">
+          <h2>Monte seu <span class="text-grad">plano de vacinação</span></h2>
+          <p>Escolha por perfil, adicione ao pedido e finalize pelo WhatsApp com a equipe Amo Vacinas.</p>
+        </div>
+
+        <div class="ltabs reveal" role="tablist" aria-label="Categorias da loja">
+          <button type="button" class="ltab is-active" data-panel="panelBebe" role="tab" aria-selected="true"><img src="assets/mascote-bebe.webp" alt="" width="26" height="39" loading="lazy" />Bebê e Criança</button>
+          <button type="button" class="ltab" data-panel="panelPacotes" role="tab" aria-selected="false"><img src="assets/mascote-doutor.webp" alt="" width="25" height="40" loading="lazy" />Pacotes PPV</button>
+          <button type="button" class="ltab" data-panel="panelAdulto" role="tab" aria-selected="false"><img src="assets/mascote-adulta.webp" alt="" width="24" height="40" loading="lazy" />Adulto</button>
+          <button type="button" class="ltab" data-panel="panelGestante" role="tab" aria-selected="false"><img src="assets/mascote-gestante.webp" alt="" width="22" height="40" loading="lazy" />Gestante</button>
+          <button type="button" class="ltab" data-panel="panelSenior" role="tab" aria-selected="false"><img src="assets/mascote-idoso.webp" alt="" width="27" height="40" loading="lazy" />Sênior</button>
+          <button type="button" class="ltab" data-panel="panelBuscar" role="tab" aria-selected="false"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.7" y2="16.7"/></svg>Buscar Vacina</button>
+        </div>
+
+        <div class="lpanel reveal" id="panelBebe" role="tabpanel" aria-label="Calendário vacinal — bebê e criança">
+          <p class="lpanel__intro">Calendário vacinal mês a mês: toque na fase, veja as vacinas com preços e adicione uma a uma ou a fase inteira.</p>
+          <div class="lcal" id="calFases"></div>
+        </div>
+
+        <div class="lpanel" id="panelPacotes" role="tabpanel" aria-label="Pacotes PPV" hidden>
+          <p class="lpanel__intro">Planos de Vacinação Programados, criados por especialistas. Nos pacotes de bebê, você escolhe a Pneumocócica (15V ou 20V).</p>
+          <div class="ppv-grid" id="ppvGrid"></div>
+        </div>
+
+        <div class="lpanel" id="panelAdulto" role="tabpanel" aria-label="Vacinas para adultos" hidden>
+          <p class="lpanel__intro">Vacinas para a vida adulta — reforços, viagens e proteção no dia a dia.</p>
+          <div class="lja-grid" id="gridAdulto"></div>
+        </div>
+
+        <div class="lpanel" id="panelGestante" role="tabpanel" aria-label="Vacinas para gestantes" hidden>
+          <p class="lpanel__intro">Proteção para a gestante e para o bebê, desde a barriga.</p>
+          <div class="lja-grid" id="gridGestante"></div>
+        </div>
+
+        <div class="lpanel" id="panelSenior" role="tabpanel" aria-label="Vacinas para 60+" hidden>
+          <p class="lpanel__intro">Vacinas para a terceira idade, com proteção reforçada para 60+.</p>
+          <div class="lja-grid" id="gridSenior"></div>
+        </div>
+
+        <div class="lpanel" id="panelBuscar" role="tabpanel" aria-label="Buscar vacina" hidden>
+          <div class="lsearch">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.7" y2="16.7"/></svg>
+            <input type="search" id="lojaSearch" placeholder="Buscar vacina por nome ou proteção..." aria-label="Buscar vacina" maxlength="60" />
+          </div>
+          <div class="lja-grid" id="lojaGrid" aria-live="polite"></div>
+          <p class="units__empty" id="lojaEmpty" hidden>Nenhuma vacina encontrada. Tente outro nome.</p>
+        </div>
+
+        <noscript>
+          <p style="text-align:center;font-weight:600;color:var(--muted);margin-top:20px">Para reservar, fale direto com a gente: <a href="https://wa.me/5508007291714">WhatsApp 0800 729 1714</a>.</p>
+        </noscript>
+      </div>
+    </section>
+
     <!-- CLUBE AMO -->
     <section class="lp-section" aria-label="Clube AMO">
       <div class="container">
         <div class="clube reveal">
           <div class="clube__info">
-            <span class="clube__star" aria-hidden="true">⭐</span>
+            <img class="clube__bear" src="assets/voucher-urso.webp" alt="" width="70" height="82" loading="lazy" />
             <div>
               <h2>Clube AMO — <span class="text-grad">preços exclusivos</span></h2>
               <p>Descontos em todas as vacinas e pacotes da rede por 12 meses. <strong>Sem renovação automática</strong> — você escolhe renovar.</p>
@@ -185,60 +242,6 @@
             <button type="button" class="btn btn--primary" id="clubeAdd">Adicionar à reserva</button>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- CALENDÁRIO DO BEBÊ MÊS A MÊS -->
-    <section class="lp-section lp-section--tint" id="calendario-bebe" aria-label="Calendário vacinal do bebê mês a mês">
-      <div class="container">
-        <div class="lp-head reveal">
-          <h2>Calendário do bebê, <span class="text-grad">mês a mês</span></h2>
-          <p>Toque na fase para ver as vacinas indicadas, com preços. Adicione uma a uma ou a fase inteira.</p>
-        </div>
-        <div class="lcal reveal" id="calFases"></div>
-      </div>
-    </section>
-
-    <!-- PACOTES PPV -->
-    <section class="lp-section" id="pacotes" aria-label="Pacotes PPV — planos de vacinação">
-      <div class="container">
-        <div class="lp-head reveal">
-          <h2>Pacotes <span class="text-grad">PPV</span></h2>
-          <p>Planos de Vacinação Programados, criados por especialistas: proteção completa para cada fase da vida com preço de pacote. Nos pacotes de bebê, você escolhe a Pneumocócica (15V ou 20V).</p>
-        </div>
-        <div class="ppv-grid reveal" id="ppvGrid"></div>
-      </div>
-    </section>
-
-    <!-- CATÁLOGO COMPLETO + BUSCA -->
-    <section class="lp-section lp-section--tint" id="catalogo" aria-label="Catálogo de vacinas">
-      <div class="container">
-        <div class="lp-head reveal">
-          <h2>Todas as <span class="text-grad">vacinas</span></h2>
-          <p>Busque pelo nome, filtre por fase da vida e adicione à reserva. Valores de referência do site — confirmados no atendimento, com <strong>R$ 50,00 de desconto na primeira visita</strong>.</p>
-        </div>
-
-        <div class="lsearch reveal">
-          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.7" y2="16.7"/></svg>
-          <input type="search" id="lojaSearch" placeholder="Buscar vacina por nome ou proteção..." aria-label="Buscar vacina" maxlength="60" />
-        </div>
-
-        <div class="lja-filters reveal" role="group" aria-label="Filtrar vacinas por fase da vida">
-          <button type="button" class="fchip is-active" data-cat="todas" aria-pressed="true">Todas</button>
-          <button type="button" class="fchip" data-cat="bebes" aria-pressed="false"><img src="assets/mascote-bebe.webp" alt="" width="26" height="39" loading="lazy" />Bebês</button>
-          <button type="button" class="fchip" data-cat="criancas" aria-pressed="false"><img src="assets/mascote-heroi-festa.webp" alt="" width="28" height="38" loading="lazy" />Crianças</button>
-          <button type="button" class="fchip" data-cat="adolescentes" aria-pressed="false"><img src="assets/mascote-heroi.webp" alt="" width="26" height="39" loading="lazy" />Adolescentes</button>
-          <button type="button" class="fchip" data-cat="adultos" aria-pressed="false"><img src="assets/mascote-adulta.webp" alt="" width="24" height="40" loading="lazy" />Adultos</button>
-          <button type="button" class="fchip" data-cat="idosos" aria-pressed="false"><img src="assets/mascote-idoso.webp" alt="" width="27" height="40" loading="lazy" />Idosos 60+</button>
-          <button type="button" class="fchip" data-cat="gestantes" aria-pressed="false"><img src="assets/mascote-gestante.webp" alt="" width="22" height="40" loading="lazy" />Gestantes</button>
-        </div>
-
-        <div class="lja-grid reveal" id="lojaGrid" aria-live="polite"></div>
-        <p class="units__empty" id="lojaEmpty" hidden>Nenhuma vacina encontrada. Tente outro nome ou filtro.</p>
-
-        <noscript>
-          <p style="text-align:center;font-weight:600;color:var(--muted);margin-top:20px">Para reservar, fale direto com a gente: <a href="https://wa.me/5508007291714">WhatsApp 0800 729 1714</a>.</p>
-        </noscript>
       </div>
     </section>
 
@@ -434,7 +437,7 @@
     <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3a12.4 12.4 0 0 0 5.8 1.5c7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.4-10.2 5.7 0 10.3 4.6 10.3 10.2 0 5.7-4.6 10.2-10.3 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
   </a>
 
-  <script src="js/script.js?v=40" defer></script>
-  <script src="js/loja.js?v=40" defer></script>
+  <script src="js/script.js?v=41" defer></script>
+  <script src="js/loja.js?v=41" defer></script>
 </body>
 </html>

@@ -57,17 +57,17 @@
   /* ---------- Pacotes PPV (Plano de Vacinação Programado) ----------
      Pacotes de bebê têm variante de Pneumocócica: 15V ou 20V. */
   var PPV = [
-    { id: 'ppv-amor', nome: 'PPV Amor', publico: 'Bebê · 2 a 6 meses', doses: 14, icone: '👶', destaque: null, pneumo: true, itens: ['Hexavalente acelular — 2 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 3 doses', 'Meningocócica B — 2 doses', 'Meningocócica ACWY — 2 doses', 'Pentavalente acelular — 1 dose'], precos: { p15: [6567, 6177], p20: [7317, 6957] } },
-    { id: 'ppv-cuidadoso', nome: 'PPV Cuidadoso', publico: 'Bebê · 2 a 9 meses', doses: 16, icone: '🛡️', destaque: null, pneumo: true, itens: ['Hexavalente acelular — 3 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 3 doses', 'Meningocócica B — 2 doses', 'Meningocócica ACWY — 2 doses', 'Influenza quadrivalente — 1 dose', 'Pentavalente acelular — 2 doses'], precos: { p15: [7224, 6634], p20: [7974, 7414] } },
-    { id: 'ppv-atencioso', nome: 'PPV Atencioso', publico: 'Bebê · 12 a 18 meses', doses: 11, icone: '🌟', destaque: null, pneumo: true, itens: ['Pneumocócica reforço — 1 dose', 'Meningocócica ACWY — 1 dose', 'Meningocócica B — 1 dose', 'Tríplice viral — 2 doses', 'Hepatite A — 1 dose', 'Varicela — 2 doses', 'Influenza — 2 doses', 'Pentavalente reforço — 2 doses'], precos: { p15: [3859, 3509], p20: [4109, 3769] } },
-    { id: 'ppv-vip', nome: 'PPV VIP', publico: 'Bebê · 2 a 18 meses', doses: 27, icone: '⭐', destaque: 'Mais completo', pneumo: true, itens: ['Hexavalente acelular — 2 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 4 doses', 'Meningocócica B — 3 doses', 'Meningocócica ACWY — 3 doses', 'Influenza quadrivalente — 3 doses', 'Hepatite A pediátrica — 3 doses', 'Tríplice viral — 2 doses', 'Febre amarela — 1 dose', 'Varicela — 2 doses', 'Pentavalente — 2 doses'], precos: { p15: [11083, 10143], p20: [12083, 11183] } },
-    { id: 'ppv-vip-plus', nome: 'PPV VIP Plus', publico: 'Nascimento a 4 anos', doses: 33, icone: '💎', destaque: 'VIP Plus', pneumo: true, itens: ['Hexavalente acelular — 2 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 4 doses', 'Meningocócica B — 3 doses', 'Meningocócica ACWY — 3 doses', 'Influenza quadrivalente — 6 doses', 'Hepatite A pediátrica — 2 doses', 'Febre amarela — 2 doses', 'Varicela — 2 doses', 'dTpa+IPV reforço — 1 dose', 'Hepatite B — 1 dose', 'Pentavalente — 2 doses'], precos: { p15: [12437, 11068], p20: [13437, 12108] } },
-    { id: 'ppv-mamae', nome: 'PPV Mamãe Cuidadosa', publico: 'Gestante', doses: 5, icone: '🤱', destaque: null, pneumo: false, itens: ['dTpa — 1 dose', 'Influenza quadrivalente — 1 dose', 'Abrysvo VSR — 1 dose'], precos: { fixo: [2787, 2437] } },
-    { id: 'ppv-papai', nome: 'PPV Papai Cuidadoso', publico: 'Adulto', doses: 5, icone: '👨‍👦', destaque: null, pneumo: false, itens: ['dTpa — 1 dose', 'Influenza quadrivalente — 1 dose', 'Febre amarela Stamaril — 1 dose', 'Hepatite A+B Twinrix — 3 doses'], precos: { fixo: [1355, 1135] } },
-    { id: 'ppv-atleta', nome: 'PPV Atleta Saudável', publico: 'Adulto', doses: 15, icone: '🏃', destaque: null, pneumo: false, itens: ['dTpa — 1 dose', 'Influenza quadrivalente — 1 dose', 'Febre amarela Stamaril — 1 dose', 'Hepatite A adulto — 2 doses', 'Twinrix Hepatite A+B — 3 doses', 'Tríplice viral — 2 doses', 'Meningocócica B — 2 doses', 'Meningocócica ACWY — 1 dose', 'HPV Gardasil 9 — 3 doses'], precos: { fixo: [6736, 6146] } },
-    { id: 'ppv-hpv', nome: 'PPV HPV Nonavalente', publico: 'Combo 3 doses', doses: 3, icone: '🔵', destaque: null, pneumo: false, itens: ['Gardasil 9 HPV — 3 doses'], precos: { fixo: [3987, 3747] } },
-    { id: 'ppv-senior', nome: 'PPV Mais Amor Sênior VIP', publico: '60+', doses: 9, icone: '👴', destaque: null, pneumo: false, itens: ['Influenza quadrivalente — 1 dose', 'Pneumo 20V — 1 dose', 'Meningocócica ACWY — 1 dose', 'dTpa — 1 dose', 'Febre amarela Stamaril — 1 dose', 'Shingrix Herpes Zóster — 2 doses', 'Arexvy VSR — 1 dose'], precos: { fixo: [7081, 6369] } },
-    { id: 'ppv-zoster', nome: 'PPV Combo Zóster', publico: 'Combo 2 doses', doses: 2, icone: '🌿', destaque: null, pneumo: false, itens: ['Shingrix Herpes Zóster — 2 doses'], precos: { fixo: [2518, 2310] } },
+    { id: 'ppv-amor', nome: 'PPV Amor', publico: 'Bebê · 2 a 6 meses', doses: 14, icone: 'assets/mascote-bebe.webp', destaque: null, pneumo: true, itens: ['Hexavalente acelular — 2 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 3 doses', 'Meningocócica B — 2 doses', 'Meningocócica ACWY — 2 doses', 'Pentavalente acelular — 1 dose'], precos: { p15: [6567, 6177], p20: [7317, 6957] } },
+    { id: 'ppv-cuidadoso', nome: 'PPV Cuidadoso', publico: 'Bebê · 2 a 9 meses', doses: 16, icone: 'assets/mascote-bebe.webp', destaque: null, pneumo: true, itens: ['Hexavalente acelular — 3 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 3 doses', 'Meningocócica B — 2 doses', 'Meningocócica ACWY — 2 doses', 'Influenza quadrivalente — 1 dose', 'Pentavalente acelular — 2 doses'], precos: { p15: [7224, 6634], p20: [7974, 7414] } },
+    { id: 'ppv-atencioso', nome: 'PPV Atencioso', publico: 'Bebê · 12 a 18 meses', doses: 11, icone: 'assets/mascote-heroi-festa.webp', destaque: null, pneumo: true, itens: ['Pneumocócica reforço — 1 dose', 'Meningocócica ACWY — 1 dose', 'Meningocócica B — 1 dose', 'Tríplice viral — 2 doses', 'Hepatite A — 1 dose', 'Varicela — 2 doses', 'Influenza — 2 doses', 'Pentavalente reforço — 2 doses'], precos: { p15: [3859, 3509], p20: [4109, 3769] } },
+    { id: 'ppv-vip', nome: 'PPV VIP', publico: 'Bebê · 2 a 18 meses', doses: 27, icone: 'assets/mascote-bebe.webp', destaque: 'Mais completo', pneumo: true, itens: ['Hexavalente acelular — 2 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 4 doses', 'Meningocócica B — 3 doses', 'Meningocócica ACWY — 3 doses', 'Influenza quadrivalente — 3 doses', 'Hepatite A pediátrica — 3 doses', 'Tríplice viral — 2 doses', 'Febre amarela — 1 dose', 'Varicela — 2 doses', 'Pentavalente — 2 doses'], precos: { p15: [11083, 10143], p20: [12083, 11183] } },
+    { id: 'ppv-vip-plus', nome: 'PPV VIP Plus', publico: 'Nascimento a 4 anos', doses: 33, icone: 'assets/mascote-heroi-festa.webp', destaque: 'VIP Plus', pneumo: true, itens: ['Hexavalente acelular — 2 doses', 'Rotavírus pentavalente — 3 doses', 'Pneumocócica conjugada — 4 doses', 'Meningocócica B — 3 doses', 'Meningocócica ACWY — 3 doses', 'Influenza quadrivalente — 6 doses', 'Hepatite A pediátrica — 2 doses', 'Febre amarela — 2 doses', 'Varicela — 2 doses', 'dTpa+IPV reforço — 1 dose', 'Hepatite B — 1 dose', 'Pentavalente — 2 doses'], precos: { p15: [12437, 11068], p20: [13437, 12108] } },
+    { id: 'ppv-mamae', nome: 'PPV Mamãe Cuidadosa', publico: 'Gestante', doses: 5, icone: 'assets/mascote-gestante.webp', destaque: null, pneumo: false, itens: ['dTpa — 1 dose', 'Influenza quadrivalente — 1 dose', 'Abrysvo VSR — 1 dose'], precos: { fixo: [2787, 2437] } },
+    { id: 'ppv-papai', nome: 'PPV Papai Cuidadoso', publico: 'Adulto', doses: 5, icone: 'assets/mascote-adulta.webp', destaque: null, pneumo: false, itens: ['dTpa — 1 dose', 'Influenza quadrivalente — 1 dose', 'Febre amarela Stamaril — 1 dose', 'Hepatite A+B Twinrix — 3 doses'], precos: { fixo: [1355, 1135] } },
+    { id: 'ppv-atleta', nome: 'PPV Atleta Saudável', publico: 'Adulto', doses: 15, icone: 'assets/mascote-heroi.webp', destaque: null, pneumo: false, itens: ['dTpa — 1 dose', 'Influenza quadrivalente — 1 dose', 'Febre amarela Stamaril — 1 dose', 'Hepatite A adulto — 2 doses', 'Twinrix Hepatite A+B — 3 doses', 'Tríplice viral — 2 doses', 'Meningocócica B — 2 doses', 'Meningocócica ACWY — 1 dose', 'HPV Gardasil 9 — 3 doses'], precos: { fixo: [6736, 6146] } },
+    { id: 'ppv-hpv', nome: 'PPV HPV Nonavalente', publico: 'Combo 3 doses', doses: 3, icone: 'assets/mascote-heroi.webp', destaque: null, pneumo: false, itens: ['Gardasil 9 HPV — 3 doses'], precos: { fixo: [3987, 3747] } },
+    { id: 'ppv-senior', nome: 'PPV Mais Amor Sênior VIP', publico: '60+', doses: 9, icone: 'assets/mascote-idoso.webp', destaque: null, pneumo: false, itens: ['Influenza quadrivalente — 1 dose', 'Pneumo 20V — 1 dose', 'Meningocócica ACWY — 1 dose', 'dTpa — 1 dose', 'Febre amarela Stamaril — 1 dose', 'Shingrix Herpes Zóster — 2 doses', 'Arexvy VSR — 1 dose'], precos: { fixo: [7081, 6369] } },
+    { id: 'ppv-zoster', nome: 'PPV Combo Zóster', publico: 'Combo 2 doses', doses: 2, icone: 'assets/mascote-idoso.webp', destaque: null, pneumo: false, itens: ['Shingrix Herpes Zóster — 2 doses'], precos: { fixo: [2518, 2310] } },
   ];
 
   /* ---------- Calendário do bebê (mês a mês) ----------
@@ -174,9 +174,29 @@
     renderCart();
   }
 
-  /* ---------- Catálogo: busca + filtro + render ---------- */
+  /* ---------- Abas da loja (organização do e-commerce) ---------- */
+  var PANELS = ['panelBebe', 'panelPacotes', 'panelAdulto', 'panelGestante', 'panelSenior', 'panelBuscar'];
+  $$('.ltab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      var target = tab.getAttribute('data-panel');
+      $$('.ltab').forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle('is-active', on);
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      PANELS.forEach(function (id) {
+        var p = document.getElementById(id);
+        if (p) p.hidden = id !== target;
+      });
+      if (target === 'panelBuscar') {
+        var si = $('#lojaSearch');
+        if (si) si.focus();
+      }
+    });
+  });
+
+  /* ---------- Grids por perfil + busca ---------- */
   var grid = $('#lojaGrid');
-  var currentFilter = 'todas';
   var searchTerm = '';
 
   function norm(s) {
@@ -241,13 +261,22 @@
     return card;
   }
 
-  function renderGrid() {
+  function renderCatGrid(sel, cat) {
+    var box = $(sel);
+    if (!box) return;
+    box.textContent = '';
+    CATALOG.forEach(function (p) {
+      if (p.cats.indexOf(cat) === -1) return;
+      box.appendChild(makeCard(p));
+    });
+  }
+
+  function renderSearch() {
     if (!grid) return;
     grid.textContent = '';
     var q = norm(searchTerm.trim());
     var shown = 0;
     CATALOG.forEach(function (p) {
-      if (currentFilter !== 'todas' && p.cats.indexOf(currentFilter) === -1) return;
       if (q && norm(p.nome + ' ' + p.desc).indexOf(q) === -1) return;
       grid.appendChild(makeCard(p));
       shown++;
@@ -256,23 +285,11 @@
     if (empty) empty.hidden = shown > 0;
   }
 
-  $$('.fchip').forEach(function (chip) {
-    chip.addEventListener('click', function () {
-      currentFilter = chip.getAttribute('data-cat') || 'todas';
-      $$('.fchip').forEach(function (c) {
-        var on = c === chip;
-        c.classList.toggle('is-active', on);
-        c.setAttribute('aria-pressed', on ? 'true' : 'false');
-      });
-      renderGrid();
-    });
-  });
-
   var searchInput = $('#lojaSearch');
   if (searchInput) {
     searchInput.addEventListener('input', function () {
       searchTerm = searchInput.value.slice(0, 60);
-      renderGrid();
+      renderSearch();
     });
   }
 
@@ -380,9 +397,13 @@
 
       var head = document.createElement('div');
       head.className = 'ppv__head';
-      var ic = document.createElement('span');
+      var ic = document.createElement('img');
       ic.className = 'ppv__ico';
-      ic.textContent = pack.icone;
+      ic.src = pack.icone;
+      ic.alt = '';
+      ic.loading = 'lazy';
+      ic.width = 40;
+      ic.height = 62;
       var tit = document.createElement('div');
       var h3 = document.createElement('h3');
       h3.textContent = pack.nome;
@@ -689,7 +710,10 @@
     });
   }
 
-  renderGrid();
+  renderCatGrid('#gridAdulto', 'adultos');
+  renderCatGrid('#gridGestante', 'gestantes');
+  renderCatGrid('#gridSenior', 'idosos');
+  renderSearch();
   renderCalendario();
   renderPPV();
   renderCart();

@@ -1259,6 +1259,31 @@ button{font-family:inherit}
   .lprod:hover{box-shadow:0 14px 34px rgba(124,58,237,.18)}
 }
 
+/* abas da loja (organização do e-commerce) */
+.ltabs{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-bottom:clamp(24px,4vw,38px);
+}
+.ltab{
+  display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+  font-family:'Baloo 2',cursive;font-weight:700;font-size:.98rem;color:var(--violet-700);
+  background:#fff;border:2px solid var(--lilac-200);border-radius:999px;padding:9px 20px;
+  transition:transform .16s var(--ease-out),box-shadow .25s var(--ease),background .25s var(--ease),color .25s var(--ease);
+}
+.ltab img{width:auto;height:32px;object-fit:contain}
+.ltab svg{flex:none}
+.ltab.is-active{background:var(--grad-primary);color:#fff;border-color:transparent;box-shadow:0 6px 16px rgba(124,58,237,.28)}
+@media (hover:hover) and (pointer:fine){.ltab:hover{transform:translateY(-2px);box-shadow:var(--shadow-sm)}}
+@media (max-width:640px){
+  .ltabs{flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start;padding-bottom:6px;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .ltabs::-webkit-scrollbar{display:none}
+  .ltab{flex:none}
+}
+.lpanel__intro{
+  text-align:center;color:var(--muted);font-weight:500;font-size:1rem;
+  max-width:640px;margin:0 auto clamp(20px,3vw,30px);text-wrap:balance;
+}
+
 /* busca do catálogo */
 .lsearch{
   display:flex;align-items:center;gap:10px;max-width:520px;margin:0 auto 18px;
@@ -1281,7 +1306,7 @@ button{font-family:inherit}
   border-radius:var(--r-lg);padding:clamp(22px,3.5vw,34px) clamp(22px,4vw,42px);box-shadow:var(--shadow-sm);
 }
 .clube__info{display:flex;align-items:center;gap:16px;flex:1;min-width:min(100%,340px)}
-.clube__star{font-size:2rem;flex:none}
+.clube__bear{width:auto;height:70px;object-fit:contain;flex:none;filter:drop-shadow(0 5px 8px rgba(91,33,182,.22))}
 .clube__info h2{font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:800}
 .clube__info p{margin-top:6px;color:var(--muted);font-weight:500;font-size:.98rem;max-width:52ch}
 .clube__cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
@@ -1334,7 +1359,7 @@ button{font-family:inherit}
   padding:4px 13px;border-radius:999px;box-shadow:0 4px 10px rgba(124,58,237,.3);
 }
 .ppv__head{display:flex;align-items:center;gap:12px}
-.ppv__ico{font-size:1.7rem;flex:none}
+.ppv__ico{width:auto;height:52px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 6px rgba(124,58,237,.18))}
 .ppv__head h3{font-size:1.05rem;font-weight:800;color:var(--ink)}
 .ppv__head small{font-weight:700;font-size:.78rem;color:var(--violet-500)}
 .ppv__list{list-style:none;margin:0;padding:0;display:grid;gap:5px;flex:1}

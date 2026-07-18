@@ -1238,9 +1238,142 @@ button{font-family:inherit}
 .lprod__tag--bebes{background:#F0FDFA;color:#0F766E;border-color:#99F6E4}
 .lprod h3{font-size:1.08rem;font-weight:700;color:var(--ink)}
 .lprod p{color:var(--muted);font-weight:500;font-size:.92rem;line-height:1.5;flex:1;text-wrap:balance}
-.lprod__foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:6px}
-.lprod__price{font-size:.78rem;font-weight:700;color:var(--violet-500);max-width:14ch;line-height:1.25}
+.lprod__foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:6px}
 .lprod__add{padding:9px 18px;font-size:.9rem}
+
+/* preços no card */
+.lprod__prices{display:flex;flex-direction:column;gap:2px;line-height:1.15}
+.lprod__price{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.22rem;color:var(--violet-700)}
+.lprod__clube{font-size:.74rem;font-weight:700;color:var(--pink-500)}
+.lprod__consult{font-size:.78rem;font-weight:700;color:var(--violet-500);max-width:14ch;line-height:1.25}
+
+/* destaque sutil dos cards do catálogo: filete em degradê no topo + brilho no hover */
+.lprod{position:relative;overflow:hidden}
+.lprod::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:3px;pointer-events:none;
+  background:linear-gradient(90deg,var(--violet-400),var(--pink-400) 55%,var(--teal-400));
+  opacity:.55;transition:opacity .3s var(--ease);
+}
+@media (hover:hover) and (pointer:fine){
+  .lprod:hover::before{opacity:1}
+  .lprod:hover{box-shadow:0 14px 34px rgba(124,58,237,.18)}
+}
+
+/* busca do catálogo */
+.lsearch{
+  display:flex;align-items:center;gap:10px;max-width:520px;margin:0 auto 18px;
+  background:#fff;border:2px solid var(--lilac-200);border-radius:999px;padding:11px 20px;
+  color:var(--violet-500);box-shadow:var(--shadow-sm);
+  transition:border-color .2s var(--ease),box-shadow .2s var(--ease);
+}
+.lsearch:focus-within{border-color:var(--violet-500);box-shadow:0 6px 18px rgba(124,58,237,.16)}
+.lsearch svg{flex:none}
+.lsearch input{
+  flex:1;border:none;background:none;font-family:inherit;font-size:1rem;font-weight:500;
+  color:var(--ink);outline:none;min-width:0;
+}
+.lsearch input::placeholder{color:var(--muted);opacity:.75}
+
+/* banner Clube AMO */
+.clube{
+  display:flex;align-items:center;justify-content:space-between;gap:clamp(18px,3vw,36px);flex-wrap:wrap;
+  background:linear-gradient(120deg,#F1E9FF,#FCE7F6);border:1.5px solid var(--lilac-200);
+  border-radius:var(--r-lg);padding:clamp(22px,3.5vw,34px) clamp(22px,4vw,42px);box-shadow:var(--shadow-sm);
+}
+.clube__info{display:flex;align-items:center;gap:16px;flex:1;min-width:min(100%,340px)}
+.clube__star{font-size:2rem;flex:none}
+.clube__info h2{font-size:clamp(1.25rem,2.4vw,1.6rem);font-weight:800}
+.clube__info p{margin-top:6px;color:var(--muted);font-weight:500;font-size:.98rem;max-width:52ch}
+.clube__cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.clube__price{display:flex;flex-direction:column;line-height:1.15}
+.clube__price b{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.35rem;color:var(--violet-700)}
+.clube__price small{font-weight:700;color:var(--muted);font-size:.82rem}
+
+/* calendário do bebê (acordeão) */
+.lcal{max-width:760px;margin:0 auto;display:grid;gap:10px}
+.lcal__fase{
+  background:#fff;border:1.5px solid var(--lilac-100);border-radius:var(--r-md);
+  box-shadow:var(--shadow-sm);overflow:hidden;
+}
+.lcal__fase summary{
+  list-style:none;cursor:pointer;display:flex;align-items:baseline;gap:12px;
+  padding:15px 20px;font-family:'Baloo 2',cursive;
+}
+.lcal__fase summary::-webkit-details-marker{display:none}
+.lcal__fase summary::after{
+  content:"▾";margin-left:auto;color:var(--violet-500);transition:transform .25s var(--ease);flex:none;
+}
+.lcal__fase[open] summary::after{transform:rotate(180deg)}
+.lcal__fase summary strong{font-weight:800;font-size:1.05rem;color:var(--violet-700);flex:none}
+.lcal__fase summary span{font-weight:500;font-size:.85rem;color:var(--muted);font-family:'Nunito'}
+.lcal__body{padding:2px 20px 16px;display:grid;gap:8px}
+.lcal__vac{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  background:var(--lilac-50);border:1px solid var(--lilac-100);border-radius:12px;padding:10px 14px;
+}
+.lcal__vac strong{display:block;font-weight:700;font-size:.95rem;color:var(--ink)}
+.lcal__vac small{font-weight:600;font-size:.78rem;color:var(--violet-500)}
+.lcal__choice{display:flex;gap:6px;flex:none}
+.lcal__mini{padding:7px 13px;font-size:.82rem;flex:none}
+.lcal__all{margin-top:6px;justify-self:start;padding:10px 20px;font-size:.9rem}
+
+/* pacotes PPV */
+.ppv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:1024px){.ppv-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:680px){.ppv-grid{grid-template-columns:1fr}}
+.ppv{
+  position:relative;background:#fff;border:1.5px solid var(--lilac-100);border-radius:var(--r-md);
+  box-shadow:var(--shadow-sm);padding:22px;display:flex;flex-direction:column;gap:12px;
+  transition:transform .2s var(--ease-out),box-shadow .3s var(--ease-out);
+}
+@media (hover:hover) and (pointer:fine){.ppv:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}}
+.ppv--destaque{border-color:var(--violet-400);box-shadow:0 10px 28px rgba(124,58,237,.16)}
+.ppv__flag{
+  position:absolute;top:-11px;right:16px;background:var(--grad-primary);color:#fff;
+  font-family:'Baloo 2',cursive;font-weight:700;font-size:.72rem;letter-spacing:.05em;
+  padding:4px 13px;border-radius:999px;box-shadow:0 4px 10px rgba(124,58,237,.3);
+}
+.ppv__head{display:flex;align-items:center;gap:12px}
+.ppv__ico{font-size:1.7rem;flex:none}
+.ppv__head h3{font-size:1.05rem;font-weight:800;color:var(--ink)}
+.ppv__head small{font-weight:700;font-size:.78rem;color:var(--violet-500)}
+.ppv__list{list-style:none;margin:0;padding:0;display:grid;gap:5px;flex:1}
+.ppv__list li{
+  font-size:.85rem;font-weight:600;color:var(--muted);padding-left:20px;position:relative;line-height:1.4;
+}
+.ppv__list li::before{content:"✓";position:absolute;left:0;color:var(--teal-400);font-weight:800}
+.ppv__variant{display:flex;align-items:center;gap:8px;font-size:.82rem;font-weight:700;color:var(--muted)}
+.ppv__variant select{
+  font-family:inherit;font-size:.85rem;font-weight:600;padding:6px 10px;border-radius:10px;
+  border:1.5px solid var(--lilac-200);background:var(--lilac-50);color:var(--ink);
+}
+.ppv__foot{display:flex;flex-direction:column;gap:10px;border-top:1px dashed var(--lilac-200);padding-top:12px}
+.ppv__prices{display:flex;flex-direction:column;line-height:1.2}
+.ppv__price{font-family:'Baloo 2',cursive;font-weight:800;font-size:1.45rem;color:var(--violet-700)}
+.ppv__clube{font-size:.8rem;font-weight:700;color:var(--pink-500)}
+
+/* cupom + totais no carrinho */
+.cupom{display:flex;gap:8px;margin-bottom:4px}
+.cupom input{
+  flex:1;min-width:0;font-family:inherit;font-size:.95rem;padding:11px 14px;border-radius:12px;
+  border:2px solid var(--lilac-200);background:var(--lilac-50);color:var(--ink);text-transform:uppercase;
+}
+.cupom input:focus{outline:none;border-color:var(--violet-500);background:#fff}
+.cupom .btn{padding:10px 18px;font-size:.88rem;flex:none}
+.cupom__msg{font-size:.82rem;font-weight:700;min-height:1em;margin-bottom:6px}
+.cupom__msg--ok{color:#0E9F6E}
+.cupom__msg--err{color:#D96262}
+.ctotal{
+  background:var(--lilac-50);border:1px solid var(--lilac-100);border-radius:14px;
+  padding:13px 16px;margin-bottom:12px;display:grid;gap:6px;
+}
+.ctotal__row{display:flex;justify-content:space-between;align-items:baseline;font-size:.9rem;font-weight:600;color:var(--muted)}
+.ctotal__row strong{font-weight:800;color:var(--ink)}
+.ctotal__desc strong{color:#0E9F6E}
+.ctotal__main{font-size:1rem}
+.ctotal__main strong{font-family:'Baloo 2',cursive;font-size:1.15rem;color:var(--violet-700)}
+.ctotal__clube strong{color:var(--pink-500)}
+.ctotal__pend{font-size:.78rem;font-weight:600;color:var(--muted);margin-top:2px}
 
 /* FAB do carrinho (à esquerda, oposto do WhatsApp) */
 .cart-fab{

@@ -17,6 +17,30 @@
     });
   }
 
+  /* ---------- Busca de unidades (unidades.html) ---------- */
+  const unitSearch = $('#unitSearch');
+  if (unitSearch) {
+    const unitsEmpty = $('#unitsEmpty');
+    const groups = $$('.units__group');
+    const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+    unitSearch.addEventListener('input', () => {
+      const q = norm(unitSearch.value.trim()).slice(0, 60);
+      let shown = 0;
+      groups.forEach((group) => {
+        let groupShown = 0;
+        $$('li', group).forEach((li) => {
+          const link = $('a', li);
+          const match = !q || norm(link.getAttribute('data-q') || '').indexOf(q) !== -1;
+          li.hidden = !match;
+          if (match) groupShown++;
+        });
+        group.hidden = groupShown === 0;
+        shown += groupShown;
+      });
+      if (unitsEmpty) unitsEmpty.hidden = shown > 0;
+    });
+  }
+
   /* ---------- Header shadow on scroll ---------- */
   const header = $('#siteHeader');
   const onScroll = () => {

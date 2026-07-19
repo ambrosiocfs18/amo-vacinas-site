@@ -911,6 +911,12 @@ button{font-family:inherit}
 .units__list li a small{margin-left:auto;color:var(--muted);font-family:'Nunito';font-weight:700}
 @media (hover:hover) and (pointer:fine){.units__list li a:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
 .units__empty{text-align:center;color:var(--muted);font-weight:600;padding:22px;display:none}
+.units__group{margin-bottom:26px}
+.units__state{
+  display:inline-flex;font-family:'Baloo 2',cursive;font-weight:800;font-size:.95rem;
+  color:var(--violet-700);background:var(--lilac-50);border-radius:var(--r-pill);
+  padding:5px 16px;margin:0 0 12px;
+}
 
 /* contato */
 .chan{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:start}

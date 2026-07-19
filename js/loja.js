@@ -195,6 +195,14 @@
     });
   });
 
+  /* links que abrem uma aba específica do catálogo (ex.: "Ver pacotes PPV") */
+  $$('[data-tab-link]').forEach(function (link) {
+    link.addEventListener('click', function () {
+      var tab = document.querySelector('.ltab[data-panel="' + link.getAttribute('data-tab-link') + '"]');
+      if (tab) tab.click();
+    });
+  });
+
   /* ---------- Grids por perfil + busca ---------- */
   var grid = $('#lojaGrid');
   var searchTerm = '';

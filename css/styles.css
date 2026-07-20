@@ -844,7 +844,7 @@ button{font-family:inherit}
 .zig__row{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);align-items:center}
 .zig__row:nth-child(even)>figure{order:2}
 .zig__row figure{margin:0}
-.zig__row img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
+.zig__row img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 40%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
 .zig__row h3{font-size:clamp(1.4rem,2.6vw,1.85rem);font-weight:800}
 .zig__row h3 span{color:var(--violet-600)}
 .zig__row p{margin-top:10px;color:var(--muted);font-weight:500;line-height:1.65}

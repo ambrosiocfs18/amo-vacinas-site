@@ -262,8 +262,10 @@ button{font-family:inherit}
 /* ---------- PROMO BANNERS ---------- */
 .promos{padding:clamp(50px,7vw,84px) 0}
 .promos .container{display:flex;flex-direction:column;gap:22px}
+/* layout padronizado: mídia (foto/mascote) à esquerda + texto + cta */
 .promo{
-  position:relative;display:grid;align-items:center;gap:24px;
+  position:relative;display:grid;align-items:center;gap:clamp(20px,3vw,34px);
+  grid-template-columns:auto 1fr auto;
   border-radius:var(--r-lg);padding:clamp(24px,3.5vw,38px) clamp(24px,4vw,46px);
   overflow:hidden;box-shadow:var(--shadow-sm);
 }
@@ -271,19 +273,19 @@ button{font-family:inherit}
 .promo__text p{margin-top:8px;color:var(--ink);opacity:.78;font-weight:600;max-width:48ch;text-wrap:balance}
 .promo__cta{justify-self:start;align-self:center}
 
-/* layout A: mascot + text + cta */
-.promo--violet{grid-template-columns:auto 1fr auto;background:linear-gradient(120deg,#F1E9FF,#E4F0FF)}
-.promo--violet .promo__mascot img{width:auto;height:150px;object-fit:contain;filter:drop-shadow(0 12px 18px rgba(124,58,237,.28))}
+/* mídia em tile arredondado do mesmo tamanho nos três cards */
+.promo__photo img{width:186px;height:158px;object-fit:cover;object-position:50% 30%;border-radius:20px;box-shadow:var(--shadow-sm)}
+.promo__mascot{
+  width:186px;height:158px;border-radius:20px;display:grid;place-items:center;
+  background:rgba(255,255,255,.5);box-shadow:var(--shadow-sm);
+}
+.promo__mascot img{width:auto;height:150px;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(124,58,237,.26))}
+
+.promo--violet{background:linear-gradient(120deg,#F1E9FF,#E4F0FF)}
 .promo--violet .promo__cta{color:var(--violet-700)}
-
-/* layout B: photo + text + cta */
-.promo--blue{grid-template-columns:auto 1fr auto;background:linear-gradient(120deg,#E7EEFF,#EAFBFF)}
-.promo__photo img{width:174px;height:150px;object-fit:cover;object-position:50% 32%;border-radius:20px;box-shadow:var(--shadow-sm)}
+.promo--blue{background:linear-gradient(120deg,#E7EEFF,#EAFBFF)}
 .promo--blue .promo__cta{color:var(--indigo-500)}
-
-/* layout C: pink, text wide + round photo right */
-.promo--pink{grid-template-columns:1fr auto auto;background:linear-gradient(120deg,#FBE8FF,#EFE6FF)}
-.promo__photo--round img{width:164px;height:164px;object-fit:cover;object-position:50% 40%;border-radius:50%}
+.promo--pink{background:linear-gradient(120deg,#FBE8FF,#EFE6FF)}
 .promo--pink .promo__cta{color:var(--pink-500)}
 
 .promo .btn--white{box-shadow:var(--shadow-sm)}
@@ -526,7 +528,6 @@ button{font-family:inherit}
   .promo{grid-template-columns:1fr !important;text-align:center;justify-items:center;gap:16px}
   .promo__text p{margin-inline:auto}
   .promo__cta{justify-self:center}
-  .promo__photo--round{order:-1}
 }
 
 @media (max-width:560px){

@@ -34,6 +34,11 @@ Banner Site.png
 Cuidado que vai do nascer até a vida adulta.png
 Insira_familia_*.jpg
 
+# Fotos-fonte soltas em assets/ (o site usa só os .webp derivados)
+assets/*.png
+assets/*.jpg
+assets/*.jpeg
+
 # Pastas-fonte movidas para dentro de assets/ (originais pesados)
 assets/Ambientes/
 assets/Banners 2/

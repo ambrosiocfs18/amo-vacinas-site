@@ -274,12 +274,7 @@ button{font-family:inherit}
 .promo__cta{justify-self:start;align-self:center}
 
 /* mídia em tile arredondado do mesmo tamanho nos três cards */
-.promo__photo img{width:186px;height:158px;object-fit:cover;object-position:50% 30%;border-radius:20px;box-shadow:var(--shadow-sm)}
-.promo__mascot{
-  width:186px;height:158px;border-radius:20px;display:grid;place-items:center;
-  background:rgba(255,255,255,.5);box-shadow:var(--shadow-sm);
-}
-.promo__mascot img{width:auto;height:150px;object-fit:contain;filter:drop-shadow(0 10px 14px rgba(124,58,237,.26))}
+.promo__photo img{width:186px;height:158px;object-fit:cover;object-position:50% 40%;border-radius:20px;box-shadow:var(--shadow-sm)}
 
 .promo--violet{background:linear-gradient(120deg,#F1E9FF,#E4F0FF)}
 .promo--violet .promo__cta{color:var(--violet-700)}

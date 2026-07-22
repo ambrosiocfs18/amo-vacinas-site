@@ -1570,4 +1570,5 @@ button{font-family:inherit}
 
 /* hero de banner full-bleed — a arte ocupa a largura inteira da tela */
 .hero-banner{display:block;line-height:0;background:#F4F0FF}
+.hero-banner > a{display:block}
 .hero-banner img{width:100%;height:auto;display:block;border-radius:0;box-shadow:none}

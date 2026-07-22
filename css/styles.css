@@ -907,12 +907,46 @@ button{font-family:inherit}
 .units__list li a small{margin-left:auto;color:var(--muted);font-family:'Montserrat',sans-serif;font-weight:700}
 @media (hover:hover) and (pointer:fine){.units__list li a:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
 .units__empty{text-align:center;color:var(--muted);font-weight:600;padding:22px;display:none}
-.units__group{margin-bottom:26px}
-.units__state{
-  display:inline-flex;font-family:'Montserrat',sans-serif;font-weight:800;font-size:.95rem;
-  color:var(--violet-700);background:var(--lilac-50);border-radius:var(--r-pill);
-  padding:5px 16px;margin:0 0 12px;
+
+/* sanfona região > estado > cidade */
+.units__regions{display:grid;gap:14px}
+.units__region{
+  background:#fff;border:1.5px solid var(--lilac-100);border-radius:var(--r-lg);
+  box-shadow:var(--shadow-sm);overflow:hidden;
 }
+.units__region>summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;
+  padding:18px 22px;font-family:'Montserrat',sans-serif;
+}
+.units__region>summary::-webkit-details-marker{display:none}
+.units__region>summary::after{
+  content:"▾";margin-left:auto;color:var(--violet-500);font-size:1.1rem;flex:none;
+  transition:transform .25s var(--ease);
+}
+.units__region[open]>summary::after{transform:rotate(180deg)}
+.units__region>summary span{font-weight:800;font-size:1.15rem;color:var(--violet-700)}
+.units__region>summary small{
+  font-weight:700;font-size:.8rem;color:var(--muted);background:var(--lilac-50);
+  padding:4px 12px;border-radius:var(--r-pill);
+}
+.units__states{padding:0 16px 16px;display:grid;gap:10px}
+
+.units__group{
+  background:var(--lilac-50);border:1px solid var(--lilac-100);border-radius:var(--r-md);overflow:hidden;
+}
+.units__group summary{
+  list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;
+  padding:13px 18px;font-family:'Montserrat',sans-serif;
+}
+.units__group summary::-webkit-details-marker{display:none}
+.units__group summary::after{
+  content:"▾";margin-left:auto;color:var(--violet-500);flex:none;
+  transition:transform .25s var(--ease);
+}
+.units__group[open] summary::after{transform:rotate(180deg)}
+.units__group summary span{font-weight:700;font-size:1rem;color:var(--ink)}
+.units__group summary small{font-weight:700;font-size:.78rem;color:var(--violet-600)}
+.units__group .units__list{padding:0 14px 14px}
 
 /* contato */
 .chan{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:start}

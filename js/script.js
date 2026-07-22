@@ -17,25 +17,32 @@
     });
   }
 
-  /* ---------- Busca de unidades (unidades.html) ---------- */
+  /* ---------- Busca de unidades (unidades.html) — sanfona região > estado > cidade ---------- */
   const unitSearch = $('#unitSearch');
   if (unitSearch) {
     const unitsEmpty = $('#unitsEmpty');
-    const groups = $$('.units__group');
+    const regions = $$('.units__region');
     const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
     unitSearch.addEventListener('input', () => {
       const q = norm(unitSearch.value.trim()).slice(0, 60);
       let shown = 0;
-      groups.forEach((group) => {
-        let groupShown = 0;
-        $$('li', group).forEach((li) => {
-          const link = $('a', li);
-          const match = !q || norm(link.getAttribute('data-q') || '').indexOf(q) !== -1;
-          li.hidden = !match;
-          if (match) groupShown++;
+      regions.forEach((region) => {
+        let regionShown = 0;
+        $$('.units__group', region).forEach((group) => {
+          let groupShown = 0;
+          $$('li', group).forEach((li) => {
+            const link = $('a', li);
+            const match = !q || norm(link.getAttribute('data-q') || '').indexOf(q) !== -1;
+            li.hidden = !match;
+            if (match) groupShown++;
+          });
+          group.hidden = groupShown === 0;
+          group.open = q ? groupShown > 0 : false;
+          regionShown += groupShown;
         });
-        group.hidden = groupShown === 0;
-        shown += groupShown;
+        region.hidden = regionShown === 0;
+        region.open = q ? regionShown > 0 : false;
+        shown += regionShown;
       });
       if (unitsEmpty) unitsEmpty.hidden = shown > 0;
     });

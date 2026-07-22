@@ -43,7 +43,7 @@
     { id: 'hep-ab', nome: 'Hepatite A + B — Twinrix', desc: 'Proteção combinada contra as hepatites A e B.', doses: '3 doses', pn: 439, pc: 399, cats: ['adolescentes', 'adultos'] },
     { id: 'hpv9', nome: 'HPV nonavalente — Gardasil 9', desc: 'Proteção contra 9 tipos de HPV.', doses: '2 a 3 doses', pn: 1329, pc: 1249, cats: ['criancas', 'adolescentes', 'adultos'] },
     { id: 'dtpa', nome: 'dTpa', desc: 'Difteria, tétano e coqueluche — reforço adulto e gestante.', doses: '1 dose (reforço)', pn: 299, pc: 239, cats: ['adolescentes', 'adultos', 'gestantes'] },
-    { id: 'dtpa-ipv', nome: 'dTpa + IPV', desc: 'Difteria, tétano, coqueluche e poliomielite.', doses: '1 dose (reforço)', pn: null, pc: null, cats: ['criancas', 'adolescentes', 'adultos'] },
+    { id: 'dtpa-ipv', nome: 'dTpa + IPV', desc: 'Difteria, tétano, coqueluche e poliomielite.', doses: '1 dose (reforço)', pn: 299, pc: 239, cats: ['criancas', 'adolescentes', 'adultos'] },
     { id: 'febre-amarela', nome: 'Febre amarela — Stamaril', desc: 'Proteção contra a febre amarela.', doses: 'Dose única', pn: 279, pc: 199, cats: ['criancas', 'adolescentes', 'adultos'] },
     { id: 'zoster', nome: 'Herpes Zóster — Shingrix', desc: 'Herpes zóster (cobreiro) e suas complicações. 50+.', doses: '2 doses', pn: 1259, pc: 1155, cats: ['adultos', 'idosos'] },
     { id: 'vsr-abrysvo', nome: 'VSR — Abrysvo', desc: 'Vírus sincicial respiratório para gestantes e 60+.', doses: 'Dose única', pn: 2299, pc: 2099, cats: ['gestantes', 'idosos'] },

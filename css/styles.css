@@ -904,7 +904,10 @@ button{font-family:inherit}
   box-shadow:var(--shadow-sm);transition:transform .2s var(--ease-out),border-color .2s var(--ease-out);
 }
 .units__list li a svg{flex:none;color:var(--violet-500)}
-.units__list li a small{margin-left:auto;color:var(--muted);font-family:'Montserrat',sans-serif;font-weight:700}
+.units__place{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.units__place strong{font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.units__place .units__city{font-weight:600;font-size:.8rem;color:var(--muted)}
+.units__list li a > small{margin-left:auto;flex:none;color:var(--muted);font-family:'Montserrat',sans-serif;font-weight:700}
 @media (hover:hover) and (pointer:fine){.units__list li a:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
 .units__empty{text-align:center;color:var(--muted);font-weight:600;padding:22px;display:none}
 

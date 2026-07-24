@@ -953,6 +953,7 @@ button{font-family:inherit}
 
 /* contato */
 .chan{display:grid;grid-template-columns:1fr 1fr;gap:clamp(26px,4.5vw,54px);align-items:start}
+.chan--solo{grid-template-columns:1fr;max-width:640px;margin-inline:auto}
 .chan figure{margin:0}
 .chan figure img{width:100%;border-radius:var(--r-lg);box-shadow:var(--shadow-md)}
 /* ---------- Ambientes: carrossel infinito ---------- */

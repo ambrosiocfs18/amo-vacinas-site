@@ -565,17 +565,75 @@
       totalsBox.appendChild(r);
     }
 
+    var hasClube = cart.some(function (i) { return i.id === CLUBE.id; });
+
     if (t.tn > 0) {
       row('Subtotal', fmt(t.tn));
       if (t.desc > 0 && cupom) row('Cupom ' + cupom.codigo, '− ' + fmt(t.desc), 'ctotal__desc');
-      row('Total estimado', fmt(Math.max(t.tn - t.desc, 0)), 'ctotal__main');
-      row('Com Clube AMO', fmt(Math.max(t.tc - t.desc, 0)), 'ctotal__clube');
+      row(hasClube ? 'Total com Clube AMO' : 'Total estimado',
+        fmt(Math.max((hasClube ? t.tc : t.tn) - t.desc, 0)), 'ctotal__main');
     }
     if (t.pend > 0) {
       var note = document.createElement('p');
       note.className = 'ctotal__pend';
       note.textContent = '+ ' + t.pend + ' item(ns) com valor confirmado no atendimento.';
       totalsBox.appendChild(note);
+    }
+
+    /* Interruptor do Clube AMO + quanto economiza nesta reserva */
+    if (t.tn > 0) {
+      var economia = t.tn - t.tc; /* o item Clube soma igual em pn/pc, não distorce */
+      var box = document.createElement('div');
+      box.className = 'clube-switch' + (hasClube ? ' is-on' : '');
+
+      var top = document.createElement('label');
+      top.className = 'clube-switch__top';
+
+      var lbl = document.createElement('span');
+      lbl.className = 'clube-switch__label';
+      var lStrong = document.createElement('strong');
+      lStrong.textContent = 'Clube AMO';
+      var lSmall = document.createElement('small');
+      lSmall.textContent = 'Assinatura R$ 94,80/ano';
+      lbl.appendChild(lStrong);
+      lbl.appendChild(lSmall);
+
+      var sw = document.createElement('span');
+      sw.className = 'switch';
+      var input = document.createElement('input');
+      input.type = 'checkbox';
+      input.className = 'switch__input';
+      input.checked = hasClube;
+      input.setAttribute('role', 'switch');
+      input.setAttribute('aria-label', 'Ativar Clube AMO na reserva');
+      input.addEventListener('change', function () {
+        if (input.checked) addToCart(CLUBE.id);
+        else setQty(CLUBE.id, 0);
+      });
+      var track = document.createElement('span');
+      track.className = 'switch__track';
+      var thumb = document.createElement('span');
+      thumb.className = 'switch__thumb';
+      track.appendChild(thumb);
+      sw.appendChild(input);
+      sw.appendChild(track);
+
+      top.appendChild(lbl);
+      top.appendChild(sw);
+      box.appendChild(top);
+
+      var desc = document.createElement('p');
+      desc.className = 'clube-switch__desc';
+      if (economia > 0) {
+        desc.innerHTML = (hasClube ? 'Você está economizando ' : 'Com o Clube AMO você economiza ') +
+          '<strong>' + fmt(economia) + '</strong> nas vacinas desta reserva.';
+      } else {
+        desc.textContent = hasClube
+          ? 'Preços de assinante ativados em toda a reserva.'
+          : 'Ative para pagar o valor de assinante em toda a reserva.';
+      }
+      box.appendChild(desc);
+      totalsBox.appendChild(box);
     }
   }
 

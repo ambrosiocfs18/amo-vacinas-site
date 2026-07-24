@@ -23,6 +23,23 @@
     const unitsEmpty = $('#unitsEmpty');
     const regions = $$('.units__region');
     const norm = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+
+    // Clicar numa unidade abre o WhatsApp do 0800 com mensagem pronta
+    // identificando a unidade escolhida (em vez de ir pro Google Maps).
+    const WA_UNIDADES = '5508001245789';
+    $$('.units__list a').forEach((link) => {
+      const bairro = $('.units__place strong', link);
+      const cidade = $('.units__city', link);
+      const uf = $('.units__uf', link);
+      let local = bairro ? bairro.textContent.trim() : '';
+      if (cidade) local += ' - ' + cidade.textContent.trim();
+      if (uf) local += '/' + uf.textContent.trim();
+      const msg = 'Olá! Tenho interesse na unidade Amo Vacinas ' + local +
+        '. Gostaria de mais informações sobre horários e agendamento.';
+      link.href = 'https://wa.me/' + WA_UNIDADES + '?text=' + encodeURIComponent(msg);
+      link.setAttribute('aria-label', 'Falar no WhatsApp sobre a unidade ' + local);
+    });
+
     unitSearch.addEventListener('input', () => {
       const q = norm(unitSearch.value.trim()).slice(0, 60);
       let shown = 0;

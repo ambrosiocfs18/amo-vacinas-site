@@ -1058,6 +1058,26 @@ button{font-family:inherit}
 .gal2 figcaption{margin-top:10px;text-align:center;color:var(--muted);font-weight:600;font-size:.92rem}
 @media (max-width:700px){.gal2{grid-template-columns:1fr}}
 
+/* Galeria de fachadas — efeito hover-reveal (destaca o card sob o cursor) */
+.fgal{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:1080px;margin:0 auto}
+.fcard{position:relative;display:block;height:440px;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md);text-decoration:none;isolation:isolate;
+  transition:transform .5s cubic-bezier(.22,1,.36,1),opacity .5s ease,filter .5s ease}
+.fcard img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.fcard__shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,10,45,.82),rgba(20,10,45,.30) 46%,transparent 72%)}
+.fcard__body{position:absolute;left:0;right:0;bottom:0;padding:22px 24px;color:#fff;z-index:1}
+.fcard__sub{display:block;font-size:.76rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;opacity:.85}
+.fcard__title{display:block;margin-top:4px;font-size:1.42rem;font-weight:700;line-height:1.15}
+/* ao passar o mouse na galeria, recua/esmaece todos os cards... */
+.fgal:hover .fcard{transform:scale(.965);opacity:.55;filter:blur(2px)}
+/* ...e realça apenas o card sob o cursor/foco */
+.fgal .fcard:hover,.fgal .fcard:focus-visible{transform:scale(1.03);opacity:1;filter:none;z-index:2}
+.fcard:hover img{transform:scale(1.07)}
+.fcard:focus-visible{outline:none;box-shadow:0 0 0 3px var(--bg),0 0 0 6px var(--violet-600)}
+@media (max-width:900px){.fgal{grid-template-columns:1fr;max-width:460px}.fcard{height:380px}
+  /* sem hover em toque: mantém todos nítidos */
+  .fgal:hover .fcard{transform:none;opacity:1;filter:none}}
+@media (prefers-reduced-motion:reduce){.fcard,.fcard img{transition:none}}
+
 /* logo oficial no mock do Instagram */
 .insta__logo{height:38px;width:auto;margin-inline:auto;display:block}
 

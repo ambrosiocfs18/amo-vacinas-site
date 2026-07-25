@@ -26,7 +26,7 @@
 
     // Clicar numa unidade abre o WhatsApp do 0800 com mensagem pronta
     // identificando a unidade escolhida (em vez de ir pro Google Maps).
-    const WA_UNIDADES = '5508001245789';
+    const WA_UNIDADES = '5508000500090';
     $$('.units__list a').forEach((link) => {
       const bairro = $('.units__place strong', link);
       const cidade = $('.units__city', link);
@@ -260,7 +260,7 @@
       const ok = $('#contactOk');
       if (ok) ok.hidden = false;
       window.open(
-        'https://wa.me/5508007291714?text=' + encodeURIComponent(linhas.join('\n')),
+        'https://wa.me/5508000500090?text=' + encodeURIComponent(linhas.join('\n')),
         '_blank',
         'noopener'
       );

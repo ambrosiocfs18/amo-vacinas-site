@@ -8,7 +8,7 @@
 (function () {
   'use strict';
 
-  var WHATS = '5508007291714';
+  var WHATS = '5508000500090';
   var CART_KEY = 'amoCart';
   var MAX_QTY = 10;
 

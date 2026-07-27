@@ -1,4 +1,10 @@
 {
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/a-amo", "destination": "/amo", "permanent": true },
+    { "source": "/a-amo.html", "destination": "/amo", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -130,7 +130,9 @@
   <main id="conteudo">
     <section class="hero-banner" aria-label="Trabalhe conosco">
       <h1 class="sr-only">Trabalhe Conosco — Amo Vacinas</h1>
-      <img src="assets/hero-trabalhe-full.webp" width="1920" height="800" fetchpriority="high"
+      <img src="assets/hero-trabalhe-full.webp"
+           srcset="assets/hero-trabalhe-full.webp 1920w, assets/hero-trabalhe-full@2x.webp 3840w"
+           sizes="100vw" width="1920" height="800" fetchpriority="high"
            alt="Você quer fazer parte da Amo Vacinas?" />
     </section>
 
@@ -224,15 +226,9 @@
     </section>
 
     <section class="lp-section" aria-label="Sobre a Amo">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div>
-            <h2>A rede de clínicas de vacinação mais premiada do Brasil</h2>
-            <p>Cresça com quem atua com responsabilidade, autonomia e propósito, entregando cuidado seguro, humano e acolhedor.</p>
-          </div>
-          <a href="a-amo.html" class="btn btn--white btn--lg">Conheça a Amo</a>
-        </div>
-      </div>
+      <a class="band-img reveal" href="a-amo.html" aria-label="Conheça a Amo, a rede de clínicas de vacinação mais premiada do Brasil">
+        <img src="assets/band-premiada.webp" alt="A rede de clínicas de vacinação mais premiada do Brasil" width="1099" height="148" loading="lazy" />
+      </a>
     </section>
 
   </main>

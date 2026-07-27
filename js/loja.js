@@ -24,11 +24,11 @@
   };
   var CATALOG = [
     { id: 'influenza4', nome: 'Influenza quadrivalente', desc: 'Proteção anual contra a gripe para toda a família.', doses: 'Dose anual', pn: 189, pc: 129, cats: ['bebes', 'criancas', 'adolescentes', 'adultos', 'gestantes'] },
-    { id: 'influenza-hd', nome: 'Influenza high dose 60+', desc: 'Gripe com dose reforçada, desenvolvida para 60+.', doses: 'Dose anual', pn: null, pc: null, cats: ['idosos'] },
+    { id: 'influenza-hd', nome: 'Influenza high dose 60+', desc: 'Gripe com dose reforçada, desenvolvida para 60+.', doses: 'Dose anual', pn: 399, pc: 379, cats: ['idosos'] },
     { id: 'hexavalente', nome: 'Hexavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio, hepatite B e Hib.', doses: '3 doses', pn: 399, pc: 369, cats: ['bebes'] },
     { id: 'pentavalente', nome: 'Pentavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio e Hib.', doses: '2 doses + reforço', pn: 279, pc: 249, cats: ['bebes'] },
     { id: 'rotavirus', nome: 'Rotavírus pentavalente', desc: 'Gastroenterites causadas por rotavírus.', doses: '3 doses (oral)', pn: 399, pc: 379, cats: ['bebes'] },
-    { id: 'vsr-beyfortus', nome: 'VSR — Beyfortus', desc: 'Anticorpo monoclonal contra o vírus sincicial respiratório.', doses: 'Dose única', pn: null, pc: null, cats: ['bebes'] },
+    { id: 'vsr-beyfortus', nome: 'VSR — Beyfortus', desc: 'Anticorpo monoclonal contra o vírus sincicial respiratório.', doses: 'Dose única', pn: 5199, pc: 3999, cats: ['bebes'] },
     { id: 'men-acwy', nome: 'Meningocócica ACWY', desc: 'Meningites dos tipos A, C, W e Y.', doses: '1 a 2 doses', pn: 529, pc: 489, cats: ['bebes', 'criancas', 'adolescentes', 'adultos'] },
     { id: 'men-b', nome: 'Meningocócica B', desc: 'Meningite do tipo B — única disponível no Brasil.', doses: '2 a 4 doses', pn: 849, pc: 829, cats: ['bebes', 'criancas', 'adolescentes'] },
     { id: 'pneumo13', nome: 'Pneumocócica 13V', desc: 'Pneumonias e doenças pneumocócicas (13 sorotipos).', doses: '3 + reforço', pn: null, pc: null, cats: ['bebes', 'adultos', 'idosos'] },
@@ -48,7 +48,7 @@
     { id: 'zoster', nome: 'Herpes Zóster — Shingrix', desc: 'Herpes zóster (cobreiro) e suas complicações. 50+.', doses: '2 doses', pn: 1259, pc: 1155, cats: ['adultos', 'idosos'] },
     { id: 'vsr-abrysvo', nome: 'VSR — Abrysvo', desc: 'Vírus sincicial respiratório para gestantes e 60+.', doses: 'Dose única', pn: 2299, pc: 2099, cats: ['gestantes', 'idosos'] },
     { id: 'vsr-arexvy', nome: 'VSR — Arexvy', desc: 'Vírus sincicial respiratório para 60+.', doses: '1 a 2 doses', pn: 2099, pc: 1899, cats: ['idosos'] },
-    { id: 'rhogan', nome: 'Rhogan', desc: 'Imunoglobulina anti-Rh para gestantes.', doses: 'Conforme indicação', pn: null, pc: null, cats: ['gestantes'] },
+    { id: 'rhogan', nome: 'Rhogan', desc: 'Imunoglobulina anti-Rh para gestantes.', doses: 'Conforme indicação', pn: 549, pc: 509, cats: ['gestantes'] },
   ];
 
   /* Clube AMO — assinatura anual com preços exclusivos */
@@ -211,6 +211,42 @@
     return s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   }
 
+  /* Preço com o Clube AMO em destaque: o valor de sócio vira o número
+     principal e o valor sem clube aparece riscado logo acima, sempre
+     rotulado para não induzir a erro sobre quem paga o quê.
+     `ns` = prefixo das classes (lprod / ppv). */
+  /* Preenche `box` com o valor riscado (sem clube) + o valor de sócio como
+     número principal. Devolve o selo da economia SEM anexá-lo: quem chama
+     decide onde ele cabe, porque no card de vacina ele não tem largura
+     suficiente ao lado do botão "Adicionar". */
+  function fillPrices(box, pn, pc, ns) {
+    box.textContent = '';
+    var economia = pn - pc;
+
+    if (economia > 0) {
+      var base = document.createElement('span');
+      base.className = ns + '__base';
+      var lab = document.createElement('em');
+      lab.textContent = 'sem clube';
+      var old = document.createElement('s');
+      old.textContent = fmt(pn);
+      base.appendChild(lab);
+      base.appendChild(old);
+      box.appendChild(base);
+    }
+
+    var main = document.createElement('span');
+    main.className = ns + '__price';
+    main.textContent = fmt(economia > 0 ? pc : pn);
+    box.appendChild(main);
+
+    if (economia <= 0) return null;
+    var clube = document.createElement('span');
+    clube.className = ns + '__clube';
+    clube.textContent = 'Clube AMO · economize ' + fmt(economia);
+    return clube;
+  }
+
   function priceBlock(p) {
     var box = document.createElement('div');
     box.className = 'lprod__prices';
@@ -219,17 +255,9 @@
       only.className = 'lprod__consult';
       only.textContent = 'Valor confirmado no atendimento';
       box.appendChild(only);
-      return box;
+      return { box: box, badge: null };
     }
-    var main = document.createElement('span');
-    main.className = 'lprod__price';
-    main.textContent = fmt(p.pn);
-    var clube = document.createElement('span');
-    clube.className = 'lprod__clube';
-    clube.textContent = 'Clube AMO: ' + fmt(p.pc);
-    box.appendChild(main);
-    box.appendChild(clube);
-    return box;
+    return { box: box, badge: fillPrices(box, p.pn, p.pc, 'lprod') };
   }
 
   function makeCard(p) {
@@ -251,9 +279,10 @@
     var desc = document.createElement('p');
     desc.textContent = p.desc + (p.doses ? ' · ' + p.doses : '');
 
+    var pb = priceBlock(p);
     var foot = document.createElement('div');
     foot.className = 'lprod__foot';
-    foot.appendChild(priceBlock(p));
+    foot.appendChild(pb.box);
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'btn btn--primary lprod__add';
@@ -265,6 +294,7 @@
     card.appendChild(tags);
     card.appendChild(h3);
     card.appendChild(desc);
+    if (pb.badge) card.appendChild(pb.badge);
     card.appendChild(foot);
     return card;
   }
@@ -358,7 +388,16 @@
         var nm2 = document.createElement('strong');
         nm2.textContent = p.nome;
         var pr2 = document.createElement('small');
-        pr2.textContent = p.pn == null ? 'Valor no atendimento' : fmt(p.pn) + ' · Clube ' + fmt(p.pc);
+        if (p.pn == null) {
+          pr2.textContent = 'Valor no atendimento';
+        } else {
+          var s2 = document.createElement('s');
+          s2.textContent = fmt(p.pn);
+          var c2 = document.createElement('b');
+          c2.textContent = 'Clube ' + fmt(p.pc);
+          pr2.appendChild(s2);
+          pr2.appendChild(c2);
+        }
         info2.appendChild(nm2);
         info2.appendChild(pr2);
         var b2 = document.createElement('button');
@@ -435,16 +474,14 @@
       var foot = document.createElement('div');
       foot.className = 'ppv__foot';
 
-      var priceN = document.createElement('span');
-      priceN.className = 'ppv__price';
-      var priceC = document.createElement('span');
-      priceC.className = 'ppv__clube';
+      var prices = document.createElement('div');
+      prices.className = 'ppv__prices';
       var sel = null;
 
       function updatePrices() {
         var pr = pack.pneumo ? pack.precos[sel.value] : pack.precos.fixo;
-        priceN.textContent = fmt(pr[0]);
-        priceC.textContent = 'Clube AMO: ' + fmt(pr[1]);
+        var badge = fillPrices(prices, pr[0], pr[1], 'ppv');
+        if (badge) prices.appendChild(badge);
       }
 
       if (pack.pneumo) {
@@ -465,10 +502,6 @@
         foot.appendChild(selWrap);
       }
 
-      var prices = document.createElement('div');
-      prices.className = 'ppv__prices';
-      prices.appendChild(priceN);
-      prices.appendChild(priceC);
       foot.appendChild(prices);
 
       var btn = document.createElement('button');

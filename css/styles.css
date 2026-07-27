@@ -1303,11 +1303,28 @@ button{font-family:inherit}
 .lprod__foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:6px}
 .lprod__add{padding:9px 18px;font-size:.9rem}
 
-/* preços no card */
-.lprod__prices{display:flex;flex-direction:column;gap:2px;line-height:1.15}
-.lprod__price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.22rem;color:var(--violet-700)}
-.lprod__clube{font-size:.74rem;font-weight:700;color:var(--pink-500)}
+/* preços no card — valor do Clube AMO como número principal */
+.lprod__prices{display:flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.15}
+.lprod__price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.34rem;color:#DB2777;letter-spacing:-.4px}
 .lprod__consult{font-size:.78rem;font-weight:700;color:var(--violet-500);max-width:14ch;line-height:1.25}
+
+/* linha "sem clube R$ X" riscada, acima do valor de sócio */
+.lprod__base,.ppv__base{display:flex;align-items:baseline;gap:5px;font-weight:600;color:var(--muted)}
+.lprod__base{font-size:.72rem}
+.ppv__base{font-size:.78rem}
+.lprod__base em,.ppv__base em{font-style:normal;font-size:.92em;letter-spacing:.04em;text-transform:uppercase;opacity:.8}
+.lprod__base s,.ppv__base s{text-decoration-color:var(--pink-400);text-decoration-thickness:1.5px}
+
+/* selo da economia — no card de vacina ele fica em linha própria (largura
+   inteira do card), porque ao lado do botão "Adicionar" não cabe numa linha */
+.lprod__clube,.ppv__clube{
+  align-self:flex-start;display:inline-flex;align-items:center;max-width:100%;
+  font-weight:700;letter-spacing:.01em;white-space:nowrap;
+  padding:3px 10px;border-radius:var(--r-pill);
+  background:#FDF2F8;color:#BE185D;border:1px solid #FBCFE8;
+}
+.lprod__clube{font-size:.68rem;margin-top:2px}
+.ppv__clube{font-size:.74rem}
 
 /* destaque sutil dos cards do catálogo: filete em degradê no topo + brilho no hover */
 .lprod{position:relative;overflow:hidden}
@@ -1400,6 +1417,8 @@ button{font-family:inherit}
 }
 .lcal__vac strong{display:block;font-weight:700;font-size:.95rem;color:var(--ink)}
 .lcal__vac small{font-weight:600;font-size:.78rem;color:var(--violet-500)}
+.lcal__vac small s{color:var(--muted);text-decoration-color:var(--pink-400);margin-right:6px}
+.lcal__vac small b{font-weight:800;color:#DB2777}
 .lcal__choice{display:flex;gap:6px;flex:none}
 .lcal__mini{padding:7px 13px;font-size:.82rem;flex:none}
 .lcal__all{margin-top:6px;justify-self:start;padding:10px 20px;font-size:.9rem}
@@ -1435,9 +1454,8 @@ button{font-family:inherit}
   border:1.5px solid var(--lilac-200);background:var(--lilac-50);color:var(--ink);
 }
 .ppv__foot{display:flex;flex-direction:column;gap:10px;border-top:1px dashed var(--lilac-200);padding-top:12px}
-.ppv__prices{display:flex;flex-direction:column;line-height:1.2}
-.ppv__price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.45rem;color:var(--violet-700)}
-.ppv__clube{font-size:.8rem;font-weight:700;color:var(--pink-500)}
+.ppv__prices{display:flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.2}
+.ppv__price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.6rem;color:#DB2777;letter-spacing:-.5px}
 
 /* cupom + totais no carrinho */
 .cupom{display:flex;gap:8px;margin-bottom:4px}

@@ -419,6 +419,8 @@ button{font-family:inherit}
 .site-footer__cols a:hover{opacity:1;transform:translateX(3px);color:var(--violet-700)}
 .site-footer__legal{margin-top:34px;padding-top:20px;border-top:1px solid rgba(60,71,148,.18);font-size:.84rem;opacity:.8}
 .site-footer__legal p{margin:2px 0}
+.site-footer__legal a{color:inherit;font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.site-footer__legal a:hover{color:var(--violet-600)}
 
 /* ---------- WHATSAPP FAB ---------- */
 .whatsapp-fab{

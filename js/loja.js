@@ -31,7 +31,6 @@
     { id: 'vsr-beyfortus', nome: 'VSR — Beyfortus', desc: 'Anticorpo monoclonal contra o vírus sincicial respiratório.', doses: 'Dose única', pn: 5199, pc: 3999, cats: ['bebes'] },
     { id: 'men-acwy', nome: 'Meningocócica ACWY', desc: 'Meningites dos tipos A, C, W e Y.', doses: '1 a 2 doses', pn: 529, pc: 489, cats: ['bebes', 'criancas', 'adolescentes', 'adultos'] },
     { id: 'men-b', nome: 'Meningocócica B', desc: 'Meningite do tipo B — única disponível no Brasil.', doses: '2 a 4 doses', pn: 849, pc: 829, cats: ['bebes', 'criancas', 'adolescentes'] },
-    { id: 'pneumo13', nome: 'Pneumocócica 13V', desc: 'Pneumonias e doenças pneumocócicas (13 sorotipos).', doses: '3 + reforço', pn: null, pc: null, cats: ['bebes', 'adultos', 'idosos'] },
     { id: 'pneumo15', nome: 'Pneumocócica 15V', desc: 'Pneumonias e doenças pneumocócicas (15 sorotipos).', doses: '3 + reforço', pn: 479, pc: 439, cats: ['bebes', 'criancas', 'idosos'] },
     { id: 'pneumo20', nome: 'Pneumocócica 20V', desc: 'Cobertura ampliada: 20 sorotipos pneumocócicos.', doses: '3 + reforço', pn: 729, pc: 699, cats: ['bebes', 'adultos', 'idosos'] },
     { id: 'triplice', nome: 'Tríplice viral', desc: 'Sarampo, caxumba e rubéola.', doses: '2 doses', pn: 169, pc: 139, cats: ['criancas', 'adolescentes', 'adultos'] },

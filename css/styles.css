@@ -1152,6 +1152,8 @@ button{font-family:inherit}
   background:radial-gradient(56% 38% at 50% 90%,rgba(124,58,237,.16),transparent 70%);
   filter:drop-shadow(0 16px 22px rgba(91,33,182,.22));
 }
+/* hero da loja: mascote recortado sem sombra de chão — urso "flutuando" */
+.ph--somos .ph__media--bear img{background:none;filter:none}
 
 /* card do cartão (mascote + lista de vacinas) */
 .cvcard{

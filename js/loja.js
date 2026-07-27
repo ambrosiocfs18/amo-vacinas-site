@@ -798,6 +798,20 @@
       linhas.push('');
       linhas.push('Ciente de que valores e disponibilidade são confirmados no atendimento.');
 
+      window.AmoLead.send({
+        formulario: 'loja',
+        nome: nome,
+        telefone: whats,
+        unidade: unidade,
+        itens: cart.map(function (i) {
+          var r = resolve(i.id);
+          return r ? { id: i.id, nome: r.nome, qtd: i.qty } : { id: i.id, qtd: i.qty };
+        }),
+        cupom: cupom ? cupom.codigo : '',
+        total_normal: t.tn > 0 ? Math.max(t.tn - t.desc, 0) : null,
+        total_clube: t.tn > 0 ? Math.max(t.tc - t.desc, 0) : null,
+      });
+
       var ok = $('#cartOk');
       if (ok) ok.hidden = false;
       window.open(

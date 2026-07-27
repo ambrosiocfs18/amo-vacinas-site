@@ -566,6 +566,16 @@
         ];
         if (form.elements['profissao'].value.trim()) linhas.push('Profissão: ' + form.elements['profissao'].value.trim());
         if (form.elements['capital'].value) linhas.push('Capital de investimento: ' + form.elements['capital'].value);
+
+        window.AmoLead.send({
+          formulario: 'franquia',
+          nome: form.elements['nome'].value.trim(),
+          telefone: form.elements['telefone'].value.trim(),
+          email: form.elements['email'].value.trim(),
+          profissao: form.elements['profissao'].value.trim(),
+          capital_investimento: form.elements['capital'].value,
+        });
+
         var ok = document.getElementById('leadOk');
         if (ok) ok.hidden = false;
         window.open('https://wa.me/5588996423687?text=' + encodeURIComponent(linhas.join('\n')), '_blank', 'noopener');

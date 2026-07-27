@@ -8,6 +8,22 @@
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Envio de leads ao CRM (webhook), sem bloquear o WhatsApp ----------
+     Falha silenciosa: se o CRM estiver fora do ar, o cliente ainda fala pelo WhatsApp. */
+  const LEAD_WEBHOOK_URL = 'https://amovacinas-webhook.gkhub.com.br/webhook/cadastro-lead';
+  window.AmoLead = {
+    send(payload) {
+      try {
+        fetch(LEAD_WEBHOOK_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(Object.assign({ origem_pagina: window.location.href, enviado_em: new Date().toISOString() }, payload)),
+          keepalive: true,
+        }).catch(() => {});
+      } catch (e) {}
+    },
+  };
+
   /* ---------- Voucher bar close ---------- */
   const voucherBar = $('#voucherBar');
   const voucherClose = $('#voucherClose');
@@ -257,6 +273,15 @@
       const assunto = form.elements['assunto'];
       if (assunto && assunto.value)
         linhas.push('Assunto: ' + (assuntos[assunto.value] || assunto.value));
+
+      window.AmoLead.send({
+        formulario: 'contato',
+        nome: form.elements['nome'].value.trim(),
+        telefone: form.elements['telefone'].value.trim(),
+        email: form.elements['email'].value.trim(),
+        assunto: assunto && assunto.value ? (assuntos[assunto.value] || assunto.value) : '',
+      });
+
       const ok = $('#contactOk');
       if (ok) ok.hidden = false;
       window.open(

@@ -9,7 +9,9 @@
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------- Envio de leads ao CRM (webhook), sem bloquear o WhatsApp ----------
-     Falha silenciosa: se o CRM estiver fora do ar, o cliente ainda fala pelo WhatsApp. */
+     Falha silenciosa: se o CRM estiver fora do ar, o cliente ainda fala pelo WhatsApp.
+     Envia só o caminho da página (nunca a URL completa) — query string pode carregar
+     parâmetros de campanha ou dados de terceiros que não precisam sair daqui. */
   const LEAD_WEBHOOK_URL = 'https://amovacinas-webhook.gkhub.com.br/webhook/cadastro-lead';
   window.AmoLead = {
     send(payload) {
@@ -17,7 +19,7 @@
         fetch(LEAD_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(Object.assign({ origem_pagina: window.location.href, enviado_em: new Date().toISOString() }, payload)),
+          body: JSON.stringify(Object.assign({ origem_pagina: window.location.pathname, enviado_em: new Date().toISOString() }, payload)),
           keepalive: true,
         }).catch(() => {});
       } catch (e) {}

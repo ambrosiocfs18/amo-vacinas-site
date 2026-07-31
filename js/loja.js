@@ -26,7 +26,7 @@
     { id: 'influenza4', nome: 'Influenza quadrivalente', desc: 'Proteção anual contra a gripe para toda a família.', doses: 'Dose anual', pn: 189, pc: 129, cats: ['bebes', 'criancas', 'adolescentes', 'adultos', 'gestantes'] },
     { id: 'influenza-hd', nome: 'Influenza high dose 60+', desc: 'Gripe com dose reforçada, desenvolvida para 60+.', doses: 'Dose anual', pn: 399, pc: 379, cats: ['idosos'] },
     { id: 'hexavalente', nome: 'Hexavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio, hepatite B e Hib.', doses: '3 doses', pn: 399, pc: 369, cats: ['bebes'] },
-    { id: 'pentavalente', nome: 'Pentavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio e Hib.', doses: '2 doses + reforço', pn: 279, pc: 249, cats: ['bebes'] },
+    { id: 'pentavalente', nome: 'Pentavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio e Hib.', doses: '2 doses + reforço', pn: 379, pc: 349, cats: ['bebes'] },
     { id: 'rotavirus', nome: 'Rotavírus pentavalente', desc: 'Gastroenterites causadas por rotavírus.', doses: '3 doses (oral)', pn: 399, pc: 379, cats: ['bebes'] },
     { id: 'vsr-beyfortus', nome: 'VSR — Beyfortus', desc: 'Anticorpo monoclonal contra o vírus sincicial respiratório.', doses: 'Dose única', pn: 5199, pc: 3999, cats: ['bebes'] },
     { id: 'men-acwy', nome: 'Meningocócica ACWY', desc: 'Meningites dos tipos A, C, W e Y.', doses: '1 a 2 doses', pn: 529, pc: 489, cats: ['bebes', 'criancas', 'adolescentes', 'adultos'] },

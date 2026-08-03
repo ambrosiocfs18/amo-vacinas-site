@@ -8,8 +8,22 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
 
+    /* Consent Mode v2 — nada é gravado antes de o visitante escolher.
+       Se já houve escolha, ela entra aqui, antes do config, para não
+       existir uma janela em que a tag grave cookie sem permissão. */
+    var amoConsentSalvo = null;
+    try { amoConsentSalvo = localStorage.getItem('amoCookieConsent'); } catch (e) {}
+    var amoConsentEstado = amoConsentSalvo === 'granted' ? 'granted' : 'denied';
+    gtag('consent', 'default', {
+      ad_storage: amoConsentEstado,
+      ad_user_data: amoConsentEstado,
+      ad_personalization: amoConsentEstado,
+      analytics_storage: amoConsentEstado,
+      wait_for_update: 500
+    });
+
+    gtag('js', new Date());
     gtag('config', 'AW-16675357727');
   </script>
 
@@ -26,7 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=80" />
+  <link rel="stylesheet" href="css/styles.css?v=86" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -608,6 +622,19 @@
     </defs>
   </svg>
 
-  <script src="js/script.js?v=80" defer></script>
+  <script src="js/script.js?v=86" defer></script>
+
+  <div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso sobre cookies" hidden>
+    <div class="cookie-bar__inner">
+      <div class="cookie-bar__copy">
+        <strong>Cookies de medição</strong>
+        <p>Usamos cookies do Google para saber se sua visita veio de um anúncio nosso. O site funciona igual se você recusar. <a href="/politica-privacidade">Política de privacidade</a>.</p>
+      </div>
+      <div class="cookie-bar__actions">
+        <button type="button" class="btn btn--soft cookie-bar__btn" id="cookieDeny">Recusar</button>
+        <button type="button" class="btn btn--primary cookie-bar__btn" id="cookieAccept">Aceitar</button>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

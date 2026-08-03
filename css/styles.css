@@ -1669,3 +1669,51 @@ button{font-family:inherit}
 .hero-banner{display:block;line-height:0;background:#F4F0FF}
 .hero-banner > a{display:block}
 .hero-banner img{width:100%;height:auto;display:block;border-radius:0;box-shadow:none}
+
+/* ---------- BARRA DE COOKIES (consentimento) ----------
+   Aceitar e recusar têm o mesmo peso de leitura: a LGPD pede que negar
+   seja tão fácil quanto consentir, então nada de "recusar" escondido
+   como link secundário. */
+/* A entrada usa transition + classe, não animation: o elemento nasce com
+   [hidden] (display:none) e animação CSS não dispara em elemento oculto —
+   ficava travada no primeiro frame, fora da tela. */
+.cookie-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:60;
+  background:#fff;border-top:1px solid var(--lilac-200);
+  box-shadow:0 -16px 40px rgba(91,33,182,.14);
+  padding:16px clamp(14px,3vw,28px);
+  transform:translateY(100%);
+  transition:transform .4s var(--ease-out);
+}
+.cookie-bar.is-open{transform:translateY(0)}
+.cookie-bar[hidden]{display:none}
+.cookie-bar__inner{
+  max-width:1180px;margin:0 auto;
+  display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;justify-content:space-between;
+}
+.cookie-bar__copy{flex:1 1 420px;min-width:0}
+.cookie-bar__copy strong{
+  display:block;font-family:'Montserrat',sans-serif;font-weight:700;
+  color:var(--ink);font-size:.98rem;margin-bottom:3px;
+}
+.cookie-bar__copy p{margin:0;font-size:.9rem;line-height:1.5;color:var(--muted);text-wrap:pretty}
+.cookie-bar__copy a{color:var(--violet-700);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.cookie-bar__copy a:hover{color:var(--violet-600)}
+.cookie-bar__actions{display:flex;gap:10px;flex:0 0 auto}
+/* min-height 44px = alvo mínimo de toque; o padding do .btn sozinho dava 35px */
+.cookie-bar__btn{font-size:.92rem;padding:10px 22px;min-width:124px;min-height:44px}
+
+@media (prefers-reduced-motion:reduce){
+  .cookie-bar{transition:none}
+}
+
+@media (max-width:640px){
+  .cookie-bar{padding:13px 14px}
+  .cookie-bar__inner{flex-direction:column;align-items:stretch;gap:11px}
+  /* em coluna, o flex-basis do copy vira ALTURA e inflava a barra para
+     420px; volta a dimensionar pelo conteudo */
+  .cookie-bar__copy{flex:0 1 auto}
+  .cookie-bar__copy p{font-size:.84rem;line-height:1.45}
+  .cookie-bar__actions{display:grid;grid-template-columns:1fr 1fr}
+  .cookie-bar__btn{min-width:0;width:100%}
+}

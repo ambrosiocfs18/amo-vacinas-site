@@ -8,6 +8,105 @@
   const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------- Consentimento de cookies ----------
+     A tag do Google já sobe com tudo negado (Consent Mode v2, no <head> de
+     cada página). Aqui só mostramos a escolha e avisamos o gtag quando ela
+     muda — por isso não existe janela em que um cookie seja gravado antes
+     do aceite, nem quando o JS demora a carregar. */
+  const CONSENT_KEY = 'amoCookieConsent';
+
+  /* O Consent Mode impede cookies NOVOS, mas não remove os já gravados.
+     Sem isto, quem aceitou e depois recusou continuaria com _ga/_gcl_au no
+     navegador — a revogação não teria efeito prático. */
+  function limparCookiesDeMedicao() {
+    const dominios = [location.hostname, '.' + location.hostname];
+    const raiz = location.hostname.split('.').slice(-2).join('.');
+    if (raiz !== location.hostname) dominios.push('.' + raiz);
+
+    document.cookie.split(';').forEach((c) => {
+      const nome = c.split('=')[0].trim();
+      if (!/^(_ga|_gid|_gcl|_gac)/.test(nome)) return;
+      dominios.forEach((d) => {
+        document.cookie = `${nome}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${d}`;
+      });
+      document.cookie = `${nome}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
+    });
+  }
+
+  function aplicarConsentimento(estado) {
+    const v = estado === 'granted' ? 'granted' : 'denied';
+    if (typeof window.gtag === 'function') {
+      window.gtag('consent', 'update', {
+        ad_storage: v,
+        ad_user_data: v,
+        ad_personalization: v,
+        analytics_storage: v,
+      });
+    }
+    if (v === 'denied') limparCookiesDeMedicao();
+  }
+
+  const cookieBar = $('#cookieBar');
+  if (cookieBar) {
+    let escolha = null;
+    try { escolha = localStorage.getItem(CONSENT_KEY); } catch (e) {}
+
+    const registrar = (estado) => {
+      try { localStorage.setItem(CONSENT_KEY, estado); } catch (e) {}
+      aplicarConsentimento(estado);
+      cookieBar.classList.remove('is-open');
+      cookieBar.hidden = true;
+    };
+
+    /* Revela e anima. O reflow forçado (leitura de offsetHeight) faz o
+       navegador aplicar o display:block antes da classe, que é o que permite
+       a transition rodar. Não usar requestAnimationFrame aqui: ele não
+       dispara em aba de segundo plano, e a barra ficaria invisível para quem
+       abre o site numa aba que só vê depois. */
+    const abrirBarra = () => {
+      cookieBar.hidden = false;
+      void cookieBar.offsetHeight;
+      cookieBar.classList.add('is-open');
+    };
+    window.__amoAbrirCookieBar = abrirBarra;
+
+    if (escolha === 'granted' || escolha === 'denied') {
+      // já decidiu antes: reaplica e não mostra a barra de novo
+      aplicarConsentimento(escolha);
+    } else {
+      abrirBarra();
+      const aceitar = $('#cookieAccept', cookieBar);
+      const recusar = $('#cookieDeny', cookieBar);
+      if (aceitar) aceitar.addEventListener('click', () => registrar('granted'));
+      if (recusar) recusar.addEventListener('click', () => registrar('denied'));
+    }
+  }
+
+  /* Permite rever a decisão depois (botão na política de privacidade) */
+  window.AmoCookies = {
+    redefinir() {
+      try { localStorage.removeItem(CONSENT_KEY); } catch (e) {}
+      aplicarConsentimento('denied');
+      if (cookieBar) {
+        const aceitar = $('#cookieAccept', cookieBar);
+        const recusar = $('#cookieDeny', cookieBar);
+        const registrar = (estado) => {
+          try { localStorage.setItem(CONSENT_KEY, estado); } catch (e) {}
+          aplicarConsentimento(estado);
+          cookieBar.classList.remove('is-open');
+          cookieBar.hidden = true;
+        };
+        if (aceitar) aceitar.onclick = () => registrar('granted');
+        if (recusar) recusar.onclick = () => registrar('denied');
+        if (window.__amoAbrirCookieBar) window.__amoAbrirCookieBar();
+        else cookieBar.hidden = false;
+      }
+    },
+  };
+
+  const btnRevisar = $('#revisarCookies');
+  if (btnRevisar) btnRevisar.addEventListener('click', () => window.AmoCookies.redefinir());
+
   /* ---------- Envio de leads ao CRM (webhook), sem bloquear o WhatsApp ----------
      Falha silenciosa: se o CRM estiver fora do ar, o cliente ainda fala pelo WhatsApp.
      Envia só o caminho da página (nunca a URL completa) — query string pode carregar

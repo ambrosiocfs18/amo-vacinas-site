@@ -955,10 +955,8 @@ button{font-family:inherit}
   width:34px;height:34px;flex:none;border-radius:50%;
   transition:transform .18s var(--ease-out),filter .18s var(--ease-out);
 }
-.units__act > :not(.units__act-ico){
-  position:absolute;width:1px;height:1px;overflow:hidden;
-  clip:rect(0 0 0 0);white-space:nowrap;
-}
+.units__act{font-size:0;line-height:0;overflow:hidden}
+.units__act .units__act-ico{font-size:1rem;line-height:0;display:inline-flex}
 .units__act-ico{display:inline-flex}
 .units__act--rota{color:var(--violet-700);background:var(--lilac-50);box-shadow:inset 0 0 0 1.5px var(--lilac-200)}
 .units__act--wa{color:#fff;background:#25D366;box-shadow:0 3px 10px rgba(37,211,102,.32)}

@@ -16,11 +16,11 @@
 
   var WHATS = '5508000500090';
 
-  /* Cores da paleta do site (css/styles.css :root):
-     aberta usa o gradiente da marca (--grad-primary: violet-600 -> indigo)
-     e "em breve" usa --violet-400, o mesmo roxo mais claro do site. */
+  /* Cores da paleta do site (css/styles.css :root). Unidade aberta repete
+     o gradiente da marca --grad-primary (#7C3AED -> #4F46E5, os mesmos dois
+     stops dos botões); "em breve" usa --violet-400. */
   var VIOLET_600 = '#7C3AED';
-  var INDIGO = '#4F46E5';
+  var INDIGO_GRAD = '#4F46E5';
   var VIOLET_400 = '#A78BFA';
 
   var idGrad = 0;
@@ -43,7 +43,7 @@
     });
   }
 
-  var iconeAberta = pino(VIOLET_600, INDIGO, false);
+  var iconeAberta = pino(VIOLET_600, INDIGO_GRAD, false);
   var iconeBreve = pino(VIOLET_400, VIOLET_400, true);
 
   function escapa(s) {

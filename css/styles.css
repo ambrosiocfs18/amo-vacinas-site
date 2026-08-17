@@ -890,6 +890,38 @@ button{font-family:inherit}
 .units__map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
 .units__maphint{text-align:center;color:var(--muted);font-weight:600;font-size:.92rem;margin:14px 0 20px;line-height:1.5}
 @media (max-width:600px){.units__map{aspect-ratio:4/5}}
+
+/* ---------- MAPA DAS UNIDADES (Leaflet) ----------
+   Pinos fixos vindos de js/unidades-geo.json. O iframe antigo era uma
+   BUSCA do Google Maps e mostrava resultado diferente para cada visitante. */
+#mapaUnidades{position:absolute;inset:0;width:100%;height:100%;z-index:0;background:var(--lilac-50)}
+.umark{background:none;border:0}
+.umark svg{filter:drop-shadow(0 3px 5px rgba(60,71,148,.35))}
+.leaflet-container{font-family:'Montserrat',sans-serif}
+.leaflet-container a{color:var(--violet-700)}
+.leaflet-popup-content-wrapper{border-radius:14px;box-shadow:var(--shadow-md)}
+.leaflet-popup-content{margin:12px 14px;min-width:150px}
+.leaflet-control-attribution{font-size:.62rem;background:rgba(255,255,255,.82)}
+
+.upop{display:flex;flex-direction:column;gap:2px}
+.upop__nome{font-family:'Montserrat',sans-serif;font-weight:800;font-size:.98rem;color:var(--ink);line-height:1.25}
+.upop__cidade{font-weight:600;font-size:.8rem;color:var(--muted)}
+.upop__breve{
+  align-self:flex-start;margin-top:5px;font-weight:800;font-size:.63rem;letter-spacing:.05em;
+  text-transform:uppercase;color:var(--violet-700);background:var(--lilac-100);padding:4px 8px;border-radius:999px;
+}
+.upop__acoes{display:flex;gap:7px;margin-top:10px}
+.upop__btn{
+  display:inline-flex;align-items:center;justify-content:center;flex:1;min-height:36px;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;border-radius:999px;
+  padding:7px 12px;text-decoration:none;white-space:nowrap;
+}
+.upop__btn--rota{color:var(--violet-700)!important;background:var(--lilac-50);box-shadow:inset 0 0 0 1.5px var(--lilac-200)}
+.upop__btn--wa{color:#fff!important;background:#25D366}
+@media (hover:hover) and (pointer:fine){
+  .upop__btn--rota:hover{background:var(--lilac-100)}
+  .upop__btn--wa:hover{filter:brightness(1.05)}
+}
 .units__search{position:relative;margin-bottom:18px}
 .units__search input{
   width:100%;font-family:inherit;font-size:1.05rem;padding:16px 52px 16px 20px;

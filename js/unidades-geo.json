@@ -1,0 +1,380 @@
+[
+ {
+  "bairro": "Shopping Tamboré",
+  "cidade": "Barueri",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.504694,
+  "lng": -46.834492,
+  "fonte": "Shopping Tamboré, Barueri, SP, Brasil"
+ },
+ {
+  "bairro": "Cambuí",
+  "cidade": "Campinas",
+  "uf": "SP",
+  "breve": false,
+  "lat": -22.892222,
+  "lng": -47.049722,
+  "fonte": "Cambuí, Campinas, SP, Brasil"
+ },
+ {
+  "bairro": "Flamboyant",
+  "cidade": "Campinas",
+  "uf": "SP",
+  "breve": false,
+  "lat": -22.88849,
+  "lng": -47.029306,
+  "fonte": "Flamboyant, Campinas, SP, Brasil"
+ },
+ {
+  "bairro": "Pitangueiras",
+  "cidade": "Guarujá",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.995105,
+  "lng": -46.258885,
+  "fonte": "Pitangueiras, Guarujá, SP, Brasil"
+ },
+ {
+  "bairro": "Internacional Shopping",
+  "cidade": "Guarulhos",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.488315,
+  "lng": -46.548983,
+  "fonte": "Internacional Shopping, Guarulhos, SP, Brasil"
+ },
+ {
+  "bairro": "Ponta da Praia",
+  "cidade": "Santos",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.9862,
+  "lng": -46.301787,
+  "fonte": "Ponta da Praia, Santos, SP, Brasil"
+ },
+ {
+  "bairro": "Rio Preto Shopping",
+  "cidade": "São José do Rio Preto",
+  "uf": "SP",
+  "breve": false,
+  "lat": -20.835153,
+  "lng": -49.398655,
+  "fonte": "Rio Preto Shopping, São José do Rio Preto, SP, Brasil"
+ },
+ {
+  "bairro": "Aquarius",
+  "cidade": "São José dos Campos",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.217366,
+  "lng": -45.906286,
+  "fonte": "Aquarius, São José dos Campos, SP, Brasil"
+ },
+ {
+  "bairro": "Alto da Mooca",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.571191,
+  "lng": -46.581172,
+  "fonte": "Alto da Mooca, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Alto de Santana",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.488782,
+  "lng": -46.630052,
+  "fonte": "Alto de Santana, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Anália Franco",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.563473,
+  "lng": -46.559702,
+  "fonte": "Anália Franco, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Moema Passáros",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.550651,
+  "lng": -46.633382,
+  "fonte": "São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Panamby",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -22.950199,
+  "lng": -47.034669,
+  "fonte": "Panamby, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Perdizes",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.53793,
+  "lng": -46.68067,
+  "fonte": "Perdizes, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Portal do Morumbi",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.615067,
+  "lng": -46.742246,
+  "fonte": "Portal do Morumbi, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Shopping Eldorado",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.572646,
+  "lng": -46.695819,
+  "fonte": "Shopping Eldorado, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Tatuapé",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.540252,
+  "lng": -46.576642,
+  "fonte": "Tatuapé, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Vila Mariana",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.5837,
+  "lng": -46.632741,
+  "fonte": "Vila Mariana, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Vila Mascote",
+  "cidade": "São Paulo",
+  "uf": "SP",
+  "breve": false,
+  "lat": -23.645917,
+  "lng": -46.667555,
+  "fonte": "Vila Mascote, São Paulo, SP, Brasil"
+ },
+ {
+  "bairro": "Anchieta",
+  "cidade": "Belo Horizonte",
+  "uf": "MG",
+  "breve": false,
+  "lat": -19.949019,
+  "lng": -43.926905,
+  "fonte": "Anchieta, Belo Horizonte, MG, Brasil"
+ },
+ {
+  "bairro": "Buritis",
+  "cidade": "Belo Horizonte",
+  "uf": "MG",
+  "breve": false,
+  "lat": -19.976579,
+  "lng": -43.967416,
+  "fonte": "Buritis, Belo Horizonte, MG, Brasil"
+ },
+ {
+  "bairro": "Centro",
+  "cidade": "Governador Valadares",
+  "uf": "MG",
+  "breve": false,
+  "lat": -18.854346,
+  "lng": -41.94686,
+  "fonte": "Centro, Governador Valadares, MG, Brasil"
+ },
+ {
+  "bairro": "Shopping Eusébio",
+  "cidade": "Eusébio",
+  "uf": "CE",
+  "breve": false,
+  "lat": -3.871145,
+  "lng": -38.467096,
+  "fonte": "Shopping Eusébio, Eusébio, CE, Brasil"
+ },
+ {
+  "bairro": "Meireles",
+  "cidade": "Fortaleza",
+  "uf": "CE",
+  "breve": false,
+  "lat": -3.727822,
+  "lng": -38.500372,
+  "fonte": "Meireles, Fortaleza, CE, Brasil"
+ },
+ {
+  "bairro": "Shopping Iguatemi",
+  "cidade": "Fortaleza",
+  "uf": "CE",
+  "breve": false,
+  "lat": -3.75543,
+  "lng": -38.488766,
+  "fonte": "Shopping Iguatemi, Fortaleza, CE, Brasil"
+ },
+ {
+  "bairro": "Joquei",
+  "cidade": "Teresina",
+  "uf": "PI",
+  "breve": false,
+  "lat": -5.076237,
+  "lng": -42.789529,
+  "fonte": "Joquei, Teresina, PI, Brasil"
+ },
+ {
+  "bairro": "Shopping Rio Poty",
+  "cidade": "Teresina",
+  "uf": "PI",
+  "breve": false,
+  "lat": -5.077183,
+  "lng": -42.801632,
+  "fonte": "Shopping Rio Poty, Teresina, PI, Brasil"
+ },
+ {
+  "bairro": "Calhau",
+  "cidade": "São Luís",
+  "uf": "MA",
+  "breve": false,
+  "lat": -2.490868,
+  "lng": -44.26922,
+  "fonte": "Calhau, São Luís, MA, Brasil"
+ },
+ {
+  "bairro": "Jatiuca",
+  "cidade": "Maceió",
+  "uf": "AL",
+  "breve": true,
+  "lat": -9.65031,
+  "lng": -35.706071,
+  "fonte": "Jatiuca, Maceió, AL, Brasil"
+ },
+ {
+  "bairro": "Boa Viagem",
+  "cidade": "Recife",
+  "uf": "PE",
+  "breve": false,
+  "lat": -8.123503,
+  "lng": -34.903396,
+  "fonte": "Boa Viagem, Recife, PE, Brasil"
+ },
+ {
+  "bairro": "Lagoa Nova",
+  "cidade": "Natal",
+  "uf": "RN",
+  "breve": false,
+  "lat": -5.822694,
+  "lng": -35.21264,
+  "fonte": "Lagoa Nova, Natal, RN, Brasil"
+ },
+ {
+  "bairro": "Shopping Salvador",
+  "cidade": "Salvador",
+  "uf": "BA",
+  "breve": false,
+  "lat": -12.978552,
+  "lng": -38.454655,
+  "fonte": "Shopping Salvador, Salvador, BA, Brasil"
+ },
+ {
+  "bairro": "Primavera do Leste",
+  "cidade": "Primavera do Leste",
+  "uf": "MT",
+  "breve": false,
+  "lat": -15.561413,
+  "lng": -54.299395,
+  "fonte": "Primavera do Leste, MT, Brasil"
+ },
+ {
+  "bairro": "Centro",
+  "cidade": "Rondonópolis",
+  "uf": "MT",
+  "breve": false,
+  "lat": -16.47216,
+  "lng": -54.633953,
+  "fonte": "Centro, Rondonópolis, MT, Brasil"
+ },
+ {
+  "bairro": "Anápolis",
+  "cidade": "Anápolis",
+  "uf": "GO",
+  "breve": true,
+  "lat": -16.333283,
+  "lng": -48.952576,
+  "fonte": "Anápolis, GO, Brasil"
+ },
+ {
+  "bairro": "Setor Oeste",
+  "cidade": "Goiânia",
+  "uf": "GO",
+  "breve": false,
+  "lat": -16.68122,
+  "lng": -49.272167,
+  "fonte": "Setor Oeste, Goiânia, GO, Brasil"
+ },
+ {
+  "bairro": "Centro",
+  "cidade": "Rio Verde",
+  "uf": "GO",
+  "breve": false,
+  "lat": -17.790519,
+  "lng": -50.912121,
+  "fonte": "Centro, Rio Verde, GO, Brasil"
+ },
+ {
+  "bairro": "Tiradentes",
+  "cidade": "Campo Grande",
+  "uf": "MS",
+  "breve": false,
+  "lat": -20.479092,
+  "lng": -54.571967,
+  "fonte": "Tiradentes, Campo Grande, MS, Brasil"
+ },
+ {
+  "bairro": "Asa Sul",
+  "cidade": "Brasília",
+  "uf": "DF",
+  "breve": false,
+  "lat": -15.837015,
+  "lng": -47.932499,
+  "fonte": "Asa Sul, Brasília, DF, Brasil"
+ },
+ {
+  "bairro": "Itajaí",
+  "cidade": "Itajaí",
+  "uf": "SC",
+  "breve": false,
+  "lat": -26.904679,
+  "lng": -48.655298,
+  "fonte": "Itajaí, SC, Brasil"
+ },
+ {
+  "bairro": "Embratel",
+  "cidade": "Porto Velho",
+  "uf": "RO",
+  "breve": false,
+  "lat": -8.750983,
+  "lng": -63.881856,
+  "fonte": "Embratel, Porto Velho, RO, Brasil"
+ },
+ {
+  "bairro": "Manaus",
+  "cidade": "Manaus",
+  "uf": "AM",
+  "breve": true,
+  "lat": -3.131633,
+  "lng": -59.982504,
+  "fonte": "Manaus, AM, Brasil"
+ }
+]

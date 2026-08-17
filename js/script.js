@@ -125,15 +125,6 @@
     },
   };
 
-  /* ---------- Voucher bar close ---------- */
-  const voucherBar = $('#voucherBar');
-  const voucherClose = $('#voucherClose');
-  if (voucherClose && voucherBar) {
-    voucherClose.addEventListener('click', () => {
-      voucherBar.classList.add('is-hidden');
-    });
-  }
-
   /* ---------- Busca de unidades (unidades.html) — sanfona região > estado > cidade ---------- */
   const unitSearch = $('#unitSearch');
   if (unitSearch) {
@@ -143,18 +134,44 @@
 
     // Clicar numa unidade abre o WhatsApp do 0800 com mensagem pronta
     // identificando a unidade escolhida (em vez de ir pro Google Maps).
+    /* Os links de rota e WhatsApp já vêm prontos no HTML; isto aqui só os
+       reescreve a partir do texto do card, para a lista sobreviver a uma
+       regeneração pela planilha sem alguém precisar refazer os hrefs. */
     const WA_UNIDADES = '5508000500090';
-    $$('.units__list a').forEach((link) => {
-      const bairro = $('.units__place strong', link);
-      const cidade = $('.units__city', link);
-      const uf = $('.units__uf', link);
-      let local = bairro ? bairro.textContent.trim() : '';
-      if (cidade) local += ' - ' + cidade.textContent.trim();
-      if (uf) local += '/' + uf.textContent.trim();
-      const msg = 'Olá! Tenho interesse na unidade Amo Vacinas ' + local +
-        '. Gostaria de mais informações sobre horários e agendamento.';
-      link.href = 'https://wa.me/' + WA_UNIDADES + '?text=' + encodeURIComponent(msg);
-      link.setAttribute('aria-label', 'Falar no WhatsApp sobre a unidade ' + local);
+    $$('.units__item').forEach((item) => {
+      const bairro = $('.units__place strong', item);
+      const cidade = $('.units__city', item);
+      const uf = $('.units__uf', item);
+      const nome = bairro ? bairro.textContent.trim() : '';
+      const cid = cidade ? cidade.textContent.trim() : '';
+      const sigla = uf ? uf.textContent.trim() : '';
+
+      let local = nome;
+      if (cid) local += ' - ' + cid;
+      if (sigla) local += '/' + sigla;
+
+      // unidade que ainda não abriu pede outra mensagem: falar em "agendamento"
+      // num lugar que não existe confundiria quem clica em "Avise-me"
+      const emBreve = item.classList.contains('units__item--breve');
+
+      const wa = $('.units__act--wa', item);
+      if (wa) {
+        const msg = emBreve
+          ? 'Olá! Quero ser avisado quando a unidade Amo Vacinas de ' + local + ' for inaugurada.'
+          : 'Olá! Tenho interesse na unidade Amo Vacinas ' + local +
+            '. Gostaria de mais informações sobre horários e agendamento.';
+        wa.href = 'https://wa.me/' + WA_UNIDADES + '?text=' + encodeURIComponent(msg);
+        wa.setAttribute('aria-label', emBreve
+          ? 'Avisar quando a unidade ' + local + ' abrir'
+          : 'Falar no WhatsApp sobre a unidade ' + local);
+      }
+
+      const rota = $('.units__act--rota', item);
+      if (rota) {
+        const destino = ('Amo Vacinas ' + nome + ' ' + cid + ' ' + sigla).replace(/\s+/g, ' ').trim();
+        rota.href = 'https://www.google.com/maps/dir/?api=1&destination=' + encodeURIComponent(destino);
+        rota.setAttribute('aria-label', 'Traçar rota até a unidade ' + local);
+      }
     });
 
     unitSearch.addEventListener('input', () => {
@@ -165,8 +182,9 @@
         $$('.units__group', region).forEach((group) => {
           let groupShown = 0;
           $$('li', group).forEach((li) => {
-            const link = $('a', li);
-            const match = !q || norm(link.getAttribute('data-q') || '').indexOf(q) !== -1;
+            // data-q agora vive no próprio <li> (o <a> que envolvia o card
+            // virou <div> para poder ter os botões de rota e WhatsApp dentro)
+            const match = !q || norm(li.getAttribute('data-q') || '').indexOf(q) !== -1;
             li.hidden = !match;
             if (match) groupShown++;
           });

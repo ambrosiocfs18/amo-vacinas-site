@@ -126,8 +126,6 @@ button{font-family:inherit}
 .voucher-bar__text{font-size:.93rem;font-weight:600}
 .voucher-bar__text strong{color:var(--violet-700)}
 .voucher-bar .btn--mini{margin-left:auto;background:var(--grad-primary)}
-.voucher-bar__close{margin-left:6px;border:none;background:transparent;color:var(--periwinkle-deep);cursor:pointer;display:grid;place-items:center;border-radius:50%;width:30px;height:30px}
-.voucher-bar__close:hover{background:rgba(255,255,255,.5)}
 
 /* ---------- HEADER ---------- */
 .site-header{
@@ -220,7 +218,7 @@ button{font-family:inherit}
 .hero-slider__dots button:focus-visible{outline:3px solid var(--violet-400);outline-offset:2px}
 
 /* ---------- (legacy hero styles, kept for reference) ---------- */
-.hero--legacy{position:relative;background:var(--grad-hero);overflow:hidden;padding:clamp(40px,6vw,76px) 0 clamp(60px,8vw,96px)}
+.hero--legacy{position:relative;background:var(--grad-hero);overflow:hidden;padding:clamp(27px,4.1vw,52px) 0 clamp(41px,5.4vw,65px)}
 .hero__bg{position:absolute;inset:0;pointer-events:none}
 .blob{position:absolute;border-radius:50%;filter:blur(8px);opacity:.5}
 .blob--1{width:340px;height:340px;background:radial-gradient(circle,#D8C5FF,transparent 70%);top:-80px;right:8%}
@@ -260,7 +258,7 @@ button{font-family:inherit}
 @keyframes pulse{0%{transform:scale(1);opacity:.8}70%{transform:scale(1.35);opacity:0}100%{opacity:0}}
 
 /* ---------- PROMO BANNERS ---------- */
-.promos{padding:clamp(50px,7vw,84px) 0}
+.promos{padding:clamp(32px,4.5vw,55px) 0}
 .promos .container{display:flex;flex-direction:column;gap:22px}
 /* layout padronizado: mídia (foto/mascote) à esquerda + texto + cta */
 .promo{
@@ -289,12 +287,12 @@ button{font-family:inherit}
 .promo::after{content:"";position:absolute;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.35);top:-60px;right:-30px}
 
 /* ---------- SECTION HEAD ---------- */
-.section-head{text-align:center;max-width:760px;margin:0 auto clamp(34px,5vw,52px)}
+.section-head{text-align:center;max-width:760px;margin:0 auto clamp(24px,3.5vw,36px)}
 .section-head h2{font-size:clamp(1.9rem,4vw,2.8rem);font-weight:800}
 .section-head p{margin-top:12px;color:var(--muted);font-size:1.08rem;font-weight:500;text-wrap:balance}
 
 /* ---------- REVIEWS ---------- */
-.reviews{padding:clamp(40px,6vw,80px) 0;background:linear-gradient(180deg,#fff, #F8F5FF)}
+.reviews{padding:clamp(26px,3.9vw,52px) 0;background:linear-gradient(180deg,#fff, #F8F5FF)}
 .reviews__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .review{
   margin:0;background:#fff;border:1px solid var(--lilac-100);border-radius:var(--r-md);
@@ -312,7 +310,7 @@ button{font-family:inherit}
 .reviews__cta{text-align:center;margin-top:38px}
 
 /* ---------- NEWS ---------- */
-.news{padding:clamp(40px,6vw,80px) 0}
+.news{padding:clamp(26px,3.9vw,52px) 0}
 .news__layout{display:grid;grid-template-columns:1.55fr 1fr;gap:30px;align-items:start}
 .news__list{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .news-card{
@@ -358,10 +356,10 @@ button{font-family:inherit}
 .insta__caption{color:var(--muted);font-size:.92rem;text-align:center;max-width:30ch;font-weight:600}
 
 /* ---------- FRANCHISE CTA ---------- */
-.franchise{padding:clamp(30px,5vw,40px) 0}
+.franchise{padding:clamp(22px,3.8vw,30px) 0}
 .franchise__inner{
   background:var(--grad-primary);color:#fff;border-radius:var(--r-lg);
-  padding:clamp(34px,5vw,56px);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;
+  padding:clamp(26px,3.6vw,40px);display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;
   box-shadow:var(--shadow-md);position:relative;overflow:hidden;
 }
 .franchise__inner::after{content:"";position:absolute;width:300px;height:300px;border-radius:50%;background:rgba(255,255,255,.08);top:-120px;right:-60px}
@@ -369,7 +367,7 @@ button{font-family:inherit}
 .franchise__text p{margin-top:10px;color:rgba(255,255,255,.9);max-width:60ch;font-weight:500;position:relative}
 
 /* ---------- CONTACT ---------- */
-.contact{padding:clamp(50px,7vw,90px) 0;background:linear-gradient(180deg,#F8F5FF,#fff)}
+.contact{padding:clamp(32px,4.5vw,58px) 0;background:linear-gradient(180deg,#F8F5FF,#fff)}
 .contact__inner{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(30px,5vw,60px);align-items:center}
 .contact__copy h2{font-size:clamp(1.9rem,4vw,2.7rem);font-weight:800}
 .contact__copy p{margin-top:14px;color:var(--muted);font-size:1.08rem;font-weight:500;max-width:46ch}
@@ -577,7 +575,7 @@ button{font-family:inherit}
    ===================================================================== */
 .stats{background:var(--grad-primary);color:#fff;position:relative;overflow:hidden}
 .stats::after{content:"";position:absolute;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.08);top:-140px;right:-70px}
-.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:clamp(26px,4vw,44px) 0;position:relative}
+.stats__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding:clamp(20px,3.1vw,34px) 0;position:relative}
 .stat{text-align:center;padding:4px}
 .stat strong{display:block;font-family:'Montserrat',sans-serif;font-size:clamp(1.75rem,3.4vw,2.6rem);font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
 .stat span{display:block;margin-top:7px;font-weight:600;font-size:.94rem;opacity:.92}
@@ -586,7 +584,7 @@ button{font-family:inherit}
 /* =====================================================================
    HOME — vacinas para cada fase da vida (mascotes reais)
    ===================================================================== */
-.stages{padding:clamp(48px,6vw,84px) 0 clamp(28px,4vw,44px)}
+.stages{padding:clamp(31px,3.9vw,55px) 0 clamp(18px,2.6vw,29px)}
 .stages__grid{display:grid;grid-template-columns:repeat(7,1fr);gap:13px}
 .stage{
   display:flex;flex-direction:column;align-items:center;gap:2px;
@@ -611,7 +609,7 @@ button{font-family:inherit}
 /* =====================================================================
    HOME — serviços (grade nativa)
    ===================================================================== */
-.svc{padding:0 0 clamp(48px,6vw,84px)}
+.svc{padding:0 0 clamp(30px,3.7vw,52px)}
 .svc__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
 .svc__item{
   display:flex;align-items:center;gap:12px;
@@ -633,7 +631,7 @@ button{font-family:inherit}
 .wa-ico{flex:none}
 
 /* hero */
-.lp-hero{position:relative;background:var(--grad-hero);padding:clamp(36px,5vw,72px) 0 clamp(46px,6vw,80px);overflow:hidden}
+.lp-hero{position:relative;background:var(--grad-hero);padding:clamp(25px,3.5vw,50px) 0 clamp(32px,4.2vw,56px);overflow:hidden}
 .lp-hero__grid{position:relative;display:grid;grid-template-columns:1.12fr .88fr;gap:clamp(28px,5vw,56px);align-items:center}
 .lp-hero h1{font-size:clamp(2rem,4.4vw,3.25rem);font-weight:800;letter-spacing:-.5px;line-height:1.1}
 .lp-hero__sub{margin:18px 0 26px;max-width:52ch;color:var(--muted);font-size:1.1rem;font-weight:500}
@@ -657,9 +655,9 @@ button{font-family:inherit}
 .lp-note{margin-top:14px;font-size:.8rem;color:var(--muted);font-weight:600}
 
 /* section scaffolding */
-.lp-section{padding:clamp(48px,6vw,88px) 0}
+.lp-section{padding:clamp(30px,3.7vw,55px) 0}
 .lp-section--tint{background:linear-gradient(180deg,#F8F5FF,#fff)}
-.lp-head{max-width:740px;margin:0 auto clamp(30px,4vw,50px);text-align:center}
+.lp-head{max-width:740px;margin:0 auto clamp(21px,2.8vw,35px);text-align:center}
 .lp-head h2{font-size:clamp(1.8rem,3.7vw,2.55rem);font-weight:800}
 .lp-head p{margin-top:12px;color:var(--muted);font-size:1.07rem;font-weight:500;text-wrap:balance}
 
@@ -784,7 +782,7 @@ button{font-family:inherit}
 .faq-item .faq-body{padding:0 20px 18px;color:var(--muted);font-weight:500;line-height:1.6}
 
 /* lead form */
-.lp-lead{padding:clamp(20px,4vw,44px) 0 clamp(56px,7vw,92px)}
+.lp-lead{padding:clamp(14px,2.7vw,30px) 0 clamp(38px,4.8vw,63px)}
 .lp-lead__box{
   background:var(--grad-primary);border-radius:var(--r-lg);box-shadow:var(--shadow-md);
   padding:clamp(26px,4vw,52px);display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(26px,4vw,52px);
@@ -816,7 +814,7 @@ button{font-family:inherit}
    PÁGINAS NATIVAS — A Amo · Serviços · Vacinas · Blog · Unidades · Contato
    ===================================================================== */
 /* page hero (split compacto) */
-.ph{position:relative;background:var(--grad-hero);overflow:hidden;padding:clamp(30px,4.5vw,60px) 0}
+.ph{position:relative;background:var(--grad-hero);overflow:hidden;padding:clamp(22px,3.4vw,45px) 0}
 .ph__grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(24px,4.5vw,52px);align-items:center}
 .ph h1{font-size:clamp(2rem,4.4vw,3.1rem);font-weight:800;letter-spacing:-.5px;line-height:1.1}
 .ph__sub{margin:14px 0 0;color:var(--muted);font-size:1.12rem;font-weight:500;max-width:52ch}
@@ -899,18 +897,55 @@ button{font-family:inherit}
 }
 .units__search input:focus{outline:none;border-color:var(--violet-600);box-shadow:var(--shadow-sm)}
 .units__search svg{position:absolute;right:20px;top:50%;transform:translateY(-50%);color:var(--violet-500);pointer-events:none}
-.units__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.units__list li a{
+.units__list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+/* O card e um <div>, nao um <a>: os botoes de rota/WhatsApp vivem dentro
+   dele, e botao dentro de link e HTML invalido. */
+.units__item{
   display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--lilac-100);
-  border-radius:16px;padding:15px 18px;font-family:'Montserrat',sans-serif;font-weight:600;color:var(--ink);
+  border-radius:16px;padding:14px 16px;font-family:'Montserrat',sans-serif;font-weight:600;color:var(--ink);
   box-shadow:var(--shadow-sm);transition:transform .2s var(--ease-out),border-color .2s var(--ease-out);
+  height:100%;min-width:0;
 }
-.units__list li a svg{flex:none;color:var(--violet-500)}
-.units__place{display:flex;flex-direction:column;line-height:1.3;min-width:0}
+.units__item > svg{flex:none;color:var(--violet-500)}
+.units__place{display:flex;flex-direction:column;line-height:1.3;min-width:0;flex:1 1 auto}
 .units__place strong{font-weight:700;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .units__place .units__city{font-weight:600;font-size:.8rem;color:var(--muted)}
-.units__list li a > small{margin-left:auto;flex:none;color:var(--muted);font-family:'Montserrat',sans-serif;font-weight:700}
-@media (hover:hover) and (pointer:fine){.units__list li a:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
+.units__uf{flex:none;color:var(--muted);font-family:'Montserrat',sans-serif;font-weight:700}
+@media (hover:hover) and (pointer:fine){.units__item:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
+
+/* Acoes do card: rota e WhatsApp */
+.units__actions{margin-left:auto;flex:none;display:flex;gap:7px}
+.units__act{
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;
+  padding:8px 12px;border-radius:999px;min-height:36px;
+  transition:transform .18s var(--ease-out),filter .18s var(--ease-out);
+}
+.units__act-ico{display:inline-flex}
+.units__act--rota{color:var(--violet-700);background:var(--lilac-50);box-shadow:inset 0 0 0 1.5px var(--lilac-200)}
+.units__act--wa{color:#fff;background:#25D366;box-shadow:0 3px 10px rgba(37,211,102,.32)}
+@media (hover:hover) and (pointer:fine){
+  .units__act:hover{transform:translateY(-1px);filter:brightness(1.04)}
+  .units__act--rota:hover{background:var(--lilac-100)}
+}
+.units__act:focus-visible{outline:2px solid var(--violet-600);outline-offset:2px}
+
+/* Unidade ainda nao inaugurada: sem botao de Rota (mandaria a pessoa a um
+   endereco que nao existe); fica o selo e o WhatsApp de aviso de abertura. */
+.units__item--breve{background:linear-gradient(180deg,#FCFBFF,#F7F4FF);border-style:dashed}
+.units__item--breve .units__place strong{color:var(--muted)}
+.units__breve{
+  display:inline-flex;align-items:center;white-space:nowrap;
+  font-family:'Montserrat',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.04em;
+  text-transform:uppercase;color:var(--violet-700);background:var(--lilac-100);
+  padding:6px 10px;border-radius:999px;
+}
+
+/* Telas menores: o texto dos botoes sai, fica so o icone (alvo de toque 40px) */
+@media (max-width:1100px){
+  .units__act{padding:0;width:40px;height:40px;min-height:40px;justify-content:center;gap:0}
+  .units__act > :not(.units__act-ico){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+}
 .units__empty{text-align:center;color:var(--muted);font-weight:600;padding:22px;display:none}
 
 /* sanfona região > estado > cidade */
@@ -997,7 +1032,7 @@ button{font-family:inherit}
   .ph__media{max-width:440px;margin-inline:auto}
   .vlist{grid-template-columns:1fr}
   .blog-grid{grid-template-columns:1fr;max-width:480px;margin-inline:auto}
-  .units__list{grid-template-columns:1fr}
+  .units__list{grid-template-columns:minmax(0,1fr)}
 }
 
 /* =====================================================================
@@ -1096,12 +1131,6 @@ button{font-family:inherit}
 .voucher-bar__mini p{font-size:.85rem;font-weight:600;color:#4b3a8c;line-height:1.25}
 .voucher-bar__mini p b{font-family:'Montserrat',sans-serif;font-weight:800;color:#7C3AED;font-size:1rem}
 .voucher-bar__mini .btn--mini{margin-left:auto;flex:none}
-.voucher-bar__close{
-  position:absolute;right:8px;top:50%;transform:translateY(-50%);
-  width:26px;height:26px;border-radius:50%;border:none;cursor:pointer;
-  background:rgba(255,255,255,.85);color:#6D28D9;display:grid;place-items:center;
-  box-shadow:0 2px 8px rgba(91,33,182,.18);
-}
 @media (max-width:760px){
   .voucher-bar__strip{display:none}
   .voucher-bar__mini{display:flex}
@@ -1140,8 +1169,6 @@ button{font-family:inherit}
 @media (max-width:760px){
   /* arte mobile recomposta (voucher-banner-mobile.webp): CTA reposicionado */
   .voucher-bar__cta{left:78.25%;top:24%;width:14.75%;height:46%;font-size:clamp(7px,2vw,12px)}
-  .voucher-bar__close{width:20px;height:20px;right:5px}
-  .voucher-bar__close svg{width:11px;height:11px}
 }
 
 /* =====================================================================

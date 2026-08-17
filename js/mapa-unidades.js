@@ -15,15 +15,26 @@
   if (!alvo || typeof L === 'undefined') return;
 
   var WHATS = '5508000500090';
-  var ROXO = '#7C3AED';
-  var CINZA = '#9691B4';
 
-  function pino(cor, tracejado) {
+  /* Cores da paleta do site (css/styles.css :root):
+     aberta usa o gradiente da marca (--grad-primary: violet-600 -> indigo)
+     e "em breve" usa --violet-400, o mesmo roxo mais claro do site. */
+  var VIOLET_600 = '#7C3AED';
+  var INDIGO = '#4F46E5';
+  var VIOLET_400 = '#A78BFA';
+
+  var idGrad = 0;
+  function pino(corA, corB, tracejado) {
+    var gid = 'amopin' + (++idGrad);
     return L.divIcon({
       className: 'umark',
       html:
         '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">' +
-        '<path d="M12 23s9-6 9-13a9 9 0 1 0-18 0c0 7 9 13 9 13z" fill="' + cor + '"' +
+        '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="1" y2="1">' +
+        '<stop offset="0%" stop-color="' + corA + '"/>' +
+        '<stop offset="100%" stop-color="' + corB + '"/>' +
+        '</linearGradient></defs>' +
+        '<path d="M12 23s9-6 9-13a9 9 0 1 0-18 0c0 7 9 13 9 13z" fill="url(#' + gid + ')"' +
         (tracejado ? ' stroke="#fff" stroke-width="1.6" stroke-dasharray="3 2"' : ' stroke="#fff" stroke-width="1.6"') +
         '/><circle cx="12" cy="10" r="3.4" fill="#fff"/></svg>',
       iconSize: [30, 30],
@@ -32,8 +43,8 @@
     });
   }
 
-  var iconeAberta = pino(ROXO, false);
-  var iconeBreve = pino(CINZA, true);
+  var iconeAberta = pino(VIOLET_600, INDIGO, false);
+  var iconeBreve = pino(VIOLET_400, VIOLET_400, true);
 
   function escapa(s) {
     return String(s).replace(/[&<>"']/g, function (c) {

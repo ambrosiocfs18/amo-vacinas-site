@@ -933,7 +933,7 @@ button{font-family:inherit}
 /* O card e um <div>, nao um <a>: os botoes de rota/WhatsApp vivem dentro
    dele, e botao dentro de link e HTML invalido. */
 .units__item{
-  display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--lilac-100);
+  display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--lilac-100);
   border-radius:16px;padding:14px 16px;font-family:'Montserrat',sans-serif;font-weight:600;color:var(--ink);
   box-shadow:var(--shadow-sm);transition:transform .2s var(--ease-out),border-color .2s var(--ease-out);
   height:100%;min-width:0;
@@ -946,12 +946,18 @@ button{font-family:inherit}
 @media (hover:hover) and (pointer:fine){.units__item:hover{transform:translateY(-2px);border-color:var(--violet-400)}}
 
 /* Acoes do card: rota e WhatsApp */
-.units__actions{margin-left:auto;flex:none;display:flex;gap:7px}
+.units__actions{margin-left:auto;flex:none;display:flex;gap:6px}
+/* Só ícone, em qualquer tela: com o rótulo escrito os botões comiam a
+   largura e o nome da unidade truncava com reticências. O texto continua
+   no aria-label/title para leitor de tela e tooltip. */
 .units__act{
-  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
-  font-family:'Montserrat',sans-serif;font-weight:700;font-size:.78rem;
-  padding:8px 12px;border-radius:999px;min-height:36px;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:34px;height:34px;flex:none;border-radius:50%;
   transition:transform .18s var(--ease-out),filter .18s var(--ease-out);
+}
+.units__act > :not(.units__act-ico){
+  position:absolute;width:1px;height:1px;overflow:hidden;
+  clip:rect(0 0 0 0);white-space:nowrap;
 }
 .units__act-ico{display:inline-flex}
 .units__act--rota{color:var(--violet-700);background:var(--lilac-50);box-shadow:inset 0 0 0 1.5px var(--lilac-200)}
@@ -973,10 +979,31 @@ button{font-family:inherit}
   padding:6px 10px;border-radius:999px;
 }
 
-/* Telas menores: o texto dos botoes sai, fica so o icone (alvo de toque 40px) */
 @media (max-width:1100px){
-  .units__act{padding:0;width:40px;height:40px;min-height:40px;justify-content:center;gap:0}
-  .units__act > :not(.units__act-ico){position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .units__act{width:38px;height:38px}
+}
+@media (pointer:coarse){
+  .units__act{width:40px;height:40px}
+}
+
+/* Em tela estreita nao ha largura para nome + botoes na mesma linha
+   (ex: "Internacional Shopping" pede 197px e sobravam 87px). Os botoes
+   descem para a 2a linha e o nome passa a ter a largura inteira do card. */
+@media (max-width:760px){
+  .units__item{
+    display:grid;
+    grid-template-columns:auto 1fr auto;
+    grid-template-areas:
+      "pin nome uf"
+      "acoes acoes acoes";
+    gap:9px 10px;align-items:center;
+  }
+  .units__item > svg{grid-area:pin}
+  .units__place{grid-area:nome}
+  .units__uf{grid-area:uf}
+  .units__actions{grid-area:acoes;margin-left:0;justify-content:flex-end}
+  .units__breve{order:-1;margin-right:auto}
+  .units__place strong{white-space:normal}
 }
 .units__empty{text-align:center;color:var(--muted);font-weight:600;padding:22px;display:none}
 

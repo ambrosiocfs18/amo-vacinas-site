@@ -1583,17 +1583,20 @@ button{font-family:inherit}
 .clube-switch__desc{margin:9px 0 0;font-size:.82rem;font-weight:600;color:var(--muted);line-height:1.35}
 .clube-switch__desc strong{color:#0E9F6E;font-weight:800}
 
-/* FAB do carrinho (à esquerda, oposto do WhatsApp) */
+/* botão do carrinho — no canto superior direito, dentro do header */
+.header-actions{display:flex;align-items:center;gap:10px}
+@media (max-width:1320px){.header-actions{margin-left:auto}}
+
 .cart-fab{
-  position:fixed;left:18px;bottom:18px;z-index:80;width:58px;height:58px;border:none;cursor:pointer;
+  position:relative;width:44px;height:44px;flex:none;border:none;cursor:pointer;
   border-radius:50%;background:var(--grad-primary);color:#fff;display:grid;place-items:center;
-  box-shadow:0 10px 24px rgba(124,58,237,.4);transition:transform .16s var(--ease-out);
+  box-shadow:0 6px 16px rgba(124,58,237,.32);transition:transform .16s var(--ease-out),box-shadow .16s var(--ease-out);
 }
 .cart-fab:active{transform:scale(.94)}
-@media (hover:hover) and (pointer:fine){.cart-fab:hover{transform:translateY(-2px)}}
+@media (hover:hover) and (pointer:fine){.cart-fab:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(124,58,237,.42)}}
 .cart-fab__count{
-  position:absolute;top:-4px;right:-4px;min-width:22px;height:22px;border-radius:11px;padding:0 5px;
-  background:var(--pink-500);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;
+  position:absolute;top:-5px;right:-5px;min-width:21px;height:21px;border-radius:11px;padding:0 5px;
+  background:var(--pink-500);color:#fff;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.76rem;
   display:grid;place-items:center;border:2px solid #fff;
 }
 

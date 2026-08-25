@@ -35,6 +35,21 @@
   })(window,document,'script','dataLayer','GTM-NHNP76Q');</script>
   <!-- End Google Tag Manager -->
 
+  <!-- Microsoft Clarity (projeto y81gkwgitf)
+       A tag em si NAO e colada aqui: ela ja vem pelo GTM (GTM-NHNP76Q). Duas
+       copias do mesmo projeto contariam a mesma sessao duas vezes.
+       O que fazemos aqui e declarar a fila do clarity() antes de o GTM subir e
+       ja empilhar a escolha de cookies. O snippet oficial reaproveita um
+       window.clarity existente, entao o Clarity nasce sabendo se pode gravar —
+       sem isto ele ignoraria o banner e gravaria _clck/_clsk sem aceite. -->
+  <script type="text/javascript">
+    window.clarity = window.clarity || function () {
+      (window.clarity.q = window.clarity.q || []).push(arguments);
+    };
+    if (amoConsentEstado === 'granted') window.clarity('consent');
+    else window.clarity('consent', false);
+  </script>
+
   <title>Amo Vacinas — Cuidado que vai do nascer até a vida adulta</title>
   <meta name="description" content="Amo Vacinas: clínicas de vacinação humanizada para toda a família. Reserve sua vacina da gripe 2026, conheça nossos planos e encontre a unidade mais próxima de você." />
 
@@ -48,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=99" />
+  <link rel="stylesheet" href="css/styles.css?v=101" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -632,13 +647,13 @@
     </defs>
   </svg>
 
-  <script src="js/script.js?v=99" defer></script>
+  <script src="js/script.js?v=101" defer></script>
 
   <div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso sobre cookies" hidden>
     <div class="cookie-bar__inner">
       <div class="cookie-bar__copy">
         <strong>Cookies de medição</strong>
-        <p>Usamos cookies do Google para saber se sua visita veio de um anúncio nosso. O site funciona igual se você recusar. <a href="/politica-privacidade">Política de privacidade</a>.</p>
+        <p>Usamos cookies do Google e da Microsoft para medir nossos anúncios e entender como o site é usado. O site funciona igual se você recusar. <a href="/politica-privacidade">Política de privacidade</a>.</p>
       </div>
       <div class="cookie-bar__actions">
         <button type="button" class="btn btn--soft cookie-bar__btn" id="cookieDeny">Recusar</button>

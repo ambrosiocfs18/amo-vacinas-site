@@ -17,7 +17,8 @@
 
   /* O Consent Mode impede cookies NOVOS, mas não remove os já gravados.
      Sem isto, quem aceitou e depois recusou continuaria com _ga/_gcl_au no
-     navegador — a revogação não teria efeito prático. */
+     navegador — a revogação não teria efeito prático.
+     _clck/_clsk são os do Microsoft Clarity e entram na mesma limpeza. */
   function limparCookiesDeMedicao() {
     const dominios = [location.hostname, '.' + location.hostname];
     const raiz = location.hostname.split('.').slice(-2).join('.');
@@ -25,7 +26,7 @@
 
     document.cookie.split(';').forEach((c) => {
       const nome = c.split('=')[0].trim();
-      if (!/^(_ga|_gid|_gcl|_gac)/.test(nome)) return;
+      if (!/^(_ga|_gid|_gcl|_gac|_clck|_clsk)/.test(nome)) return;
       dominios.forEach((d) => {
         document.cookie = `${nome}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=${d}`;
       });
@@ -43,6 +44,18 @@
         analytics_storage: v,
       });
     }
+
+    /* Clarity: a tag vem pelo GTM, então não dá para simplesmente não
+       carregá-la daqui. O que dá é usar a API de consentimento dele — a fila
+       window.clarity já existe desde o <head>, então a chamada vale mesmo que
+       a tag ainda não tenha terminado de carregar. */
+    if (typeof window.clarity === 'function') {
+      try {
+        if (v === 'granted') window.clarity('consent');
+        else window.clarity('consent', false);
+      } catch (e) {}
+    }
+
     if (v === 'denied') limparCookiesDeMedicao();
   }
 

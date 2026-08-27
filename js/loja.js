@@ -21,33 +21,50 @@
     adultos: 'Adultos',
     idosos: 'Idosos 60+',
     gestantes: 'Gestantes',
+    servicos: 'Serviço',
+    produtos: 'Produto',
   };
   var CATALOG = [
     { id: 'influenza4', nome: 'Influenza quadrivalente', desc: 'Proteção anual contra a gripe para toda a família.', doses: 'Dose anual', pn: 189, pc: 129, cats: ['bebes', 'criancas', 'adolescentes', 'adultos', 'gestantes'] },
     { id: 'influenza-hd', nome: 'Influenza high dose 60+', desc: 'Gripe com dose reforçada, desenvolvida para 60+.', doses: 'Dose anual', pn: 399, pc: 379, cats: ['idosos'] },
-    { id: 'hexavalente', nome: 'Hexavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio, hepatite B e Hib.', doses: '3 doses', pn: 399, pc: 369, cats: ['bebes'] },
-    { id: 'pentavalente', nome: 'Pentavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio e Hib.', doses: '2 doses + reforço', pn: 379, pc: 349, cats: ['bebes'] },
-    { id: 'rotavirus', nome: 'Rotavírus pentavalente', desc: 'Gastroenterites causadas por rotavírus.', doses: '3 doses (oral)', pn: 399, pc: 379, cats: ['bebes'] },
+    { id: 'hexavalente', nome: 'Hexavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio, hepatite B e Hib.', doses: '3 doses', pn: 399, pc: 369, porDose: true, cats: ['bebes'] },
+    { id: 'pentavalente', nome: 'Pentavalente acelular', desc: 'Difteria, tétano, coqueluche, pólio e Hib.', doses: '2 doses + reforço', pn: 379, pc: 349, porDose: true, cats: ['bebes'] },
+    { id: 'rotavirus', nome: 'Rotavírus pentavalente', desc: 'Gastroenterites causadas por rotavírus.', doses: '3 doses (oral)', pn: 399, pc: 379, porDose: true, cats: ['bebes'] },
     { id: 'vsr-beyfortus', nome: 'VSR — Beyfortus', desc: 'Anticorpo monoclonal contra o vírus sincicial respiratório.', doses: 'Dose única', pn: 5199, pc: 3999, cats: ['bebes'] },
-    { id: 'men-acwy', nome: 'Meningocócica ACWY', desc: 'Meningites dos tipos A, C, W e Y.', doses: '1 a 2 doses', pn: 529, pc: 489, cats: ['bebes', 'criancas', 'adolescentes', 'adultos'] },
-    { id: 'men-b', nome: 'Meningocócica B', desc: 'Meningite do tipo B — única disponível no Brasil.', doses: '2 a 4 doses', pn: 849, pc: 829, cats: ['bebes', 'criancas', 'adolescentes'] },
-    { id: 'pneumo15', nome: 'Pneumocócica 15V', desc: 'Pneumonias e doenças pneumocócicas (15 sorotipos).', doses: '3 + reforço', pn: 479, pc: 439, cats: ['bebes', 'criancas', 'idosos'] },
-    { id: 'pneumo20', nome: 'Pneumocócica 20V', desc: 'Cobertura ampliada: 20 sorotipos pneumocócicos.', doses: '3 + reforço', pn: 729, pc: 699, cats: ['bebes', 'adultos', 'idosos'] },
-    { id: 'triplice', nome: 'Tríplice viral', desc: 'Sarampo, caxumba e rubéola.', doses: '2 doses', pn: 169, pc: 139, cats: ['criancas', 'adolescentes', 'adultos'] },
-    { id: 'varicela', nome: 'Varicela', desc: 'Catapora.', doses: '2 doses', pn: 349, pc: 319, cats: ['criancas', 'adolescentes', 'adultos'] },
-    { id: 'qdenga', nome: 'Qdenga — Dengue', desc: 'Vacina tetravalente contra a dengue.', doses: '2 doses', pn: 679, pc: 629, cats: ['criancas', 'adolescentes', 'adultos'] },
-    { id: 'hep-a', nome: 'Hepatite A pediátrica', desc: 'Proteção contra a hepatite A para bebês e crianças.', doses: '2 doses', pn: 199, pc: 179, cats: ['bebes', 'criancas'] },
-    { id: 'hep-a-ad', nome: 'Hepatite A adulto', desc: 'Proteção contra a hepatite A para adultos.', doses: '2 doses', pn: 299, pc: 279, cats: ['adultos'] },
-    { id: 'hep-b', nome: 'Hepatite B', desc: 'Proteção contra a hepatite B. Primeira dose ao nascer.', doses: 'Conforme esquema', pn: 199, pc: 99, cats: ['bebes', 'adultos'] },
-    { id: 'hep-ab', nome: 'Hepatite A + B — Twinrix', desc: 'Proteção combinada contra as hepatites A e B.', doses: '3 doses', pn: 439, pc: 399, cats: ['adolescentes', 'adultos'] },
-    { id: 'hpv9', nome: 'HPV nonavalente — Gardasil 9', desc: 'Proteção contra 9 tipos de HPV.', doses: '2 a 3 doses', pn: 1329, pc: 1249, cats: ['criancas', 'adolescentes', 'adultos'] },
+    { id: 'men-acwy', nome: 'Meningocócica ACWY', desc: 'Meningites dos tipos A, C, W e Y.', doses: '1 a 2 doses', pn: 529, pc: 489, porDose: true, cats: ['bebes', 'criancas', 'adolescentes', 'adultos'] },
+    { id: 'men-b', nome: 'Meningocócica B', desc: 'Meningite do tipo B — única disponível no Brasil.', doses: '2 a 4 doses', pn: 849, pc: 829, porDose: true, cats: ['bebes', 'criancas', 'adolescentes'] },
+    { id: 'pneumo15', nome: 'Pneumocócica 15V', desc: 'Pneumonias e doenças pneumocócicas (15 sorotipos).', doses: '3 + reforço', pn: 479, pc: 439, porDose: true, cats: ['bebes', 'criancas', 'idosos'] },
+    { id: 'pneumo20', nome: 'Pneumocócica 20V', desc: 'Cobertura ampliada: 20 sorotipos pneumocócicos.', doses: '3 + reforço', pn: 729, pc: 699, porDose: true, cats: ['bebes', 'adultos', 'idosos'] },
+    { id: 'triplice', nome: 'Tríplice viral', desc: 'Sarampo, caxumba e rubéola.', doses: '2 doses', pn: 169, pc: 139, porDose: true, cats: ['criancas', 'adolescentes', 'adultos'] },
+    { id: 'varicela', nome: 'Varicela', desc: 'Catapora.', doses: '2 doses', pn: 349, pc: 319, porDose: true, cats: ['criancas', 'adolescentes', 'adultos'] },
+    { id: 'qdenga', nome: 'Qdenga — Dengue', desc: 'Vacina tetravalente contra a dengue.', doses: '2 doses', pn: 679, pc: 629, porDose: true, cats: ['criancas', 'adolescentes', 'adultos'] },
+    { id: 'hep-a', nome: 'Hepatite A pediátrica', desc: 'Proteção contra a hepatite A para bebês e crianças.', doses: '2 doses', pn: 199, pc: 179, porDose: true, cats: ['bebes', 'criancas'] },
+    { id: 'hep-a-ad', nome: 'Hepatite A adulto', desc: 'Proteção contra a hepatite A para adultos.', doses: '2 doses', pn: 299, pc: 279, porDose: true, cats: ['adultos'] },
+    { id: 'hep-b', nome: 'Hepatite B', desc: 'Proteção contra a hepatite B. Primeira dose ao nascer.', doses: 'Conforme esquema', pn: 199, pc: 99, porDose: true, cats: ['bebes', 'adultos'] },
+    { id: 'hep-ab', nome: 'Hepatite A + B — Twinrix', desc: 'Proteção combinada contra as hepatites A e B.', doses: '3 doses', pn: 439, pc: 399, porDose: true, cats: ['adolescentes', 'adultos'] },
+    { id: 'hpv9', nome: 'HPV nonavalente — Gardasil 9', desc: 'Proteção contra 9 tipos de HPV.', doses: '2 a 3 doses', pn: 1329, pc: 1249, porDose: true, cats: ['criancas', 'adolescentes', 'adultos'] },
     { id: 'dtpa', nome: 'dTpa', desc: 'Difteria, tétano e coqueluche — reforço adulto e gestante.', doses: '1 dose (reforço)', pn: 299, pc: 239, cats: ['adolescentes', 'adultos', 'gestantes'] },
     { id: 'dtpa-ipv', nome: 'dTpa + IPV', desc: 'Difteria, tétano, coqueluche e poliomielite.', doses: '1 dose (reforço)', pn: 299, pc: 239, cats: ['criancas', 'adolescentes', 'adultos'] },
     { id: 'febre-amarela', nome: 'Febre amarela — Stamaril', desc: 'Proteção contra a febre amarela.', doses: 'Dose única', pn: 279, pc: 199, cats: ['criancas', 'adolescentes', 'adultos'] },
-    { id: 'zoster', nome: 'Herpes Zóster — Shingrix', desc: 'Herpes zóster (cobreiro) e suas complicações. 50+.', doses: '2 doses', pn: 1259, pc: 1155, cats: ['adultos', 'idosos'] },
+    { id: 'zoster', nome: 'Herpes Zóster — Shingrix', desc: 'Herpes zóster (cobreiro) e suas complicações. 50+.', doses: '2 doses', pn: 1259, pc: 1155, porDose: true, cats: ['adultos', 'idosos'] },
     { id: 'vsr-abrysvo', nome: 'VSR — Abrysvo', desc: 'Vírus sincicial respiratório. Indicação a partir dos 18 anos, incluindo gestantes.', doses: 'Dose única', pn: 2299, pc: 1599, cats: ['gestantes', 'adultos', 'idosos'] },
-    { id: 'vsr-arexvy', nome: 'VSR — Arexvy', desc: 'Vírus sincicial respiratório para 60+.', doses: '1 a 2 doses', pn: 2099, pc: 1899, cats: ['idosos'] },
-    { id: 'rhogan', nome: 'Rhogan', desc: 'Imunoglobulina anti-Rh para gestantes.', doses: 'Conforme indicação', pn: 549, pc: 509, cats: ['gestantes'] },
+    { id: 'vsr-arexvy', nome: 'VSR — Arexvy', desc: 'Vírus sincicial respiratório para 60+.', doses: '1 a 2 doses', pn: 2099, pc: 1899, porDose: true, cats: ['idosos'] },
+    { id: 'rhogan', nome: 'Rhogan', desc: 'Imunoglobulina anti-Rh para gestantes.', doses: 'Conforme indicação', pn: 549, pc: 509, porDose: true, cats: ['gestantes'] },
+  ];
+
+  /* ---------- Serviços e produtos de balcão ----------
+     Não são vacinas: ficam numa aba própria e fora da busca de vacinas, mas
+     usam o mesmo card e o mesmo carrinho (entram no índice byId logo abaixo).
+     Sem campo `doses` e sem `porDose`: o preço aqui é por atendimento/unidade.
+     `desc` fica curta de propósito — texto clínico só entra com o que a
+     equipe confirmar. */
+  var SERVICOS = [
+    { id: 'serv-compressa', nome: 'Compressa Mágica', desc: 'Conforto na hora da aplicação. Detalhes com a equipe da unidade.', pn: 49.9, pc: 39.9, cats: ['servicos'] },
+    { id: 'serv-picadinha', nome: 'Picadinha Mágica', desc: 'Conforto na hora da aplicação. Detalhes com a equipe da unidade.', pn: 44.9, pc: 39.9, cats: ['servicos'] },
+    { id: 'serv-lavagem', nome: 'Lavagem Mágica', desc: 'Procedimento realizado na unidade. Detalhes com a equipe.', pn: 29.9, pc: 29.9, cats: ['servicos'] },
+    { id: 'serv-im', nome: 'Aplicação intramuscular', desc: 'Aplicação de medicamento injetável com prescrição, por equipe de enfermagem.', pn: 80, pc: 60, cats: ['servicos'] },
+    { id: 'serv-brinco-furo', nome: 'Aplicação de brinco (furo)', desc: 'Furo e colocação do primeiro brinco, com o brinco incluso.', pn: 220, pc: 199, cats: ['servicos'] },
+    { id: 'prod-brinco-reposicao', nome: 'Brinco de reposição', desc: 'Par de brincos para troca, sem o procedimento de furo.', pn: 89.9, pc: 79.9, cats: ['produtos'] },
   ];
 
   /* Clube AMO — assinatura anual com preços exclusivos */
@@ -100,6 +117,7 @@
   /* ---------- Índices ---------- */
   var byId = {};
   CATALOG.forEach(function (p) { byId[p.id] = p; });
+  SERVICOS.forEach(function (p) { byId[p.id] = p; });
   byId[CLUBE.id] = CLUBE;
   var ppvById = {};
   PPV.forEach(function (p) { ppvById[p.id] = p; });
@@ -173,8 +191,11 @@
     renderCart();
   }
 
-  /* ---------- Abas da loja (organização do e-commerce) ---------- */
-  var PANELS = ['panelBebe', 'panelPacotes', 'panelAdulto', 'panelGestante', 'panelSenior', 'panelBuscar'];
+  /* ---------- Abas da loja (organização do e-commerce) ----------
+     A lista de painéis sai do próprio DOM: quando era uma lista fixa no JS,
+     criar uma aba nova no HTML sem lembrar de atualizá-la escondia TODOS os
+     painéis (o alvo não estava na lista, então ninguém o reexibia). */
+  var PANELS = $$('.lpanel').map(function (p) { return p.id; });
   $$('.ltab').forEach(function (tab) {
     tab.addEventListener('click', function () {
       var target = tab.getAttribute('data-panel');
@@ -256,7 +277,18 @@
       box.appendChild(only);
       return { box: box, badge: null };
     }
-    return { box: box, badge: fillPrices(box, p.pn, p.pc, 'lprod') };
+    var badge = fillPrices(box, p.pn, p.pc, 'lprod');
+
+    /* Vacina de esquema múltiplo: o preço é de UMA dose. Sem este rótulo,
+       um valor alto ao lado de "2 doses" na descrição se lê como o esquema
+       inteiro — e a pessoa chega na unidade esperando pagar metade. */
+    if (p.porDose) {
+      var un = document.createElement('span');
+      un.className = 'lprod__unit';
+      un.textContent = 'por dose';
+      box.appendChild(un);
+    }
+    return { box: box, badge: badge };
   }
 
   function makeCard(p) {
@@ -306,6 +338,15 @@
       if (p.cats.indexOf(cat) === -1) return;
       box.appendChild(makeCard(p));
     });
+  }
+
+  /* Serviços ficam fora do CATALOG, então têm o próprio render — assim a
+     busca de vacinas continua devolvendo só vacinas. */
+  function renderServicos() {
+    var box = $('#gridServicos');
+    if (!box) return;
+    box.textContent = '';
+    SERVICOS.forEach(function (p) { box.appendChild(makeCard(p)); });
   }
 
   function renderSearch() {
@@ -658,7 +699,7 @@
       desc.className = 'clube-switch__desc';
       if (economia > 0) {
         desc.innerHTML = (hasClube ? 'Você está economizando ' : 'Com o Clube AMO você economiza ') +
-          '<strong>' + fmt(economia) + '</strong> nas vacinas desta reserva.';
+          '<strong>' + fmt(economia) + '</strong> nesta reserva.';
       } else {
         desc.textContent = hasClube
           ? 'Preços de assinante ativados em toda a reserva.'
@@ -775,7 +816,7 @@
 
       var t = computeTotals();
       var linhas = [
-        'Olá! Quero reservar vacinas pelo site da Amo. 💜',
+        'Olá! Quero fazer uma reserva pelo site da Amo. 💜',
         '',
         'Nome: ' + nome,
         'WhatsApp: ' + whats,
@@ -822,6 +863,7 @@
     });
   }
 
+  renderServicos();
   renderCatGrid('#gridAdulto', 'adultos');
   renderCatGrid('#gridGestante', 'gestantes');
   renderCatGrid('#gridSenior', 'idosos');

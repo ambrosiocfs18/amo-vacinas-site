@@ -1384,6 +1384,9 @@ button{font-family:inherit}
 .lprod__tag--gestantes{background:#FDF2F8;color:#BE185D;border-color:#FBCFE8}
 .lprod__tag--idosos{background:#EEF2FF;color:#4338CA;border-color:#C7D2FE}
 .lprod__tag--bebes{background:#F0FDFA;color:#0F766E;border-color:#99F6E4}
+/* não são vacinas — cor própria para não se confundir com faixa etária */
+.lprod__tag--servicos{background:#FFF7ED;color:#C2410C;border-color:#FED7AA}
+.lprod__tag--produtos{background:#F8FAFC;color:#475569;border-color:#CBD5E1}
 .lprod h3{font-size:1.08rem;font-weight:700;color:var(--ink)}
 .lprod p{color:var(--muted);font-weight:500;font-size:.92rem;line-height:1.5;flex:1;text-wrap:balance}
 .lprod__foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:6px}
@@ -1393,6 +1396,9 @@ button{font-family:inherit}
 .lprod__prices{display:flex;flex-direction:column;align-items:flex-start;gap:3px;line-height:1.15}
 .lprod__price{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.34rem;color:#DB2777;letter-spacing:-.4px}
 .lprod__consult{font-size:.78rem;font-weight:700;color:var(--violet-500);max-width:14ch;line-height:1.25}
+/* "por dose" logo abaixo do valor: sem isto, um preço alto ao lado de
+   "2 doses" na descrição se lê como o esquema completo */
+.lprod__unit{font-size:.72rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--violet-500);margin-top:-1px}
 
 /* linha "sem clube R$ X" riscada, acima do valor de sócio */
 .lprod__base,.ppv__base{display:flex;align-items:baseline;gap:5px;font-weight:600;color:var(--muted)}

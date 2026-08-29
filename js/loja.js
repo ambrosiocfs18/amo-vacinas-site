@@ -52,19 +52,19 @@
     { id: 'rhogan', nome: 'Rhogan', desc: 'Imunoglobulina anti-Rh para gestantes.', doses: 'Conforme indicação', pn: 549, pc: 509, porDose: true, cats: ['gestantes'] },
   ];
 
-  /* ---------- Serviços e produtos de balcão ----------
+  /* ---------- Produtos e serviços (fora do calendário vacinal) ----------
      Não são vacinas: ficam numa aba própria e fora da busca de vacinas, mas
      usam o mesmo card e o mesmo carrinho (entram no índice byId logo abaixo).
-     Sem campo `doses` e sem `porDose`: o preço aqui é por atendimento/unidade.
-     `desc` fica curta de propósito — texto clínico só entra com o que a
-     equipe confirmar. */
+     Sem campo `doses` e sem `porDose`: aqui o preço é por unidade/atendimento.
+     Nomes e descrições vieram do material oficial da marca — as três linhas
+     "Mágica" são PRODUTOS de caixa, não procedimentos. */
   var SERVICOS = [
-    { id: 'serv-compressa', nome: 'Compressa Mágica', desc: 'Conforto na hora da aplicação. Detalhes com a equipe da unidade.', pn: 49.9, pc: 39.9, cats: ['servicos'] },
-    { id: 'serv-picadinha', nome: 'Picadinha Mágica', desc: 'Conforto na hora da aplicação. Detalhes com a equipe da unidade.', pn: 44.9, pc: 39.9, cats: ['servicos'] },
-    { id: 'serv-lavagem', nome: 'Lavagem Mágica', desc: 'Procedimento realizado na unidade. Detalhes com a equipe.', pn: 29.9, pc: 29.9, cats: ['servicos'] },
+    { id: 'prod-picadinha', nome: 'Picadinha Mágica', desc: 'Menos dor e mais tranquilidade na hora da aplicação. Contém 1 unidade.', pn: 44.9, pc: 39.9, cats: ['produtos'] },
+    { id: 'prod-compressa', nome: 'Compressa Mágica', desc: 'Compressas refrescantes em adesivo: aliviam o desconforto e a vermelhidão depois da aplicação. Contém 2 adesivos.', pn: 49.9, pc: 39.9, cats: ['produtos'] },
+    { id: 'prod-lavagem', nome: 'Lavagem Mágica', desc: 'Dispositivo de lavagem nasal com êmbolo de borracha para controlar a pressão. Limpeza segura e alívio da congestão.', pn: 29.9, pc: 29.9, cats: ['produtos'] },
+    { id: 'prod-brinco-furo', nome: 'Brinco de perfuração', desc: 'Hipoalergênico e seguro, com a qualidade Amo Vacinas. Inclui a aplicação na unidade.', pn: 220, pc: 199, cats: ['produtos'] },
+    { id: 'prod-brinco-reposicao', nome: 'Brinco de reposição', desc: 'Reposição com o mesmo padrão de segurança e beleza, sem o procedimento de furo.', pn: 89.9, pc: 79.9, cats: ['produtos'] },
     { id: 'serv-im', nome: 'Aplicação intramuscular', desc: 'Aplicação de medicamento injetável com prescrição, por equipe de enfermagem.', pn: 80, pc: 60, cats: ['servicos'] },
-    { id: 'serv-brinco-furo', nome: 'Aplicação de brinco (furo)', desc: 'Furo e colocação do primeiro brinco, com o brinco incluso.', pn: 220, pc: 199, cats: ['servicos'] },
-    { id: 'prod-brinco-reposicao', nome: 'Brinco de reposição', desc: 'Par de brincos para troca, sem o procedimento de furo.', pn: 89.9, pc: 79.9, cats: ['produtos'] },
   ];
 
   /* Clube AMO — assinatura anual com preços exclusivos */

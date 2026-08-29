@@ -61,7 +61,7 @@
   var SERVICOS = [
     { id: 'prod-picadinha', nome: 'Picadinha Mágica', desc: 'Menos dor e mais tranquilidade na hora da aplicação. Contém 1 unidade.', pn: 44.9, pc: 39.9, cats: ['produtos'] },
     { id: 'prod-compressa', nome: 'Compressa Mágica', desc: 'Compressas refrescantes em adesivo: aliviam o desconforto e a vermelhidão depois da aplicação. Contém 2 adesivos.', pn: 49.9, pc: 39.9, cats: ['produtos'] },
-    { id: 'prod-lavagem', nome: 'Lavagem Mágica', desc: 'Dispositivo de lavagem nasal com êmbolo de borracha para controlar a pressão. Limpeza segura e alívio da congestão.', pn: 29.9, pc: 29.9, cats: ['produtos'] },
+    { id: 'prod-lavagem', nome: 'Lavagem Mágica', desc: 'Dispositivo de lavagem nasal de 10 ml, com êmbolo de borracha para controlar a pressão e 2 adaptadores nasais. Alívio da congestão com segurança.', pn: 29.9, pc: 29.9, cats: ['produtos'] },
     { id: 'prod-brinco-furo', nome: 'Brinco de perfuração', desc: 'Hipoalergênico e seguro, com a qualidade Amo Vacinas. Inclui a aplicação na unidade.', pn: 220, pc: 199, cats: ['produtos'] },
     { id: 'prod-brinco-reposicao', nome: 'Brinco de reposição', desc: 'Reposição com o mesmo padrão de segurança e beleza, sem o procedimento de furo.', pn: 89.9, pc: 79.9, cats: ['produtos'] },
     { id: 'serv-im', nome: 'Aplicação intramuscular', desc: 'Aplicação de medicamento injetável com prescrição, por equipe de enfermagem.', pn: 80, pc: 60, cats: ['servicos'] },

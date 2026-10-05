@@ -125,13 +125,44 @@
      Envia só o caminho da página (nunca a URL completa) — query string pode carregar
      parâmetros de campanha ou dados de terceiros que não precisam sair daqui. */
   const LEAD_WEBHOOK_URL = 'https://amovacinas-webhook.gkhub.com.br/webhook/cadastro-lead';
+
+  /* Anti-bot (barra o robô genérico que varre sites preenchendo formulário;
+     NÃO barra quem chama o webhook direto — isso só se resolve no servidor):
+     - honeypot: campo `url_site` fora da tela; gente não vê, robô preenche;
+     - tempo mínimo: ninguém preenche nome+telefone+e-mail em menos de 3s.
+     Se cair em qualquer um, o lead não vai ao CRM, mas o resto do fluxo segue
+     igual (mensagem de sucesso e WhatsApp). Assim um falso positivo — alguém
+     muito rápido com autopreenchimento — ainda chega até nós pelo WhatsApp. */
+  const HONEYPOT = 'url_site';
+  const TEMPO_MINIMO_MS = 3000;
+  const carregadoEm = Date.now();
+  const LIMITE_CAMPO = 1200; // nenhum campo legítimo passa disso
+
+  const limitar = (v) => {
+    if (typeof v === 'string') return v.slice(0, LIMITE_CAMPO);
+    if (Array.isArray(v)) return v.slice(0, 50).map(limitar);
+    if (v && typeof v === 'object') {
+      const o = {};
+      Object.keys(v).forEach((k) => { o[k] = limitar(v[k]); });
+      return o;
+    }
+    return v;
+  };
+
   window.AmoLead = {
-    send(payload) {
+    ehBot(form) {
+      if (!form) return false;
+      const hp = form.elements[HONEYPOT];
+      if (hp && hp.value.trim() !== '') return true;
+      return Date.now() - carregadoEm < TEMPO_MINIMO_MS;
+    },
+    send(payload, form) {
+      if (window.AmoLead.ehBot(form)) return;
       try {
         fetch(LEAD_WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(Object.assign({ origem_pagina: window.location.pathname, enviado_em: new Date().toISOString() }, payload)),
+          body: JSON.stringify(Object.assign({ origem_pagina: window.location.pathname, enviado_em: new Date().toISOString() }, limitar(payload))),
           keepalive: true,
         }).catch(() => {});
       } catch (e) {}
@@ -412,7 +443,7 @@
         telefone: form.elements['telefone'].value.trim(),
         email: form.elements['email'].value.trim(),
         assunto: assunto && assunto.value ? (assuntos[assunto.value] || assunto.value) : '',
-      });
+      }, form);
 
       const ok = $('#contactOk');
       if (ok) ok.hidden = false;

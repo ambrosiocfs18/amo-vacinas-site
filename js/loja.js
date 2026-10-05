@@ -851,7 +851,7 @@
         cupom: cupom ? cupom.codigo : '',
         total_normal: t.tn > 0 ? Math.max(t.tn - t.desc, 0) : null,
         total_clube: t.tn > 0 ? Math.max(t.tc - t.desc, 0) : null,
-      });
+      }, form);
 
       var ok = $('#cartOk');
       if (ok) ok.hidden = false;

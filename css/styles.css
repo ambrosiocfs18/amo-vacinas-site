@@ -1810,3 +1810,8 @@ button{font-family:inherit}
   .cookie-bar__actions{display:grid;grid-template-columns:1fr 1fr}
   .cookie-bar__btn{min-width:0;width:100%}
 }
+
+/* Honeypot anti-bot dos formulários. Fora da tela em vez de display:none de
+   propósito: robô que respeita display:none pularia o campo e não cairia na
+   armadilha. aria-hidden + tabindex=-1 no HTML tiram ele de leitor de tela e Tab. */
+.hp-field{position:absolute!important;left:-10000px!important;top:auto;width:1px;height:1px;overflow:hidden}

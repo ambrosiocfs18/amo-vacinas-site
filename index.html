@@ -63,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=107" />
+  <link rel="stylesheet" href="css/styles.css?v=108" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -536,20 +536,24 @@
         </div>
 
         <form class="contact__form reveal" id="contactForm" novalidate>
+            <div class="hp-field" aria-hidden="true">
+              <label for="hpContato">Deixe este campo em branco</label>
+              <input type="text" id="hpContato" name="url_site" tabindex="-1" autocomplete="off" />
+            </div>
           <div class="field">
             <label for="nome">Nome completo</label>
-            <input type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como podemos te chamar?" />
+            <input maxlength="80" type="text" id="nome" name="nome" autocomplete="name" required placeholder="Como podemos te chamar?" />
             <small class="field__error" data-for="nome"></small>
           </div>
           <div class="field-row">
             <div class="field">
               <label for="telefone">Telefone / WhatsApp</label>
-              <input type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="tel" required placeholder="(00) 00000-0000" />
+              <input maxlength="16" type="tel" id="telefone" name="telefone" autocomplete="tel" inputmode="tel" required placeholder="(00) 00000-0000" />
               <small class="field__error" data-for="telefone"></small>
             </div>
             <div class="field">
               <label for="email">E-mail</label>
-              <input type="email" id="email" name="email" autocomplete="email" required placeholder="seu@email.com" />
+              <input maxlength="120" type="email" id="email" name="email" autocomplete="email" required placeholder="seu@email.com" />
               <small class="field__error" data-for="email"></small>
             </div>
           </div>
@@ -647,7 +651,7 @@
     </defs>
   </svg>
 
-  <script src="js/script.js?v=107" defer></script>
+  <script src="js/script.js?v=108" defer></script>
 
   <div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso sobre cookies" hidden>
     <div class="cookie-bar__inner">

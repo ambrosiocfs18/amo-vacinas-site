@@ -117,7 +117,20 @@
     window.addEventListener('resize', function () { mapa.invalidateSize(); });
   }
 
-  fetch('js/unidades-geo.json')
+  /* O JSON é servido com max-age de 1 dia (regra de /js no vercel.json). Sem
+     cache-busting, tirar ou mover uma unidade continuaria aparecendo no mapa
+     por até 24h para quem já visitou. Reaproveitamos o ?v= do próprio script,
+     que já sobe a cada publicação, em vez de um número solto para esquecer. */
+  var versao = '';
+  var meuSrc = (document.currentScript && document.currentScript.src) ||
+    (function () {
+      var s = document.querySelector('script[src*="mapa-unidades.js"]');
+      return s ? s.src : '';
+    })();
+  var casa = /[?&]v=([0-9]+)/.exec(meuSrc);
+  if (casa) versao = '?v=' + casa[1];
+
+  fetch('js/unidades-geo.json' + versao)
     .then(function (r) { return r.json(); })
     .then(monta)
     .catch(function () {

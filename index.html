@@ -63,7 +63,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="css/styles.css?v=108" />
+  <link rel="stylesheet" href="css/styles.css?v=110" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -83,8 +83,13 @@
         <source media="(max-width:760px)" srcset="assets/voucher-banner-mobile.webp" width="3255" height="279" />
         <img src="assets/voucher-banner.webp" alt="Gift Voucher: R$50,00 em todas as vacinas na sua primeira visita" width="4098" height="279" loading="eager" />
       </picture>
-      <a class="voucher-bar__cta" href="/loja">Compre online</a>
+      <a class="voucher-bar__cta" href="/loja">Reservar vacinas</a>
     </div>
+    <a class="voucher-mob" href="/loja">
+      <img src="assets/voucher-urso.webp" alt="" width="358" height="416" loading="eager" />
+      <span class="voucher-mob__txt"><span class="voucher-mob__pill">Gift Voucher</span><b>R$ 50,00</b> na sua primeira visita</span>
+      <span class="voucher-mob__btn">Reservar vacinas</span>
+    </a>
   </div>
 
   <!-- ============ HEADER / NAV ============ -->
@@ -135,7 +140,7 @@
 
       <div class="site-header__cta">
         <a href="/franquia" class="btn btn--ghost">Seja nosso franqueado</a>
-        <a href="/loja" class="btn btn--primary">Compre online</a>
+        <a href="/loja" class="btn btn--primary">Reservar vacinas</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
@@ -187,7 +192,7 @@
     </nav>
     <div class="mobile-menu__cta">
       <a href="/franquia" class="btn btn--ghost">Seja nosso franqueado</a>
-      <a href="/loja" class="btn btn--primary">Compre online</a>
+      <a href="/loja" class="btn btn--primary">Reservar vacinas</a>
     </div>
   </div>
 
@@ -202,33 +207,38 @@
         <div class="hero-slider__viewport">
           <div class="hero-slider__track" id="heroTrack">
 
-            <a class="hero-slide" href="/loja" aria-label="Reserve a Vacina da Gripe 2026 e proteja sua família">
-              <img src="assets/hero-gripe.webp" srcset="assets/hero-gripe-m.webp 960w, assets/hero-gripe.webp 1300w" sizes="100vw" width="1180" height="526" fetchpriority="high"
+            <a class="hero-slide" href="/loja?busca=hpv" aria-label="Amo minha vida: câncer tem prevenção. Vacine-se contra o HPV">
+              <img src="assets/hero-hpv.webp" srcset="assets/hero-hpv-m.webp 960w, assets/hero-hpv.webp 1920w" sizes="100vw" width="1920" height="800" fetchpriority="high"
+                   alt="Amo minha vida. Câncer tem prevenção, ame sua vida. A vacinação contra o HPV ajuda a prevenir infecções que podem causar vários cânceres que afetam as mulheres, como colo do útero, vulva, vagina, ânus e orofaringe." />
+            </a>
+
+            <a class="hero-slide" href="/loja?busca=influenza" aria-label="Reserve a Vacina da Gripe 2026 e proteja sua família">
+              <img src="assets/hero-gripe.webp" srcset="assets/hero-gripe-m.webp 960w, assets/hero-gripe.webp 1300w" sizes="100vw" width="1300" height="580" loading="lazy"
                    alt="Reserve a Vacina da Gripe 2026. Proteja sua família. Quem se vacina vence a gripe." />
             </a>
 
-            <a class="hero-slide" href="/loja" aria-label="Vacinação em domicílio, sem sair de casa">
-              <img src="assets/hero-domicilio.webp" srcset="assets/hero-domicilio-m.webp 960w, assets/hero-domicilio.webp 1300w" sizes="100vw" width="1180" height="526" loading="lazy"
-                   alt="Cuidar da sua saúde sem sair de casa. Levamos a vacinação até você, com conforto e segurança. Agende agora." />
+            <a class="hero-slide" href="https://wa.me/5508000500090?text=Ol%C3%A1%21%20Quero%20solicitar%20vacina%C3%A7%C3%A3o%20domiciliar%20da%20Amo%20Vacinas." target="_blank" rel="noopener" aria-label="Vacinação em domicílio, sem sair de casa: solicitar pelo WhatsApp">
+              <img src="assets/hero-domicilio-2.webp" srcset="assets/hero-domicilio-2-m.webp 960w, assets/hero-domicilio-2.webp 1300w" sizes="100vw" width="1300" height="580" loading="lazy"
+                   alt="Cuidar da sua saúde sem sair de casa. Levamos a vacinação até você, com conforto e segurança: atendimento domiciliar, equipe especializada, mais saúde e tranquilidade." />
             </a>
 
-            <a class="hero-slide" href="/loja" aria-label="Vacinação contra a gripe para escolas em 2026">
-              <img src="assets/hero-escola.webp" srcset="assets/hero-escola-m.webp 960w, assets/hero-escola.webp 1300w" sizes="100vw" width="1180" height="526" loading="lazy"
-                   alt="Proteja sua escola contra a gripe em 2026. Fale conosco e planeje sua campanha de vacinação. Agende agora." />
+            <a class="hero-slide" href="https://wa.me/5508000500090?text=Ol%C3%A1%21%20Quero%20planejar%20uma%20campanha%20de%20vacina%C3%A7%C3%A3o%20na%20minha%20escola." target="_blank" rel="noopener" aria-label="Vacinação escolar: planejar campanha pelo WhatsApp">
+              <img src="assets/hero-escola.webp" srcset="assets/hero-escola-m.webp 960w, assets/hero-escola.webp 1300w" sizes="100vw" width="1300" height="580" loading="lazy"
+                   alt="Proteja sua escola contra a gripe em 2026. Fale conosco e planeje sua campanha de vacinação." />
             </a>
 
-            <a class="hero-slide" href="/loja" aria-label="Campanha de vacinação corporativa contra a gripe em 2026">
-              <img src="assets/hero-corporativo.webp" srcset="assets/hero-corporativo-m.webp 960w, assets/hero-corporativo.webp 1300w" sizes="100vw" width="1180" height="526" loading="lazy"
-                   alt="Proteja seus colaboradores contra a gripe em 2026. Planeje sua campanha de vacinação corporativa. Agende agora." />
+            <a class="hero-slide" href="https://wa.me/5508000500090?text=Ol%C3%A1%21%20Quero%20planejar%20uma%20campanha%20de%20vacina%C3%A7%C3%A3o%20na%20minha%20empresa." target="_blank" rel="noopener" aria-label="Vacinação empresarial: planejar campanha pelo WhatsApp">
+              <img src="assets/hero-corporativo.webp" srcset="assets/hero-corporativo-m.webp 960w, assets/hero-corporativo.webp 1300w" sizes="100vw" width="1300" height="580" loading="lazy"
+                   alt="Proteja seus colaboradores contra a gripe em 2026. Planeje sua campanha de vacinação corporativa." />
             </a>
 
             <a class="hero-slide" href="/amo" aria-label="A rede de clínicas de vacinação mais premiada do Brasil">
-              <img src="assets/hero-premiada.webp" srcset="assets/hero-premiada-m.webp 960w, assets/hero-premiada.webp 1300w" sizes="100vw" width="1300" height="580" loading="lazy"
-                   alt="A rede de clínicas de vacinação mais premiada do Brasil. Excelência em Franchising ABF e Melhores Franquias do Brasil." />
+              <img src="assets/hero-premiada-2.webp" srcset="assets/hero-premiada-2-m.webp 960w, assets/hero-premiada-2.webp 1920w" sizes="100vw" width="1920" height="800" loading="lazy"
+                   alt="A rede de clínicas de vacinação mais premiada do Brasil: Excelência em Franchising ABF 2024 e 2025, Melhores Franquias do Brasil 2023, 2024, 2025 e 2026." />
             </a>
 
             <a class="hero-slide" href="/amo" aria-label="Empresa com avaliação 5 estrelas no atendimento no Google">
-              <img src="assets/hero-estrelas.webp" srcset="assets/hero-estrelas-m.webp 960w, assets/hero-estrelas.webp 1300w" sizes="100vw" width="1180" height="526" loading="lazy"
+              <img src="assets/hero-estrelas-2.webp" srcset="assets/hero-estrelas-2-m.webp 960w, assets/hero-estrelas-2.webp 1920w" sizes="100vw" width="1920" height="800" loading="lazy"
                    alt="Somos uma empresa com avaliação 5 estrelas no atendimento no Google. Clínica 5 estrelas na avaliação do Google." />
             </a>
 
@@ -282,7 +292,7 @@
             <h2>Programe sua <span class="text-grad">vacinação</span></h2>
             <p>E aproveite todos os serviços da Amo na data certa, sem perder nenhuma dose.</p>
           </div>
-          <a href="/loja" class="btn btn--white promo__cta">Compre online</a>
+          <a href="/loja" class="btn btn--white promo__cta">Reservar vacinas</a>
         </article>
 
         <article class="promo promo--pink reveal" id="vacinas">
@@ -448,9 +458,9 @@
                 <img src="assets/fundadoras-premio.webp" alt="Fundadoras da Amo Vacinas recebendo prêmio de franchising" width="844" height="1125" loading="lazy" style="object-position:center 18%" />
               </div>
               <div class="news-card__body">
-                <span class="tag">Notícia</span>
-                <h3>Grupo Salus, dono da Sorridents, vai transformar rede cearense de vacinas em franquia</h3>
-                <a href="/blog" class="link-arrow">Ler matéria
+                <span class="tag">Prêmio</span>
+                <h3>Amo Vacinas está entre as Melhores Franquias do Brasil 2026</h3>
+                <a href="/amo" class="link-arrow">Conheça nossa história
                   <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </a>
               </div>
@@ -651,7 +661,7 @@
     </defs>
   </svg>
 
-  <script src="js/script.js?v=108" defer></script>
+  <script src="js/script.js?v=110" defer></script>
 
   <div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso sobre cookies" hidden>
     <div class="cookie-bar__inner">

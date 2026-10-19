@@ -868,6 +868,17 @@
   renderCatGrid('#gridGestante', 'gestantes');
   renderCatGrid('#gridSenior', 'idosos');
   renderSearch();
+
+  /* /loja?busca=hpv (links de campanha): abre "Buscar Vacina" já filtrada */
+  var busca = new URLSearchParams(location.search).get('busca');
+  if (busca && searchInput) {
+    var tabBusca = document.querySelector('.ltab[data-panel="panelBuscar"]');
+    if (tabBusca) tabBusca.click();
+    searchInput.value = busca.slice(0, 60);
+    searchTerm = searchInput.value;
+    renderSearch();
+  }
+
   renderCalendario();
   renderPPV();
   renderCart();

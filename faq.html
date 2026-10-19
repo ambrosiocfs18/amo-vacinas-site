@@ -57,7 +57,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=108" />
+  <link rel="stylesheet" href="css/styles.css?v=110" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='15' fill='%237C3AED'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>a</text></svg>" />
 </head>
 <body>
@@ -74,8 +74,13 @@
         <source media="(max-width:760px)" srcset="assets/voucher-banner-mobile.webp" width="3255" height="279" />
         <img src="assets/voucher-banner.webp" alt="Gift Voucher: R$50,00 em todas as vacinas na sua primeira visita" width="4098" height="279" loading="eager" />
       </picture>
-      <a class="voucher-bar__cta" href="/loja">Compre online</a>
+      <a class="voucher-bar__cta" href="/loja">Reservar vacinas</a>
     </div>
+    <a class="voucher-mob" href="/loja">
+      <img src="assets/voucher-urso.webp" alt="" width="358" height="416" loading="eager" />
+      <span class="voucher-mob__txt"><span class="voucher-mob__pill">Gift Voucher</span><b>R$ 50,00</b> na sua primeira visita</span>
+      <span class="voucher-mob__btn">Reservar vacinas</span>
+    </a>
   </div>
 
   <header class="site-header" id="siteHeader">
@@ -123,7 +128,7 @@
       </nav>
       <div class="site-header__cta">
         <a href="/franquia" class="btn btn--ghost">Seja nosso franqueado</a>
-        <a href="/loja" class="btn btn--primary">Compre online</a>
+        <a href="/loja" class="btn btn--primary">Reservar vacinas</a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
@@ -173,15 +178,35 @@
     </nav>
     <div class="mobile-menu__cta">
       <a href="/franquia" class="btn btn--ghost">Seja nosso franqueado</a>
-      <a href="/loja" class="btn btn--primary">Compre online</a>
+      <a href="/loja" class="btn btn--primary">Reservar vacinas</a>
     </div>
   </div>
 
   <main id="conteudo">
 
-    <section class="hero-banner" aria-label="Perguntas frequentes">
-      <img src="assets/hero-faq-full.webp" srcset="assets/hero-faq-full-m.webp 960w, assets/hero-faq-full.webp 1920w" sizes="100vw" width="1920" height="800" fetchpriority="high"
-           alt="Mascotes da Amo Vacinas segurando as letras FAQ: perguntas frequentes" />
+    <section class="hero">
+      <div class="hero-slider" id="heroSlider"
+           role="region" aria-roledescription="carrossel" aria-label="Perguntas frequentes">
+        <div class="hero-slider__viewport">
+          <div class="hero-slider__track" id="heroTrack">
+
+            <div class="hero-slide">
+              <img src="assets/hero-faq-full.webp" srcset="assets/hero-faq-full-m.webp 960w, assets/hero-faq-full.webp 1920w" sizes="100vw" width="1920" height="800" fetchpriority="high"
+                   alt="Mascotes da Amo Vacinas segurando as letras FAQ: perguntas frequentes" />
+            </div>
+
+          </div>
+        </div>
+
+        <button class="hero-slider__arrow hero-slider__arrow--prev" id="heroPrev" type="button" aria-label="Banner anterior">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="hero-slider__arrow hero-slider__arrow--next" id="heroNext" type="button" aria-label="Próximo banner">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+        <div class="hero-slider__dots" id="heroDots" role="tablist" aria-label="Selecionar banner"></div>
+      </div>
     </section>
 
     <section class="lp-section" style="padding-top:clamp(20px,3vw,36px)" aria-label="Perguntas frequentes">
@@ -298,7 +323,7 @@
     <svg viewBox="0 0 32 32" width="30" height="30" fill="currentColor" aria-hidden="true"><path d="M16 3C9 3 3.5 8.5 3.5 15.5c0 2.4.7 4.6 1.8 6.5L3 29l7.2-2.3a12.4 12.4 0 0 0 5.8 1.5c7 0 12.5-5.5 12.5-12.5S23 3 16 3zm0 22.7c-1.9 0-3.7-.5-5.3-1.5l-.4-.2-4.3 1.4 1.4-4.1-.3-.4a10 10 0 0 1-1.6-5.4c0-5.6 4.6-10.2 10.4-10.2 5.7 0 10.3 4.6 10.3 10.2 0 5.7-4.6 10.2-10.3 10.2zm5.7-7.6c-.3-.2-1.8-.9-2.1-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-1 1.2-.2.2-.4.2-.7.1a8.4 8.4 0 0 1-4.2-3.7c-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.6l-1-2.3c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6 5.3 2.2.9 3 1 4.1.9.7-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.3z"/></svg>
   </a>
 
-  <script src="js/script.js?v=108" defer></script>
+  <script src="js/script.js?v=110" defer></script>
 
   <div class="cookie-bar" id="cookieBar" role="region" aria-label="Aviso sobre cookies" hidden>
     <div class="cookie-bar__inner">

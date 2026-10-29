@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex, follow">
+<title>Amo Vacinas Eusébio | Agende pelo WhatsApp</title>
+<meta name="description" content="Agende suas vacinas na Amo Vacinas Eusébio. Atendimento acolhedor e agendamento pelo WhatsApp.">
+<meta name="theme-color" content="#8043a9">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'none'; object-src 'none'; form-action 'none'">
+<script async src="https://www.googletagmanager.com/gtag/js?id=GT-K4V3J86H"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+var amoConsentSalvo = null;
+try { amoConsentSalvo = localStorage.getItem('amoCookieConsent'); } catch (e) {}
+var amoConsentEstado = amoConsentSalvo === 'granted' ? 'granted' : 'denied';
+gtag('consent', 'default', {ad_storage: amoConsentEstado, ad_user_data: amoConsentEstado, ad_personalization: amoConsentEstado, analytics_storage: amoConsentEstado, wait_for_update: 500});
+gtag('js', new Date());
+gtag('config', 'GT-K4V3J86H');
+</script>
+<script>
+window.AMO_CONFIG = Object.freeze({"whatsapp":"5585981705490","message":"Vim do Google e gostaria de agendar uma vacina.","landing_page":"eusebio"});
+window.dataLayer = window.dataLayer || [];
+(function(){
+  var keys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+  var storageKey = 'amo_lp_attribution_v1:' + window.AMO_CONFIG.landing_page;
+  var params = new URLSearchParams(location.search);
+  var stored = {}, selected = {};
+  try {
+    var raw = sessionStorage.getItem(storageKey);
+    if (raw && raw.length <= 4096) {
+      var parsed = JSON.parse(raw);
+      if (parsed && typeof parsed === 'object' && !Array.isArray(parsed)) stored = parsed;
+    }
+  } catch(e) {}
+  var hasCampaign = keys.some(function(k){return params.has(k);});
+  keys.forEach(function(k){
+    var value = hasCampaign ? params.get(k) : stored[k];
+    if (typeof value === 'string' && value.length <= 120 && /^[A-Za-z0-9_. -]+$/.test(value)) selected[k] = value;
+  });
+  try {sessionStorage.setItem(storageKey, JSON.stringify(selected));} catch(e) {}
+  window.amoAttribution = Object.freeze(selected);
+})();
+</script>
+<style>
+:root{--purple:#8043a9;--deep:#48265f;--lilac:#ab6fc9;--blue:#e3f3ff;--ink:#493c55;--muted:#6e6377;--line:#e6ddec}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Trebuchet MS',Arial,sans-serif;color:var(--ink);background:#fff}a{color:inherit}a:focus-visible{outline:3px solid #2787ad;outline-offset:5px}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+header{background:#f7fcff;border-bottom:1px solid #e6eff6}.nav{display:flex;align-items:center;justify-content:space-between;min-height:98px;gap:20px}.logo{display:block;width:176px;flex:0 0 176px;border-radius:10px;overflow:hidden}.logo svg{display:block;width:100%;height:auto}.nav-right{display:flex;align-items:center;gap:28px}.nav-right>span{font-size:13px;letter-spacing:1.3px;text-transform:uppercase}.button{display:inline-flex;gap:12px;align-items:center;justify-content:center;padding:17px 24px;border-radius:100px;background:var(--purple);color:white;text-decoration:none;font-weight:700;font-size:16px;min-height:54px;box-shadow:0 8px 22px #8043a922;transition:transform .2s,background .2s}.button:hover{background:#67328e;transform:translateY(-2px)}.button.small{padding:12px 20px;font-size:14px;min-height:45px}
+.hero{position:relative;overflow:hidden;background:radial-gradient(ellipse at 92% 0,#d7edff 0,transparent 56%),radial-gradient(ellipse at 0 100%,#eee3f8 0,transparent 52%),#f8fcff;padding:76px 0 65px}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:52px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--purple);margin:0 0 25px}.eyebrow:before{content:'';display:inline-block;width:22px;height:2px;background:var(--lilac);vertical-align:middle;margin-right:10px}h1{font-size:clamp(40px,5.1vw,64px);line-height:1.08;letter-spacing:-2.6px;font-weight:400;margin:0 0 25px;color:var(--deep)}h1 strong{font-weight:700;color:var(--purple)}.intro{font-size:18px;line-height:1.65;max-width:470px;margin:0 0 28px}.note{font-size:12px;color:var(--muted);margin:13px 0 0}.care-art{position:relative;min-height:405px;display:grid;place-items:center}.orb{position:absolute;inset:10px -10px;border-radius:49% 51% 42% 58%;background:linear-gradient(135deg,#d6eefe88,#f3e7fb);border:1px solid white;transform:rotate(-7deg)}.heart{width:260px;filter:drop-shadow(0 22px 24px #945ecb33);transform:rotate(-8deg)}.art-label{position:absolute;background:#ffffffed;border:1px solid white;border-radius:18px;padding:15px 20px;box-shadow:0 10px 35px #7a5a9620;font-size:14px}.art-label.top{top:15px;right:-3px;color:var(--purple)}.art-label.bottom{bottom:20px;left:-12px;line-height:1.6}.art-label b{color:var(--purple)}.spark{position:absolute;font-size:38px;color:#ad7dca;right:8px;bottom:85px}.trust{display:flex;gap:42px;align-items:center;margin-top:55px;border-top:1px solid #dce1ef;padding-top:25px}.trust strong{color:var(--purple);display:block;font-size:22px}.trust span{display:block;font-size:12px;margin-top:5px;line-height:1.5}
+section.locations{padding:70px 0}h2{font-weight:400;font-size:36px;line-height:1.2;letter-spacing:-1px;color:var(--deep);margin:0 0 15px}.section-intro{color:var(--muted);line-height:1.6;margin:0 0 32px;max-width:650px}.locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}.place{padding:26px 0;border-top:2px solid #e4d5ee;display:flex;flex-direction:column;align-items:flex-start}.place .index{color:var(--lilac);font-size:13px;letter-spacing:2px}.place h3{color:var(--deep);font-size:22px;margin:18px 0 12px}.place p{font-size:15px;line-height:1.7;margin:0 0 16px}.place .text-link{margin-top:auto;color:var(--purple);font-weight:700;text-decoration:none;padding:10px 0}.map{font-size:12px;color:var(--muted);margin-bottom:16px;text-underline-offset:3px}.closing{background:#f3edf8;border-radius:28px;padding:42px;display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:55px}.closing h2{font-size:30px;max-width:470px}.closing p{font-size:15px;line-height:1.6;margin:0}footer{border-top:1px solid var(--line);padding:24px 0 100px;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:24px;line-height:1.6}.float{position:fixed;bottom:22px;right:22px;z-index:10;box-shadow:0 8px 26px #4d286b33}.wa{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.7;flex-shrink:0}
+@media(max-width:760px){.wrap{width:calc(100% - 36px)}.nav{min-height:82px}.logo{width:132px;flex-basis:132px}.nav-right>span{display:none}.button.small{font-size:12px;padding:10px 16px}.hero{padding:40px 0}.hero-grid{grid-template-columns:1fr;gap:15px}h1{letter-spacing:-1.7px;font-size:45px}.intro{font-size:16px}.hero .button{width:100%}.care-art{min-height:265px;margin:24px 10px 0}.heart{width:180px}.art-label{font-size:12px;padding:12px 15px}.art-label.bottom{bottom:5px;left:-3px}.orb{inset:0 20px}.trust{gap:20px;justify-content:space-between;margin-top:30px;align-items:flex-start}.trust strong{font-size:19px}.trust span{font-size:11px;max-width:120px}.locations-grid{grid-template-columns:1fr;gap:4px}section.locations{padding:45px 0}h2{font-size:31px}.place{padding:24px 0}.place h3{margin-top:12px}.closing{flex-direction:column;align-items:stretch;padding:28px 24px;border-radius:22px;gap:22px}.closing h2{font-size:29px}.foot{flex-direction:column;gap:6px}.float{right:16px;bottom:16px;padding:14px 19px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.family-art{min-height:0;display:block;margin:0}.family-photo{display:block;width:100%;height:auto;border-radius:28px;box-shadow:0 18px 48px #8043a91c}.hero-grid{grid-template-columns:1.05fr 1fr;gap:44px}@media(max-width:760px){.hero-grid{grid-template-columns:1fr;gap:28px}.family-art{margin:0;min-height:0}.family-photo{border-radius:22px}}
+.comfort{padding:54px 0;background:#f7f1fb}.faq{padding-top:50px;padding-bottom:50px}.faq details{border-bottom:1px solid var(--line);padding:20px 0}.faq summary{cursor:pointer;font-size:17px;color:var(--deep);font-weight:bold}.faq details p{line-height:1.7;max-width:720px}.locations-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.locations-grid.single{grid-template-columns:1fr;max-width:650px}@media(max-width:760px){.locations-grid{grid-template-columns:1fr}.nav{gap:10px}.button.small{max-width:180px;text-align:center}}
+.logo img{display:block;width:100%;height:auto}.foot a{color:inherit;text-underline-offset:3px}
+.cookie{position:fixed;left:16px;right:16px;bottom:16px;z-index:20;max-width:760px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 18px 48px #4d286b33;padding:18px 20px;display:flex;gap:18px;align-items:center}.cookie[hidden]{display:none}.cookie strong{color:var(--deep);font-size:15px}.cookie p{margin:4px 0 0;font-size:13px;line-height:1.5;color:var(--muted)}.cookie a{color:var(--purple)}.cookie-actions{display:flex;gap:10px;flex:none}.cookie button{font:inherit;font-weight:700;font-size:14px;min-height:44px;min-width:112px;padding:10px 20px;border-radius:100px;cursor:pointer;border:2px solid var(--purple);background:#f3edf8;color:var(--deep)}.cookie button:hover{background:#e9dcf3}.cookie button:focus-visible{outline:3px solid #2787ad;outline-offset:3px}
+@media(max-width:760px){.cookie{flex-direction:column;align-items:stretch;left:12px;right:12px;bottom:12px;padding:16px;gap:14px}.cookie-actions button{flex:1}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="logo" href="#inicio" aria-label="Amo Vacinas — início"><img src="/assets/lp/amo-logo-lp.webp" alt="Amo Vacinas" width="352" height="178"></a><div class="nav-right"><span>Eusébio · Ceará</span><a class="button small" data-wa data-position="cabecalho" data-service="geral" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Fale com um especialista ↗</a></div></div></header>
+<main id="inicio">
+<div class="hero"><div class="wrap"><div class="hero-grid"><div><p class="eyebrow">Vacinação em Eusébio</p><h1>Mais proteção.<br>Mais cuidado.<br><strong>Mais tranquilidade.</strong></h1><p class="intro">Agende suas vacinas na Amo Vacinas. No Shopping Eusébio, com opções também no Shopping Iguatemi, no Meireles e em domicílio: escolha onde prefere ser atendido e agende com nossa central do Eusébio.</p><a class="button" data-wa data-position="abertura" data-service="geral" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Agendar minhas vacinas <span aria-hidden="true">↗</span></a><p class="note">Converse com nossa equipe pelo WhatsApp.</p></div>
+<div class="care-art family-art"><img class="family-photo" src="/assets/lp/amo-mascote-premios.webp" alt="Mascote da Amo Vacinas com troféu e selos de premiação ABF e PEGN" width="1000" height="1408" fetchpriority="high"></div></div>
+<div class="trust"><div><strong>10 anos</strong><span>de história e cuidado</span></div><div><strong>Todo o Brasil</strong><span>presentes em todas as regiões</span></div><div><strong>Perto de você</strong><span>na clínica ou em casa</span></div></div></div></div>
+<section class="comfort"><div class="wrap"><p class="eyebrow">Cuidado em cada detalhe</p><h2>O medo da agulha merece acolhimento.</h2><p class="section-intro">Na Amo Vacinas, o cuidado começa antes da aplicação. Nosso protocolo combina acolhimento, dispositivos para auxiliar no manejo da dor e agulhas selecionadas conforme a avaliação da equipe, buscando uma experiência mais confortável.</p><a class="button" data-wa data-position="conforto" data-service="protocolo" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Conhecer nosso cuidado na vacinação ↗</a></div></section>
+<section class="locations" id="atendimentos"><div class="wrap"><p class="eyebrow">Escolha onde ser cuidado</p><h2>O mesmo carinho.<br>Do jeito que você precisa.</h2><p class="section-intro">Escolha o atendimento mais conveniente e fale com nossa equipe para consultar vacinas, valores e horários disponíveis.</p><div class="locations-grid"><article class="place"><span class="index">01 / NA CLÍNICA</span><h3>Amo Vacinas Shopping Eusébio</h3><p>Shopping Eusébio<br>Av. Eusébio de Queiroz, 1890 · Eusébio</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Amo%20Vacinas%20Shopping%20Eus%C3%A9bio%20Avenida%20Eus%C3%A9bio%20de%20Queiroz%201890" target="_blank" rel="noopener noreferrer">Ver localização ↗</a><a class="text-link" data-wa data-position="eusebio" data-service="eusebio" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Agendar nesta unidade ↗</a></article>
+<article class="place"><span class="index">02 / NA CLÍNICA</span><h3>Amo Vacinas Shopping Iguatemi</h3><p>Shopping Iguatemi Bosque · Piso L1<br>Av. Washington Soares, 85 · Fortaleza</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Amo%20Vacinas%20Iguatemi%20Bosque%20Fortaleza" target="_blank" rel="noopener noreferrer">Ver localização ↗</a><a class="text-link" data-wa data-position="iguatemi" data-service="iguatemi" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Agendar nesta unidade ↗</a></article>
+<article class="place"><span class="index">03 / NA CLÍNICA</span><h3>Amo Vacinas Meireles</h3><p>Rua Canuto de Aguiar, 1197<br>Meireles · Fortaleza</p><a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=Amo%20Vacinas%20Meireles%20Rua%20Canuto%20de%20Aguiar%201197%20Fortaleza" target="_blank" rel="noopener noreferrer">Ver localização ↗</a><a class="text-link" data-wa data-position="meireles" data-service="meireles" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Agendar nesta unidade ↗</a></article>
+<article class="place"><span class="index">04 / NA SUA CASA</span><h3>Atendimento domiciliar</h3><p>O cuidado da Amo Vacinas no conforto da sua casa. Consulte a cobertura para seu endereço e os horários disponíveis.</p><a class="text-link" data-wa data-position="domiciliar" data-service="domiciliar" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Agendar em casa ↗</a></article></div></div></section>
+<section class="faq wrap"><p class="eyebrow">Antes de agendar</p><h2>Vamos tirar suas dúvidas?</h2><details><summary>Como saber quais vacinas preciso?</summary><p>Envie sua caderneta de vacinação pelo WhatsApp. Nossa equipe orienta os próximos passos conforme a idade e o histórico vacinal.</p></details><details><summary>Como consultar valores e formas de pagamento?</summary><p>Fale com a equipe pelo WhatsApp para receber as condições da unidade e os valores das vacinas de seu interesse.</p></details><details><summary>Como confirmo a disponibilidade e o horário?</summary><p>Consulte a equipe antes de ir à clínica. O atendimento pelo WhatsApp permite verificar a vacina e combinar o melhor horário.</p></details></section>
+<div class="wrap"><section class="closing"><div><h2>Vamos cuidar da sua proteção?</h2><p>Nossa equipe ajuda você a planejar o próximo passo.</p></div><a class="button" data-wa data-position="encerramento" data-service="geral" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." target="_blank" rel="noopener noreferrer">Falar com um especialista ↗</a></section></div>
+</main>
+<footer><div class="wrap foot"><span>© Amo Vacinas · Eusébio, Ceará<br>Vacinar é um ato de amor à vida.<br><a href="/politica-privacidade">Política de privacidade</a></span><span>WhatsApp: (85) 98170-5490<br>Agendamentos sujeitos à confirmação da equipe.</span></div></footer>
+<a class="button float" data-wa data-position="flutuante" data-service="geral" href="https://wa.me/5585981705490?text=Vim%20do%20Google%20e%20gostaria%20de%20agendar%20uma%20vacina." aria-label="Falar com a Amo Vacinas pelo WhatsApp" target="_blank" rel="noopener noreferrer"><svg class="wa" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.7 11.6a8.6 8.6 0 0 1-12.6 7.6L3 20.7l1.5-5A8.6 8.6 0 1 1 20.7 11.6Z"/><path d="M8 7.4c-1.8 2.1 2.4 7.8 5.6 8.2 1.1.1 2-.6 2.3-1.6l-2.4-1.4-.9 1c-1.6-.6-2.7-1.8-3.2-3.2l.8-.9L8.8 7.3Z"/></svg> Agendar pelo WhatsApp</a>
+<script>
+(function(){
+ document.querySelectorAll('[data-wa]').forEach(function(a){
+  if(!window.AMO_CONFIG.whatsapp){a.setAttribute('aria-disabled','true');a.addEventListener('click',function(e){e.preventDefault();});return;}
+  a.href='https://wa.me/'+window.AMO_CONFIG.whatsapp+'?text='+encodeURIComponent(window.AMO_CONFIG.message);
+  a.target='_blank';a.rel='noopener noreferrer';
+  a.addEventListener('click',function(){
+   var event={event:'whatsapp_click',landing_page:window.AMO_CONFIG.landing_page,button_position:a.dataset.position,service:a.dataset.service};
+   Object.keys(window.amoAttribution).forEach(function(k){event[k]=window.amoAttribution[k];});
+   window.dataLayer.push(event);
+   if (typeof window.gtag === 'function') {
+    var googleParams = {};
+    Object.keys(event).forEach(function(k){if(k !== 'event')googleParams[k] = event[k];});
+    window.gtag('event', 'whatsapp_click', googleParams);
+   }
+  });
+ });
+})();
+</script>
+<div class="cookie" id="cookieBar" role="region" aria-label="Aviso sobre cookies" hidden><div><strong>Cookies de medição</strong><p>Usamos cookies do Google para medir nossos anúncios e entender como a página é usada. A página funciona igual se você recusar. <a href="/politica-privacidade">Política de privacidade</a>.</p></div><div class="cookie-actions"><button type="button" id="cookieDeny">Recusar</button><button type="button" id="cookieAccept">Aceitar</button></div></div>
+<script>
+(function(){
+ var KEY='amoCookieConsent', bar=document.getElementById('cookieBar');
+ function limpar(){
+  var h=location.hostname, doms=[h,'.'+h], raiz=h.split('.').slice(-2).join('.');
+  if(raiz!==h)doms.push('.'+raiz);
+  document.cookie.split(';').forEach(function(c){
+   var nome=c.split('=')[0].trim();
+   if(!/^(_ga|_gid|_gcl|_gac)/.test(nome))return;
+   doms.forEach(function(d){document.cookie=nome+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain='+d;});
+   document.cookie=nome+'=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+  });
+ }
+ var escolha=null; try{escolha=localStorage.getItem(KEY);}catch(e){}
+ if(escolha==='granted'||escolha==='denied'){if(escolha==='denied')limpar();return;}
+ if(!bar)return;
+ bar.hidden=false;
+ function registrar(v){
+  try{localStorage.setItem(KEY,v);}catch(e){}
+  if(typeof window.gtag==='function')window.gtag('consent','update',{ad_storage:v,ad_user_data:v,ad_personalization:v,analytics_storage:v});
+  if(v==='denied')limpar();
+  bar.hidden=true;
+ }
+ document.getElementById('cookieAccept').addEventListener('click',function(){registrar('granted');});
+ document.getElementById('cookieDeny').addEventListener('click',function(){registrar('denied');});
+})();
+</script>
+</body></html>

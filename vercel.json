@@ -3,7 +3,8 @@
   "trailingSlash": false,
   "redirects": [
     { "source": "/a-amo", "destination": "/amo", "permanent": true },
-    { "source": "/a-amo.html", "destination": "/amo", "permanent": true }
+    { "source": "/a-amo.html", "destination": "/amo", "permanent": true },
+    { "source": "/eus%C3%A9bio", "destination": "/eusebio", "permanent": true }
   ],
   "headers": [
     {

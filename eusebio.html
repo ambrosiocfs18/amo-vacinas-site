@@ -7,7 +7,6 @@
 <meta name="theme-color" content="#8043a9">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="base-uri 'none'; object-src 'none'; form-action 'none'">
-<script async src="https://www.googletagmanager.com/gtag/js?id=GT-K4V3J86H"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -15,8 +14,11 @@ var amoConsentSalvo = null;
 try { amoConsentSalvo = localStorage.getItem('amoCookieConsent'); } catch (e) {}
 var amoConsentEstado = amoConsentSalvo === 'granted' ? 'granted' : 'denied';
 gtag('consent', 'default', {ad_storage: amoConsentEstado, ad_user_data: amoConsentEstado, ad_personalization: amoConsentEstado, analytics_storage: amoConsentEstado, wait_for_update: 500});
-gtag('js', new Date());
-gtag('config', 'GT-K4V3J86H');
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-KSHK7FG');
 </script>
 <script>
 window.AMO_CONFIG = Object.freeze({"whatsapp":"5585981705490","message":"Vim do Google e gostaria de agendar uma vacina.","landing_page":"eusebio"});
@@ -83,11 +85,6 @@ section.locations{padding:70px 0}h2{font-weight:400;font-size:36px;line-height:1
    var event={event:'whatsapp_click',landing_page:window.AMO_CONFIG.landing_page,button_position:a.dataset.position,service:a.dataset.service};
    Object.keys(window.amoAttribution).forEach(function(k){event[k]=window.amoAttribution[k];});
    window.dataLayer.push(event);
-   if (typeof window.gtag === 'function') {
-    var googleParams = {};
-    Object.keys(event).forEach(function(k){if(k !== 'event')googleParams[k] = event[k];});
-    window.gtag('event', 'whatsapp_click', googleParams);
-   }
   });
  });
 })();

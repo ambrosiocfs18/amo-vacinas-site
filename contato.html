@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16675357727"></script>
+  <!-- Google Tag Manager -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
     /* Consent Mode v2 — nada é gravado antes de o visitante escolher.
-       Se já houve escolha, ela entra aqui, antes do config, para não
-       existir uma janela em que a tag grave cookie sem permissão. */
+       Se já houve escolha, ela entra aqui, antes do contêiner subir, para não
+       existir uma janela em que alguma tag grave cookie sem permissão. */
     var amoConsentSalvo = null;
     try { amoConsentSalvo = localStorage.getItem('amoCookieConsent'); } catch (e) {}
     var amoConsentEstado = amoConsentSalvo === 'granted' ? 'granted' : 'denied';
@@ -23,20 +22,16 @@
       wait_for_update: 500
     });
 
-    gtag('js', new Date());
-    gtag('config', 'AW-16675357727');
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
   j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NHNP76Q');</script>
+  })(window,document,'script','dataLayer','GTM-KSHK7FG');
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- Microsoft Clarity (projeto y81gkwgitf)
-       A tag em si NAO e colada aqui: ela ja vem pelo GTM (GTM-NHNP76Q). Duas
+       A tag em si NAO e colada aqui: ela entra pelo GTM, se o conteiner a tiver. Duas
        copias do mesmo projeto contariam a mesma sessao duas vezes.
        O que fazemos aqui e declarar a fila do clarity() antes de o GTM subir e
        ja empilhar a escolha de cookies. O snippet oficial reaproveita um
@@ -62,7 +57,7 @@
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NHNP76Q"
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KSHK7FG"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 

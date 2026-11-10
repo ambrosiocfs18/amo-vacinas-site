@@ -36,15 +36,6 @@
   "fonte": "Pitangueiras, Guarujá, SP, Brasil"
  },
  {
-  "bairro": "Internacional Shopping",
-  "cidade": "Guarulhos",
-  "uf": "SP",
-  "breve": false,
-  "lat": -23.488315,
-  "lng": -46.548983,
-  "fonte": "Internacional Shopping, Guarulhos, SP, Brasil"
- },
- {
   "bairro": "Ponta da Praia",
   "cidade": "Santos",
   "uf": "SP",
@@ -52,24 +43,6 @@
   "lat": -23.9862,
   "lng": -46.301787,
   "fonte": "Ponta da Praia, Santos, SP, Brasil"
- },
- {
-  "bairro": "Rio Preto Shopping",
-  "cidade": "São José do Rio Preto",
-  "uf": "SP",
-  "breve": false,
-  "lat": -20.835153,
-  "lng": -49.398655,
-  "fonte": "Rio Preto Shopping, São José do Rio Preto, SP, Brasil"
- },
- {
-  "bairro": "Aquarius",
-  "cidade": "São José dos Campos",
-  "uf": "SP",
-  "breve": false,
-  "lat": -23.217366,
-  "lng": -45.906286,
-  "fonte": "Aquarius, São José dos Campos, SP, Brasil"
  },
  {
   "bairro": "Alto da Mooca",

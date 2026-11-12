@@ -902,6 +902,8 @@ button{font-family:inherit}
 #mapaUnidades{position:absolute;inset:0;width:100%;height:100%;z-index:0;background:var(--lilac-50)}
 .umark{background:none;border:0}
 .umark svg{filter:drop-shadow(0 3px 5px rgba(60,71,148,.35))}
+/* pino que representa várias unidades próximas: selo com a quantidade */
+.umark__n{position:absolute;top:-7px;right:-9px;min-width:19px;height:19px;padding:0 4px;border-radius:999px;background:#DB2777;color:#fff;border:2px solid #fff;font:800 11px/15px 'Montserrat',sans-serif;text-align:center;box-shadow:0 2px 5px rgba(60,71,148,.35)}
 .leaflet-container{font-family:'Montserrat',sans-serif}
 .leaflet-container a{color:var(--violet-700)}
 .leaflet-popup-content-wrapper{border-radius:14px;box-shadow:var(--shadow-md)}

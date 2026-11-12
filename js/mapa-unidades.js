@@ -24,11 +24,12 @@
   var VIOLET_400 = '#A78BFA';
 
   var idGrad = 0;
-  function pino(corA, corB, tracejado) {
+  function pino(corA, corB, tracejado, qtd) {
     var gid = 'amopin' + (++idGrad);
     return L.divIcon({
       className: 'umark',
       html:
+        (qtd ? '<b class="umark__n">' + qtd + '</b>' : '') +
         '<svg viewBox="0 0 24 24" width="30" height="30" aria-hidden="true">' +
         '<defs><linearGradient id="' + gid + '" x1="0" y1="0" x2="1" y2="1">' +
         '<stop offset="0%" stop-color="' + corA + '"/>' +
@@ -100,19 +101,62 @@
 
     var marcadores = [];
     unidades.forEach(function (u) {
+      var nome = u.bairro + (u.cidade !== u.bairro ? ' - ' + u.cidade : '') + '/' + u.uf;
       var m = L.marker([u.lat, u.lng], {
         icon: u.breve ? iconeBreve : iconeAberta,
-        title: u.bairro + (u.cidade !== u.bairro ? ' - ' + u.cidade : '') + '/' + u.uf,
+        title: nome,
       }).addTo(mapa);
       m.bindPopup(popup(u));
+      m._amo = { nome: nome, icone: m.options.icon, grupo: null };
+      // pino de grupo: em vez do balão de uma unidade só, aproxima até separar
+      m.on('click', function () {
+        if (!m._amo.grupo) return;
+        m.closePopup();
+        mapa.fitBounds(L.featureGroup(m._amo.grupo).getBounds(), { padding: [70, 70], maxZoom: ZOOM_SEPARA });
+      });
       marcadores.push(m);
     });
+
+    /* Unidades da mesma cidade caem uma em cima da outra no zoom do Brasil, e
+       quem passa o cursor só enxerga a de cima. Pinos a menos de RAIO px viram
+       um só, com a quantidade e o nome de todas; refaz a cada zoom. */
+    var RAIO = 30, ZOOM_SEPARA = 16, iconesGrupo = {};
+    function agrupa() {
+      var separa = mapa.getZoom() >= ZOOM_SEPARA;  // perto o bastante: nunca agrupa
+      var pts = marcadores.map(function (m) { return mapa.latLngToLayerPoint(m.getLatLng()); });
+      var usado = [];
+      marcadores.forEach(function (lider, i) {
+        if (usado[i]) return;
+        var grupo = [lider];
+        for (var j = i + 1; j < marcadores.length && !separa; j++) {
+          if (!usado[j] && pts[i].distanceTo(pts[j]) < RAIO) { usado[j] = true; grupo.push(marcadores[j]); }
+        }
+        var varios = grupo.length > 1;
+        grupo.forEach(function (m, k) {
+          m._amo.grupo = varios ? grupo : null;
+          if (k > 0) { mapa.removeLayer(m); return; }   // só o líder fica visível
+          m.options.title = !varios ? m._amo.nome
+            : grupo.length + ' unidades' +
+              // lista os nomes enquanto cabem num balão; acima disso, só a contagem
+              (grupo.length <= 6 ? ': ' + grupo.map(function (g) { return g._amo.nome; }).join(' · ') : ' nesta região') +
+              ' (clique para aproximar)';
+          m.setIcon(varios
+            ? (iconesGrupo[grupo.length] = iconesGrupo[grupo.length] || pino(VIOLET_600, INDIGO_GRAD, false, grupo.length))
+            : m._amo.icone);
+          if (!mapa.hasLayer(m)) m.addTo(mapa);
+          // o setIcon reaproveita o elemento e não reescreve o title
+          if (m._icon) { m._icon.title = m.options.title; m._icon.setAttribute('aria-label', m.options.title); }
+        });
+      });
+    }
 
     if (marcadores.length) {
       mapa.fitBounds(L.featureGroup(marcadores).getBounds(), { padding: [34, 34] });
     } else {
       mapa.setView([-15.78, -47.93], 4);
     }
+    mapa.on('zoomend', agrupa);
+    agrupa();
 
     // o mapa só ganha altura depois do CSS: recalcula para não ficar cinza
     setTimeout(function () { mapa.invalidateSize(); }, 250);
